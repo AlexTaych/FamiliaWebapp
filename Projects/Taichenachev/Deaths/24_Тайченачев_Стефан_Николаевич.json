@@ -1,0 +1,18 @@
+{
+  "id": 24,
+  "date": "26.03.1903",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Стефан",
+    "patronym": "Николаевич"
+  },
+  "death_cause": "чахотка",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

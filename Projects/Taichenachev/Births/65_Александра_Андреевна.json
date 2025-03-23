@@ -1,0 +1,33 @@
+{
+  "id": 65,
+  "date": "18.04.1908",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Андреевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Андрей",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Акилина",
+    "patronym": "Афанасиевна"
+  },
+  "locality": "Подаик",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Шубин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Шубина(подайские)",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

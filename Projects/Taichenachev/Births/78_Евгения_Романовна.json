@@ -1,0 +1,33 @@
+{
+  "id": 78,
+  "date": "29.06.1905",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Евгения",
+    "patronym": "Романовна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Василисса",
+    "patronym": "Митрофановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Подунаев",
+      "name": "Иван",
+      "patronym": "..."
+    },
+    "2nd": {
+      "familia": "Подунаева",
+      "name": "...ина",
+      "patronym": "Ивановна"
+    }
+  }
+}

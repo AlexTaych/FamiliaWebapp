@@ -1,0 +1,33 @@
+{
+  "id": 46,
+  "date": "26.11.1916",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Александр",
+    "patronym": "Евфимович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Евфимий",
+    "patronym": "Козьмин"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Егоровна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

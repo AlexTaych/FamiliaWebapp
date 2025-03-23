@@ -1,0 +1,18 @@
+{
+  "id": 50,
+  "date": "09.10.1897",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Романович"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "возраст неразборчиво"
+}

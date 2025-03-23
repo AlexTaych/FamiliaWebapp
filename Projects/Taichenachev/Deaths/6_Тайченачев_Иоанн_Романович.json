@@ -1,0 +1,18 @@
+{
+  "id": 6,
+  "date": "22.12.1914",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Романович"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

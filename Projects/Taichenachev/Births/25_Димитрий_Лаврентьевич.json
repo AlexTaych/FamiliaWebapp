@@ -1,0 +1,33 @@
+{
+  "id": 25,
+  "date": "07.02.1914",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Димитрий",
+    "patronym": "Лаврентьевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Лаврентий",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Евдокимовна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Крестьянка Иванова",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

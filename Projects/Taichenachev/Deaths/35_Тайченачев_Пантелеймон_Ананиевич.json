@@ -1,0 +1,18 @@
+{
+  "id": 35,
+  "date": "23.11.1900",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Пантелеймон",
+    "patronym": "Ананиевич"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

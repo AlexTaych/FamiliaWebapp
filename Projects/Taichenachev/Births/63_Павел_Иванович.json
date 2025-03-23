@@ -1,0 +1,33 @@
+{
+  "id": 63,
+  "date": "12.01.1906",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна"
+  },
+  "locality": "Подаик",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

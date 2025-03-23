@@ -1,0 +1,18 @@
+{
+  "id": 10,
+  "date": "25.02.1912",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евфросиния",
+    "patronym": "Лаврентиевна"
+  },
+  "death_cause": "корь",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Лаврентий",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

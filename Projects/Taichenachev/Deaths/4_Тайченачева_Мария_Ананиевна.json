@@ -1,0 +1,18 @@
+{
+  "id": 4,
+  "date": "01.11.1913",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Ананиевна"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Романович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

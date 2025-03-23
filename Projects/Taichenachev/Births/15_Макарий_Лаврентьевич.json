@@ -1,0 +1,33 @@
+{
+  "id": 15,
+  "date": "25.05.1912",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Макарий",
+    "patronym": "Лаврентьевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Лаврентий",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Иакимовна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Булгачева",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

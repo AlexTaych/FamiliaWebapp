@@ -1,0 +1,33 @@
+{
+  "id": 94,
+  "date": "02.11.1901",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Георгий",
+    "patronym": "Тимофеевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Варвара",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Петр",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

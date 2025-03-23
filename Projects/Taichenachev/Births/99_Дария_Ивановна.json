@@ -1,0 +1,33 @@
+{
+  "id": 99,
+  "date": "14.03.1900",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Феодор",
+      "patronym": "Алексеевич"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Анисия",
+      "patronym": "Стефановна"
+    }
+  },
+  "notes": "-"
+}

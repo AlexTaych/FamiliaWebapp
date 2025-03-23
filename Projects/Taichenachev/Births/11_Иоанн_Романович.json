@@ -1,0 +1,33 @@
+{
+  "id": 11,
+  "date": "10.11.1911",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Гликерия",
+    "patronym": "Сергеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьяне",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьяне",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

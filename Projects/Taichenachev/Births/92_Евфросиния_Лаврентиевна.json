@@ -1,0 +1,33 @@
+{
+  "id": 92,
+  "date": "14.02.1910",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Евфросиния",
+    "patronym": "Лаврентиевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Лаврентий",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Евдокимовна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": 71,
+  "date": "17.08.1893",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Соломония",
+    "patronym": "Николаевна"
+  },
+  "death_cause": "(кашель) слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "3 недели"
+}

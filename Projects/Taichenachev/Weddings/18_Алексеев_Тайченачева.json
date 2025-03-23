@@ -1,0 +1,41 @@
+{
+  "id": 18,
+  "date": "14.01.1907",
+  "husband": {
+    "familia": "Алексеев",
+    "name": "Евфимий",
+    "patronym": "Димитриевич",
+    "locality": "Димитриевская"
+  },
+  "wife": {
+    "familia": "Тайченачева",
+    "name": "Анисия",
+    "patronym": "Стефановна",
+    "locality": "Кубаева"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Подберезин",
+      "name": "Роман",
+      "patronym": "Протасиевич"
+    },
+    "2nd": {
+      "familia": "Сладков",
+      "name": "Иван",
+      "patronym": "Хрисанфович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Исай",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Михеев",
+      "name": "Василий",
+      "patronym": "Павлович"
+    }
+  },
+  "notes": "жениху 21 год"
+}

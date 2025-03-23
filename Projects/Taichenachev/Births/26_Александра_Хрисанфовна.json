@@ -1,0 +1,33 @@
+{
+  "id": 26,
+  "date": "25.04.1914",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Хрисанфовна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Хрисанф",
+    "patronym": "Владимирович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Тимофеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "..фан",
+      "patronym": "Федорович"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

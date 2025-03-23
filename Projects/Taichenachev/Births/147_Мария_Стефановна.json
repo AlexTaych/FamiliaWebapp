@@ -1,0 +1,33 @@
+{
+  "id": 147,
+  "date": "03.08.1893",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Стефановна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Стефан",
+    "patronym": "Афанасиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Феодосия",
+    "patronym": "Леонтиевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "псаломник",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "текст утерян",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

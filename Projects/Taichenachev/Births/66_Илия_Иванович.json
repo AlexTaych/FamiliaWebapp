@@ -1,0 +1,33 @@
+{
+  "id": 66,
+  "date": "18.07.1908",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Илия",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна"
+  },
+  "locality": "Подаик",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Уркин",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

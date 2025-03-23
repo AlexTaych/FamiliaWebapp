@@ -1,0 +1,33 @@
+{
+  "id": 13,
+  "date": "28.03.1912",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Ипатий",
+    "patronym": "Хрисанфович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Хрисанф",
+    "patronym": "Владимирович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Тимофеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Собакин",
+      "name": "...андр",
+      "patronym": "Петрович"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Татиана",
+      "patronym": "...рова"
+    }
+  }
+}

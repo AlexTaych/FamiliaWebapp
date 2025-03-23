@@ -1,0 +1,33 @@
+{
+  "id": 17,
+  "date": "10.12.1912",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Елена",
+    "patronym": "Евфимиевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Фрол",
+      "patronym": "Ананиев"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Васса",
+      "patronym": "Романовна"
+    }
+  }
+}

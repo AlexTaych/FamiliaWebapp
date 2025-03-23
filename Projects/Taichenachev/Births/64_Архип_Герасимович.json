@@ -1,0 +1,33 @@
+{
+  "id": 64,
+  "date": "16.02.1906",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Архип",
+    "patronym": "Герасимович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Герасим",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Сиклитикия",
+    "patronym": "Феодоровна"
+  },
+  "locality": "Подаик",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Уркина",
+      "name": "Евфимия",
+      "patronym": "Ивановна"
+    }
+  }
+}

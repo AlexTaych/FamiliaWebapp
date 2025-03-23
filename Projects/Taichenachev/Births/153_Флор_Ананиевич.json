@@ -1,0 +1,33 @@
+{
+  "id": 153,
+  "date": "13.08.1894",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Флор",
+    "patronym": "Ананиевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Николаевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "отставной солдат",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Евдокия",
+      "patronym": "Ивановна"
+    }
+  },
+  "notes": "-"
+}

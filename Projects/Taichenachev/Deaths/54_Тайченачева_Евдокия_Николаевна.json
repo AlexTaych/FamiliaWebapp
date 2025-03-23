@@ -1,0 +1,18 @@
+{
+  "id": 54,
+  "date": "22.07.1898",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Николаевна"
+  },
+  "death_cause": "понос",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "возраст 5 чего-то"
+}

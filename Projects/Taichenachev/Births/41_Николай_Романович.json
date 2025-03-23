@@ -1,0 +1,33 @@
+{
+  "id": 41,
+  "date": "04.12.1915",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Андреевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "...",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Матрона",
+      "patronym": "Евдокимовна"
+    }
+  }
+}

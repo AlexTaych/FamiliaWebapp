@@ -1,0 +1,33 @@
+{
+  "id": 104,
+  "date": "05.02.1901",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Симеоновна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Симеон",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Самуиловна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "Феодор",
+      "patronym": "Стефанович"
+    },
+    "2nd": {
+      "familia": "крестьянская дочь",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

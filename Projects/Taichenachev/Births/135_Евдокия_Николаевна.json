@@ -1,0 +1,33 @@
+{
+  "id": 135,
+  "date": "11.02.1898",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Николаевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Евфимия",
+    "patronym": "Иосифовна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

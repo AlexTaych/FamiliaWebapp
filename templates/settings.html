@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки</title>
+</head>
+<body>
+    <h1>Настройки</h1>
+    <form method="POST">
+        <label for="familia_m">Мужская фамилия по умолчанию:</label>
+        <input type="text" id="familia_m" name="familia_m" value="{{ familia_m }}" required><br><br>
+
+        <label for="familia_f">Женская фамилия по умолчанию:</label>
+        <input type="text" id="familia_f" name="familia_f" value="{{ familia_f }}" required><br><br>
+
+        <label for="locality">Населенный пункт по умолчанию:</label>
+        <input type="text" id="locality" name="locality" value="{{ locality }}" required><br><br>
+
+        <button type="submit">Сохранить</button>
+    </form>
+    <br>
+    <a href="{{ url_for('rec_select') }}"><button>Вернуться к выбору записи</button></a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "id": 40,
+  "date": "29.12.1910",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "в 50 лет"
+}

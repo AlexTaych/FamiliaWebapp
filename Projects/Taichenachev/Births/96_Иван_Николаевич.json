@@ -1,0 +1,33 @@
+{
+  "id": 96,
+  "date": "09.11.1900",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Евфимия",
+    "patronym": "Фомина"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанка",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

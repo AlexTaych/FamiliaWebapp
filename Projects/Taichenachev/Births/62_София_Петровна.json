@@ -1,0 +1,33 @@
+{
+  "id": 62,
+  "date": "10.09.1907",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "София",
+    "patronym": "Петровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "(Петр)",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ирина",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Филиппова",
+      "name": "Евфро...",
+      "patronym": "Евфимиевна"
+    },
+    "2nd": {
+      "familia": "Подунаев",
+      "name": "Емелиан",
+      "patronym": "Иванович"
+    }
+  }
+}

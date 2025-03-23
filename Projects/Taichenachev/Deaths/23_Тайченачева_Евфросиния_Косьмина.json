@@ -1,0 +1,18 @@
+{
+  "id": 23,
+  "date": "25.03.1903",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евфросиния",
+    "patronym": "Козьмина"
+  },
+  "death_cause": "простуда",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Исай",
+    "patronym": "Николаевич",
+    "relation_degree": "муж"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

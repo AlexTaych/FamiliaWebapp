@@ -1,0 +1,18 @@
+{
+  "id": 25,
+  "date": "23.06.1903",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Агрипина",
+    "patronym": "Владимировна"
+  },
+  "death_cause": "неразборчиво",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Владимир",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

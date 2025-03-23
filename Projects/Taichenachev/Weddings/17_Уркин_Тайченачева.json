@@ -1,0 +1,41 @@
+{
+  "id": 17,
+  "date": "30.01.1919",
+  "husband": {
+    "familia": "Уркин",
+    "name": "Павел",
+    "patronym": "Терентиевич",
+    "locality": "Подаик"
+  },
+  "wife": {
+    "familia": "Тайченачева",
+    "name": "Параскева",
+    "patronym": "Романовна",
+    "locality": "Кубаева"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Укрин",
+      "name": "Василий",
+      "patronym": "Терентиевич"
+    },
+    "2nd": {
+      "familia": "Григорьев",
+      "name": "Евфим",
+      "patronym": "Калистратович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Гавриил",
+      "patronym": "Романович"
+    },
+    "2nd": {
+      "familia": "Уркин",
+      "name": "Артемий",
+      "patronym": "Терентиевич"
+    }
+  },
+  "notes": "жениху 20 лет"
+}

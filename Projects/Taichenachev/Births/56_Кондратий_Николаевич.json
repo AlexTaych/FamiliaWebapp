@@ -1,0 +1,33 @@
+{
+  "id": 56,
+  "date": "20.09.1918",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Кондратий",
+    "patronym": "Николаевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Евфимиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Леонтиевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "...",
+      "patronym": "Леонтиевич"
+    },
+    "2nd": {
+      "familia": "Буданаева",
+      "name": "Анна",
+      "patronym": "Феодоровна"
+    }
+  }
+}

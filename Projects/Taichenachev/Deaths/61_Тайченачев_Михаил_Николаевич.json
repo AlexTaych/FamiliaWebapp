@@ -1,0 +1,18 @@
+{
+  "id": 61,
+  "date": "24.09.1899",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Николаевич"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "3 недели"
+}

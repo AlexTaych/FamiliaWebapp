@@ -1,0 +1,18 @@
+{
+  "id": 60,
+  "date": "31.08.1899",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Козьма",
+    "patronym": "Стефанович"
+  },
+  "death_cause": "чахотка",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "28 лет"
+}

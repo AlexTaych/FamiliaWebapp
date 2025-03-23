@@ -1,0 +1,33 @@
+{
+  "id": 146,
+  "date": "24.07.1893",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Соломония",
+    "patronym": "Николаевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Екатерина",
+    "patronym": "Леонтиевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "ссыльный крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

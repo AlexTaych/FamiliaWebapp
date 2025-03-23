@@ -1,0 +1,33 @@
+{
+  "id": 54,
+  "date": "29.08.1918",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Игнатиевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Игнатий",
+    "patronym": "Романович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "...дор",
+      "patronym": "Евфимиевич"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Наталия",
+      "patronym": "Ивановна"
+    }
+  }
+}

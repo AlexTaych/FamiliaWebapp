@@ -1,0 +1,18 @@
+{
+  "id": 26,
+  "date": "16.08.1903",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Феодоровна"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Алексеевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

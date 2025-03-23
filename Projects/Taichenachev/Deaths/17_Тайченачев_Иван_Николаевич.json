@@ -1,0 +1,18 @@
+{
+  "id": 17,
+  "date": "26.11.1917",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "death_cause": "тиф",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "48 лет"
+}

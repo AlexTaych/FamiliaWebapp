@@ -1,0 +1,33 @@
+{
+  "id": 89,
+  "date": "05.04.1910",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Георгий",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Гликерия",
+    "patronym": "Сергеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "...",
+      "patronym": "Леонтиевич"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

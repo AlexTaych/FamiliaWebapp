@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись о бракосочетании</title>
+    <style>
+        /* Основной контейнер для формы */
+        .form-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto 20px auto auto;
+            gap: 20px;
+            max-width: 600px;
+            margin-left: 0;
+        }
+
+        /* Стили для каждой группы (метка + поле ввода) */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .error {
+            border: 2px solid red;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Позиция всплывающего окна */
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Запись о бракосочетании</h1>
+
+    <p>Текущий проект: {{ current_project }}</p>
+    <!-- Блок для отображения ошибок -->
+    {% if errors %}
+        <div style="color: red;">
+            <strong>Ошибки в заполнении данных:</strong>
+            <ul>
+                {% for field, message in errors.items() %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <form method="POST">
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date" value="{{ form_data.date if form_data }}" required><br><br>
+
+        <div class="form-container">
+            <div class="input-group">
+                <label for="husband">Фамилия, имя и отчество жениха:</label>
+				<input type="text" id="husband" name="husband"
+					   value="{{ familia_m }}"
+					   class="{% if 'husband' in errors %}error{% endif %}"
+					   required>
+            </div>
+            <div class="input-group">
+                <label for="wife">Фамилия, имя и отчество невесты:</label>
+				<input type="text" id="wife" name="wife"
+					   value="{{ form_data.wife if form_data }}"
+					   class="{% if 'wife' in errors %}error{% endif %}"
+					   required>
+            </div>
+            <div class="input-group">
+                <label for="hus_locality">Место проживания жениха:</label>
+                <input type="text" id="hus_locality" name="hus_locality"
+                       value="{{ locality }}"
+                       required>
+            </div>
+            <div class="input-group">
+                <label for="wif_locality">Место проживания невесты:</label>
+                <input type="text" id="wif_locality" name="wif_locality"
+                       value="{{ form_data.wif_locality if form_data }}"
+                       required>
+            </div>
+            <div class="input-group">
+                <p>
+                    Поручители жениха
+                    <span class="tooltip">ℹ️
+                        <span class="tooltiptext">
+                            Информация о поручителях вводится в формате ФИО: "Иванов Иван Иванович".
+                            При необходимости можно оставить поля пустыми.
+                        </span>
+                    </span>
+                </p>
+            </div>
+            <div class="input-group">
+                <p>Поручители невесты</p>
+            </div>
+            <div class="input-group">
+                <label for="hus_guarantor1">Первый поручитель:</label>
+                <input type="text" id="hus_guarantor1" name="hus_guarantor1"
+                       value="{{ form_data.hus_guarantor1 if form_data }}"
+                       class="{% if 'hus_guarantor1' in errors %}error{% endif %}">
+            </div>
+            <div class="input-group">
+                <label for="wif_guarantor1">Первый поручитель:</label>
+                <input type="text" id="wif_guarantor1" name="wif_guarantor1"
+                       value="{{ form_data.wif_guarantor1 if form_data }}"
+                       class="{% if 'wif_guarantor1' in errors %}error{% endif %}">
+            </div>
+            <div class="input-group">
+                <label for="hus_guarantor2">Второй поручитель:</label>
+                <input type="text" id="hus_guarantor2" name="hus_guarantor2"
+                       value="{{ form_data.hus_guarantor2 if form_data }}"
+                       class="{% if 'hus_guarantor2' in errors %}error{% endif %}">
+            </div>
+            <div class="input-group">
+                <label for="wif_guarantor2">Второй поручитель:</label>
+                <input type="text" id="wif_guarantor2" name="wif_guarantor2"
+                       value="{{ form_data.wif_guarantor2 if form_data }}"
+                       class="{% if 'wif_guarantor2' in errors %}error{% endif %}">
+            </div>
+        </div>
+        <br>
+        <label for="notes">Примечания:</label>
+        <textarea id="notes" name="notes" rows="4" cols="50">{{ form_data.notes if form_data }}</textarea><br><br>
+
+        <button type="submit">Сохранить запись</button><br>
+    </form>
+    <br>
+    <a href="{{ url_for('rec_select') }}"><button>Вернуться к выбору записи</button></a>
+</body>
+</html>

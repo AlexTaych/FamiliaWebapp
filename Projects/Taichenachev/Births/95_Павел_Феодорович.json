@@ -1,0 +1,33 @@
+{
+  "id": 95,
+  "date": "12.12.1900",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Феодорович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Алексеевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Иосифовна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Берлелюбская",
+      "name": "Анастасия",
+      "patronym": "Васильевна"
+    }
+  }
+}

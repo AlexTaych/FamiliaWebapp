@@ -1,0 +1,41 @@
+{
+  "id": 11,
+  "date": "01.10.1917",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Игнатий",
+    "patronym": "Романович",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна",
+    "locality": "Кубаева"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Исай",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Прокопий",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Максим",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Тайченачев",
+      "name": "Николай",
+      "patronym": "Евфимович"
+    }
+  },
+  "notes": "жениху 19 лет, невесте 17 лет"
+}

@@ -1,0 +1,18 @@
+{
+  "id": 32,
+  "date": "24.09.1904",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Романович"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

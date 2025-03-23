@@ -1,0 +1,33 @@
+{
+  "id": 97,
+  "date": "13.08.1900",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Диомид",
+    "patronym": "Андреевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Андрей",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Акилина",
+    "patronym": "Афанасиевна"
+  },
+  "locality": "Подаик",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Уркина",
+      "name": "Евфимия",
+      "patronym": "Ивановна"
+    }
+  },
+  "notes": "-"
+}

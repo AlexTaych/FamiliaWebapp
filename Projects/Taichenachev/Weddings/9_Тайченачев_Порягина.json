@@ -1,0 +1,41 @@
+{
+  "id": 9,
+  "date": "23.01.1915",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Порягина",
+    "name": "Дария",
+    "patronym": "Филипповна",
+    "locality": "Константиновское"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "Леонтий",
+      "patronym": "Тимофеевич"
+    },
+    "2nd": {
+      "familia": "Буданаев",
+      "name": "Архип",
+      "patronym": "Егорович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Уркин",
+      "name": "Онисим",
+      "patronym": "Гаврилович"
+    },
+    "2nd": {
+      "familia": "Тайченачев",
+      "name": "Павел",
+      "patronym": "Козьмин"
+    }
+  },
+  "notes": "жениху 21 год"
+}

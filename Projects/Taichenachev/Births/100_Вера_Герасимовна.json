@@ -1,0 +1,33 @@
+{
+  "id": 100,
+  "date": "12.09.1901",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Вера",
+    "patronym": "Герасимовна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Герасим",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Сиклитикия",
+    "patronym": "Феодоровна"
+  },
+  "locality": "Подаик",
+  "susceptors": {
+    "1st": {
+      "familia": "Шубин",
+      "name": "Иван",
+      "patronym": "Трофимович"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

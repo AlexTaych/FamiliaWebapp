@@ -1,0 +1,41 @@
+{
+  "id": 13,
+  "date": "03.11.1917",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Стефан",
+    "patronym": "Феодорович",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Григорьева",
+    "name": "Елизавета",
+    "patronym": "Георгиевна",
+    "locality": "Усть-Сертинское"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Петр",
+      "patronym": "Никитин"
+    },
+    "2nd": {
+      "familia": "Погонеев",
+      "name": "Сергий",
+      "patronym": "Осипович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Григорьев",
+      "name": "Никифор",
+      "patronym": "Егорович"
+    },
+    "2nd": {
+      "familia": "Григорьев",
+      "name": "Григорий",
+      "patronym": "Андреевич"
+    }
+  },
+  "notes": "жениху 22, невесте 21-22"
+}

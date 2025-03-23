@@ -1,0 +1,33 @@
+{
+  "id": 34,
+  "date": "20.09.1906",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Владимирович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Владимир",
+    "patronym": "Иванович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Олимпиада",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Уркин",
+      "name": "Онисим",
+      "patronym": "Гаврилович"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Лукия",
+      "patronym": "Тимофеевна"
+    }
+  }
+}

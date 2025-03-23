@@ -1,0 +1,33 @@
+{
+  "id": 90,
+  "date": "27.03.1910",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иларион",
+    "patronym": "Хрисанфович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Хрисанф",
+    "patronym": "Владимирович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Алексеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Буданаева",
+      "name": "Наталия",
+      "patronym": "Егоровна"
+    }
+  }
+}

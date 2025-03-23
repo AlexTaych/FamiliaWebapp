@@ -1,0 +1,18 @@
+{
+  "id": 64,
+  "date": "15.02.1896",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Феодосия",
+    "patronym": "Евфимиевна"
+  },
+  "death_cause": "горячка",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Герасим",
+    "patronym": "Стефанович",
+    "relation_degree": "муж"
+  },
+  "locality": "Подаик",
+  "notes": "20 с чем-то лет"
+}

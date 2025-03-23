@@ -1,0 +1,33 @@
+{
+  "id": 31,
+  "date": "04.03.1906",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Исаевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Исай",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Подунаева",
+      "name": "Фекла",
+      "patronym": "Андреевна"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": 47,
+  "date": "24.01.1897",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евпраксия",
+    "patronym": "Николаевна"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "2 месяца"
+}

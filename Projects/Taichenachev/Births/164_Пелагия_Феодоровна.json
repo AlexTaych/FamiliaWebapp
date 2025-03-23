@@ -1,0 +1,33 @@
+{
+  "id": 164,
+  "date": "20.09.1923",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Пелагия",
+    "patronym": "Феодоровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Евфимиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Марфа",
+    "patronym": "..."
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "Отцу 21, матери 22 года; 1й ребенок; запись ЗАГСа"
+}

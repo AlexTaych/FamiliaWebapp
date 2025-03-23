@@ -1,0 +1,33 @@
+{
+  "id": 138,
+  "date": "18.02.1899",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Герасимович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Герасим",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Сиклитикия",
+    "patronym": "Феодотовна"
+  },
+  "locality": "Подаик",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Иван",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "мещанская жена",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

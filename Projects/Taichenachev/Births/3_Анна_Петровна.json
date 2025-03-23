@@ -1,0 +1,33 @@
+{
+  "id": 3,
+  "date": "23.10.1908",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Петровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ирина",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачева",
+      "name": "Гликерия",
+      "patronym": "Тимофеевна"
+    },
+    "2nd": {
+      "familia": "Буданаев",
+      "name": "Мануил",
+      "patronym": "Иванович"
+    }
+  }
+}

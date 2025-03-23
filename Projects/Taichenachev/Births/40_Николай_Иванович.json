@@ -1,0 +1,33 @@
+{
+  "id": 40,
+  "date": "23.11.1915",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Филипповна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "Архип",
+      "patronym": "..."
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": 38,
+  "date": "11.08.1902",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Александр",
+    "patronym": "Иванович"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

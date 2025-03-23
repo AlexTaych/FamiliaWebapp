@@ -1,0 +1,18 @@
+{
+  "id": 62,
+  "date": "23.05.1898",
+  "deceased": {
+    "familia": "Буданаев",
+    "name": "Кирилл",
+    "patronym": "Козьмин"
+  },
+  "death_cause": "старость",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "90 лет"
+}

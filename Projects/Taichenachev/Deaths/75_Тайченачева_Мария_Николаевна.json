@@ -1,0 +1,18 @@
+{
+  "id": 75,
+  "date": "09.08.1894",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Николаевна"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "2 недели"
+}

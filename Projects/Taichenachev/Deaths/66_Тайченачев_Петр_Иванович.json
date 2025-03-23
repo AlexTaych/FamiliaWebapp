@@ -1,0 +1,18 @@
+{
+  "id": 66,
+  "date": "19.07.1897",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Иванович"
+  },
+  "death_cause": "понос",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Подаик",
+  "notes": "3 недели"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 52,
+  "date": "01.05.1918",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Евфимиевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Евфимий",
+    "patronym": "Козьмин"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Егоровна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "...",
+      "name": "Михаил",
+      "patronym": "Лукин"
+    },
+    "2nd": {
+      "familia": "Буданаева",
+      "name": "Ирина",
+      "patronym": "Ивановна"
+    }
+  }
+}

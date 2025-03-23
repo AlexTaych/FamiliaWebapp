@@ -1,0 +1,18 @@
+{
+  "id": 65,
+  "date": "24.05.1896",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Ксения",
+    "patronym": "Герасимовна"
+  },
+  "death_cause": "корь",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Герасим",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Подаик",
+  "notes": "-"
+}

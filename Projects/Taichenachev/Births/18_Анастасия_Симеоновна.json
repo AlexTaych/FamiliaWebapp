@@ -1,0 +1,33 @@
+{
+  "id": 18,
+  "date": "18.12.1912",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Анастасия",
+    "patronym": "Симеоновна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Симеон",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Самуиловна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Ананий",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Евдокия",
+      "patronym": "..."
+    }
+  }
+}

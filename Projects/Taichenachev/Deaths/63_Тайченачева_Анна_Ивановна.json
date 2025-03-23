@@ -1,0 +1,18 @@
+{
+  "id": 63,
+  "date": "08.02.1896",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Ивановна"
+  },
+  "death_cause": "кашель",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Подаик",
+  "notes": "-"
+}

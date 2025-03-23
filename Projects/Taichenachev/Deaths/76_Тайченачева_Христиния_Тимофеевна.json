@@ -1,0 +1,18 @@
+{
+  "id": 76,
+  "date": "13.08.1894",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Христиния",
+    "patronym": "Тимофеевна"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "3 недели"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 27,
+  "date": "04.06.1914",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Фекла",
+    "patronym": "Романовна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Васса",
+    "patronym": "Митрофановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "...",
+      "patronym": "Димитриевич"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

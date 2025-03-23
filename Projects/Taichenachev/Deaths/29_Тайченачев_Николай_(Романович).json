@@ -1,0 +1,18 @@
+{
+  "id": 29,
+  "date": "05.07.1904",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "(Романович)"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "(Роман)",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

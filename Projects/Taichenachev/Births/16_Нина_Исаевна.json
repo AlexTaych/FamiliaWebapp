@@ -1,0 +1,33 @@
+{
+  "id": 16,
+  "date": "13.11.1912",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Нина",
+    "patronym": "Исаевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Исай",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьяне",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьяне",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

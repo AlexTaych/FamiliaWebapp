@@ -1,0 +1,18 @@
+{
+  "id": 56,
+  "date": "06.09.1895",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Митрофан",
+    "patronym": "Николаевич"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "3 чего-то, вероятно лет"
+}

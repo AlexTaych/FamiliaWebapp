@@ -1,0 +1,33 @@
+{
+  "id": 72,
+  "date": "06.11.1903",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Андреевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Андрей",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Акилина",
+    "patronym": "Афанасиевна"
+  },
+  "locality": "Подаик",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Балыгачев",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "...",
+      "name": "Анастасия",
+      "patronym": "Афанасиевна"
+    }
+  }
+}

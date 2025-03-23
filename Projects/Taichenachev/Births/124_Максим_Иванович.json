@@ -1,0 +1,33 @@
+{
+  "id": 124,
+  "date": "18.02.1895",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Максим",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Козьма",
+      "patronym": "Стефанович"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

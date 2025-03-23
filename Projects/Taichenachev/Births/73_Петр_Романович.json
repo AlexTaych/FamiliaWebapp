@@ -1,0 +1,33 @@
+{
+  "id": 73,
+  "date": "15.12.1903",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Гликерия",
+    "patronym": "Сергеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Анисия",
+      "patronym": "Сергеевна"
+    }
+  }
+}

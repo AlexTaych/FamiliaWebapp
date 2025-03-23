@@ -1,0 +1,18 @@
+{
+  "id": 27,
+  "date": "22.08.1903",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Романович"
+  },
+  "death_cause": "...ица",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

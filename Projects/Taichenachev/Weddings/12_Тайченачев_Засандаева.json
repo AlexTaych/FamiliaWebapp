@@ -1,0 +1,41 @@
+{
+  "id": 12,
+  "date": "01.10.1917",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Георгий",
+    "patronym": "Романович",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Засандаева",
+    "name": "Татиана",
+    "patronym": "Евфимовна",
+    "locality": "Кубаева"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Уркин",
+      "name": "Онисим",
+      "patronym": "Гаврилович"
+    },
+    "2nd": {
+      "familia": "Буданаев",
+      "name": "Никифор",
+      "patronym": "Егорович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Евфим",
+      "patronym": "Козьмин"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "жениху 18 лет"
+}

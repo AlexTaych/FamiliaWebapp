@@ -1,0 +1,18 @@
+{
+  "id": 3,
+  "date": "12.03.1913",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Нина",
+    "patronym": "Исаевна"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Исай",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

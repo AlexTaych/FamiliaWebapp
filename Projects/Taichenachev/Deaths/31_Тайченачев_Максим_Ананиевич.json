@@ -1,0 +1,18 @@
+{
+  "id": 31,
+  "date": "16.08.1904",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Максим",
+    "patronym": "Ананиевич"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

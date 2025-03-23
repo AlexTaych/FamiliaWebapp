@@ -1,0 +1,18 @@
+{
+  "id": 30,
+  "date": "09.08.1904",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Александр",
+    "patronym": "Тимофеевич"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

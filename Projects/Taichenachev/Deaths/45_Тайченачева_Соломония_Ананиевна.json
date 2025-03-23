@@ -1,0 +1,18 @@
+{
+  "id": 45,
+  "date": "09.08.1896",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Соломония",
+    "patronym": "Ананиевна"
+  },
+  "death_cause": "понос",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "1 месяц"
+}

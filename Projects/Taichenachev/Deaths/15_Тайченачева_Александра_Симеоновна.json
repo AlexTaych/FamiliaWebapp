@@ -1,0 +1,18 @@
+{
+  "id": 15,
+  "date": "21.11.1916",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Симеоновна"
+  },
+  "death_cause": "корь",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Симеон",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 49,
+  "date": "12.02.1918",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Георгий",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Филипповна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "...",
+      "name": "Иван",
+      "patronym": "Филиппович"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Параскева",
+      "patronym": "Романовна"
+    }
+  }
+}

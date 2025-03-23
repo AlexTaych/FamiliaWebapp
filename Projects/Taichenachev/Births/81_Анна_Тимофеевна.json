@@ -1,0 +1,33 @@
+{
+  "id": 81,
+  "date": "13.11.1905",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Тимофеевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Варвара",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Ястржембский",
+      "name": "Болеслав",
+      "patronym": "Болеславович"
+    },
+    "2nd": {
+      "familia": "Никитина",
+      "name": "Наталия",
+      "patronym": "Авф..."
+    }
+  }
+}

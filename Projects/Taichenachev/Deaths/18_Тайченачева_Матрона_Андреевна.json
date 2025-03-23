@@ -1,0 +1,18 @@
+{
+  "id": 18,
+  "date": "02.12.1917",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Андреевна"
+  },
+  "death_cause": "тиф",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

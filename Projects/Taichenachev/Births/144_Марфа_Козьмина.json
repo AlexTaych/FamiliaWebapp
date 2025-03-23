@@ -1,0 +1,33 @@
+{
+  "id": 144,
+  "date": "29.06.1893",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Марфа",
+    "patronym": "Козьмина"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Козьма",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Феодосия",
+    "patronym": "Митрофановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "ссыльный крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Купалова",
+      "name": "Васса",
+      "patronym": "Митрофановна"
+    }
+  },
+  "notes": "-"
+}

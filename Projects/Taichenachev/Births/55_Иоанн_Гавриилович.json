@@ -1,0 +1,33 @@
+{
+  "id": 55,
+  "date": "17.09.1918",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Гавриилович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Гавриил",
+    "patronym": "Романович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Татиана",
+    "patronym": "Евфимиевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "...ий",
+      "patronym": "Тимофеевич"
+    },
+    "2nd": {
+      "familia": "Алексиева",
+      "name": "Елена",
+      "patronym": "Петровна"
+    }
+  }
+}

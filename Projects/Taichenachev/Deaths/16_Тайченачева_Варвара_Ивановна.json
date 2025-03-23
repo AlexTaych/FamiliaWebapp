@@ -1,0 +1,18 @@
+{
+  "id": 16,
+  "date": "22.04.1917",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Варвара",
+    "patronym": "Ивановна"
+  },
+  "death_cause": "...анхит",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович",
+    "relation_degree": "муж"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

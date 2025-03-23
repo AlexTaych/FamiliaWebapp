@@ -1,0 +1,18 @@
+{
+  "id": 21,
+  "date": "24.08.1907",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Симеоновна"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Симеон",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

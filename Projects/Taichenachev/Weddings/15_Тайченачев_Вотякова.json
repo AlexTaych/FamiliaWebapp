@@ -1,0 +1,41 @@
+{
+  "id": 15,
+  "date": "24.01.1918",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Вотякова",
+    "name": "Марина",
+    "patronym": "Семеновна",
+    "locality": "Усть-Сертинское"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Исай",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "жених - вдовец, вторым браком, 44 года; невеста - вдова"
+}

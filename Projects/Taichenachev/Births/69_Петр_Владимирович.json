@@ -1,0 +1,33 @@
+{
+  "id": 69,
+  "date": "07.09.1903",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Владимирович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Владимир",
+    "patronym": "Иванович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Олимпиада",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Буданаева",
+      "name": "...",
+      "patronym": "Ивановна"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": 75,
+  "date": "12.07.1904",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Александр",
+    "patronym": "Тимофеевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Варвара",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "...",
+      "patronym": "Владимировна"
+    }
+  }
+}

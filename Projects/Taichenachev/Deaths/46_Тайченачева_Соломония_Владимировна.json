@@ -1,0 +1,18 @@
+{
+  "id": 46,
+  "date": "23.08.1896",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Соломония",
+    "patronym": "Владимировна"
+  },
+  "death_cause": "понос",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Владимир",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "1,5 года"
+}

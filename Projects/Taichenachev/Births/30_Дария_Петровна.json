@@ -1,0 +1,33 @@
+{
+  "id": 30,
+  "date": "07.02.1906",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Петровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ирина",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Подунаев",
+      "name": "Феодор",
+      "patronym": "...орович"
+    },
+    "2nd": {
+      "familia": "Ястржембская",
+      "name": "Пелагия",
+      "patronym": "Авфсеевна"
+    }
+  }
+}

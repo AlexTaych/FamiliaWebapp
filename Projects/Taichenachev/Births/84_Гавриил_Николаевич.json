@@ -1,0 +1,33 @@
+{
+  "id": 84,
+  "date": "16.03.1902",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Гавриил",
+    "patronym": "Николаевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Евфимия",
+    "patronym": "Фомина"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Матрона",
+      "patronym": "Андреевна"
+    }
+  }
+}

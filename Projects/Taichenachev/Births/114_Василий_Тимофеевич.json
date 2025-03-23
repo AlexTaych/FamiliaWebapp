@@ -1,0 +1,33 @@
+{
+  "id": 114,
+  "date": "31.12.1897",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Василий",
+    "patronym": "Тимофеевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Варвара",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Подунаева",
+      "name": "Параскева",
+      "patronym": "(И)вановна"
+    }
+  },
+  "notes": "-"
+}

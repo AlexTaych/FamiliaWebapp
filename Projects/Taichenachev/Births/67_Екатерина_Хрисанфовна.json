@@ -1,0 +1,33 @@
+{
+  "id": 67,
+  "date": "14.11.1908",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Екатерина",
+    "patronym": "Хрисанфовна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Хрисанф",
+    "patronym": "Владимирович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Тимофеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "...",
+      "patronym": "Владимировна"
+    }
+  }
+}

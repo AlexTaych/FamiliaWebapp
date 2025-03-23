@@ -1,0 +1,18 @@
+{
+  "id": 55,
+  "date": "04.08.1898",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Василий",
+    "patronym": "Тимофеевич"
+  },
+  "death_cause": "понос",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "1,5 лет"
+}

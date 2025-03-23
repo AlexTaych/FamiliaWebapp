@@ -1,0 +1,33 @@
+{
+  "id": 116,
+  "date": "20.10.1898",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Параскева",
+    "patronym": "Ивановна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна"
+  },
+  "locality": "Подаик",
+  "susceptors": {
+    "1st": {
+      "familia": "запасный рядовой",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

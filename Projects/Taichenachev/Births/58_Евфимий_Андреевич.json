@@ -1,0 +1,33 @@
+{
+  "id": 58,
+  "date": "06.03.1919",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Евфимий",
+    "patronym": "Андреевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Андрей",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Акилина",
+    "patronym": "Афанасиевна"
+  },
+  "locality": "Подаик",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

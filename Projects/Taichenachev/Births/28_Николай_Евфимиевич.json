@@ -1,0 +1,33 @@
+{
+  "id": 28,
+  "date": "04.12.1914",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Евфимиевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Евфимий",
+    "patronym": "Козьмин"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Егоровна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "...",
+      "patronym": "Стефанович"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

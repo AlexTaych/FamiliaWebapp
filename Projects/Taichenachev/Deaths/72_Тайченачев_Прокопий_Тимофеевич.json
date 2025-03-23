@@ -1,0 +1,18 @@
+{
+  "id": 72,
+  "date": "19.08.1893",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Прокопий",
+    "patronym": "Тимофеевич"
+  },
+  "death_cause": "кашель",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "6 недель"
+}

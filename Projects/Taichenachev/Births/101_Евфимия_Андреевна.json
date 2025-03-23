@@ -1,0 +1,33 @@
+{
+  "id": 101,
+  "date": "14.09.1901",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Евфимия",
+    "patronym": "Андреевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Андрей",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Акилина",
+    "patronym": "Афанасиевна"
+  },
+  "locality": "Подаик",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Шубина",
+      "name": "Варвара",
+      "patronym": "Константиновна"
+    }
+  },
+  "notes": "-"
+}

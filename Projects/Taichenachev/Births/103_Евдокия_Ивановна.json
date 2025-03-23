@@ -1,0 +1,33 @@
+{
+  "id": 103,
+  "date": "26.03.1901",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Ивановна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна"
+  },
+  "locality": "Подаик",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Уркина",
+      "name": "Пелагия",
+      "patronym": "Ермолаевна"
+    }
+  },
+  "notes": "-"
+}

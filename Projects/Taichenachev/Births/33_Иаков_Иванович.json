@@ -1,0 +1,33 @@
+{
+  "id": 33,
+  "date": "28.06.1906",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иаков",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Елена",
+    "patronym": "Евфимиевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Стефанович"
+    },
+    "2nd": {
+      "familia": "Кузнецова",
+      "name": "Феодосия",
+      "patronym": "Михаиловна"
+    }
+  }
+}

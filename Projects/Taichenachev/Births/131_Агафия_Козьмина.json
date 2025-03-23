@@ -1,0 +1,33 @@
+{
+  "id": 131,
+  "date": "17.04.1899",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Агафия",
+    "patronym": "Козьмина"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Козьма",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Феодосия",
+    "patronym": "Митрофановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Василисса",
+      "patronym": "Митрофановна"
+    }
+  },
+  "notes": "-"
+}

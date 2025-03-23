@@ -1,0 +1,41 @@
+{
+  "id": 22,
+  "date": "18.10.1902",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Исай",
+    "patronym": "Николаевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Подунаева",
+    "name": "Евфросиния",
+    "patronym": "Косьмина",
+    "locality": "Кубаева"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Болыгачев",
+      "name": "Иларион",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Стефанович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Коломанин",
+      "name": "Владимир",
+      "patronym": "Антонович"
+    }
+  },
+  "notes": "жениху 19, невесте 20"
+}

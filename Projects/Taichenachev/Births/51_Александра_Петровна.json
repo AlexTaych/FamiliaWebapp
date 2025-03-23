@@ -1,0 +1,33 @@
+{
+  "id": 51,
+  "date": "29.04.1918",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Петровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ирина",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "Иван",
+      "patronym": "Феодорович"
+    },
+    "2nd": {
+      "familia": "Буданаева",
+      "name": "Евдокия",
+      "patronym": "Ивановна"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": 29,
+  "date": "22.01.1906",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Василий",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Гликерия",
+    "patronym": "Сергеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Уркин",
+      "name": "Анисим",
+      "patronym": "Гаврилович"
+    },
+    "2nd": {
+      "familia": "Подунаева",
+      "name": "Соломония",
+      "patronym": "Павловна"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": 70,
+  "date": "11.09.1903",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Андреевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "Емелиан",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Гликерия",
+      "patronym": "Сергеевна"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": 8,
+  "date": "20.06.1910",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Исаевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Исай",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталья",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

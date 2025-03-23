@@ -1,0 +1,33 @@
+{
+  "id": 93,
+  "date": "15.02.1910",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Елена",
+    "patronym": "Евфимиевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Исай",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Шубина",
+      "name": "Ирина",
+      "patronym": "Константиновна"
+    }
+  }
+}

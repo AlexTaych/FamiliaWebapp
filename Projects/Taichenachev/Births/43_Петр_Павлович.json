@@ -1,0 +1,33 @@
+{
+  "id": 43,
+  "date": "16.12.1915",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Павлович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Козьмин"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Фекла",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Николай",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Васильева",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": 9,
+  "date": "16.07.1910",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Андреевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Крестьянин Заруцкий",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Мещанка",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

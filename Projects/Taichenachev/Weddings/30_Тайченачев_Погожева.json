@@ -1,0 +1,41 @@
+{
+  "id": 30,
+  "date": "28.01.1894",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Алексеевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Погожева",
+    "name": "Матрона",
+    "patronym": "Иосифовна",
+    "locality": "Димитриевская"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Подунаев",
+      "name": "Георгий",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Погожев",
+      "name": "Сергей",
+      "patronym": "Иосифович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Скабелкин",
+      "name": "Василий",
+      "patronym": "Леонтиевич"
+    },
+    "2nd": {
+      "familia": "Подунаев",
+      "name": "Феодор",
+      "patronym": "Стефанович"
+    }
+  },
+  "notes": "жениху 22 года, невесте 23"
+}

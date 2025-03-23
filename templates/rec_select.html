@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница проекта</title>
+</head>
+<body>
+    <h1>Новая запись</h1>
+    <p>Текущий проект: {{ current_project }}</p>
+    <p>Выберите тип записи:</p>
+    <a href="{{ url_for('birth') }}"><button>Запись о рождении</button></a>
+    <a href="{{ url_for('wedding') }}"><button>Запись о бракосочетании</button></a>
+    <br><br>
+    <a href="{{ url_for('death') }}"><button>Запись о смерти</button></a>
+    <a href="{{ url_for('side_event') }}"><button>Запись о побочном событии</button></a>
+
+    <!-- Четыре пустые строки -->
+    <br><br><br><br>
+
+    <a href="{{ url_for('settings') }}"><button>Настройки</button></a>
+    <a href="{{ url_for('initial') }}"><button>Вернуться к выбору проекта</button></a>
+</body>
+</html>

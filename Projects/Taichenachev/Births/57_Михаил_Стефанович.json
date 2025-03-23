@@ -1,0 +1,33 @@
+{
+  "id": 57,
+  "date": "09.11.1918",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Стефанович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Стефан",
+    "patronym": "Феодорович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Елизавета",
+    "patronym": "Егоровна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Павел",
+      "patronym": "Ф..."
+    },
+    "2nd": {
+      "familia": "Буданаева",
+      "name": "Матрона",
+      "patronym": "..."
+    }
+  }
+}

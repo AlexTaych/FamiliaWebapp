@@ -1,0 +1,33 @@
+{
+  "id": 68,
+  "date": "24.07.1903",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Феодоровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Алексеевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Иосифовна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Анна",
+      "patronym": "..."
+    }
+  }
+}

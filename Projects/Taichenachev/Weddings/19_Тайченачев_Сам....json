@@ -1,0 +1,41 @@
+{
+  "id": 19,
+  "date": "24.10.1904",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Исай",
+    "patronym": "Николаевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Сам...",
+    "name": "Наталия",
+    "patronym": "Ивановна",
+    "locality": "Орло-Розовая"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Вишневский",
+      "name": "Матвей",
+      "patronym": "Станиславович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Симеон",
+      "patronym": "Степанович"
+    },
+    "2nd": {
+      "familia": "Берлюбский",
+      "name": "Павел",
+      "patronym": "Иванович"
+    }
+  },
+  "notes": "второй брак жениха, жениху 20 лет"
+}

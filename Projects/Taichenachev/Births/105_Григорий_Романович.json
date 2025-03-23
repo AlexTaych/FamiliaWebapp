@@ -1,0 +1,33 @@
+{
+  "id": 105,
+  "date": "20.01.1901",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Григорий",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Андреевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "лист с восприемниками утерян"
+}

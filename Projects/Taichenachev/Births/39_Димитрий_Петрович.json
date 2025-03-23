@@ -1,0 +1,33 @@
+{
+  "id": 39,
+  "date": "21.10.1915",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Димитрий",
+    "patronym": "Петрович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ирина",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "...н",
+      "patronym": "Димитриев"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

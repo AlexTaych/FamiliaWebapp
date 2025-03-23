@@ -1,0 +1,33 @@
+{
+  "id": 48,
+  "date": "23.07.1917",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Романовна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Симеонович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Лукерия",
+    "patronym": "Сергеевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "...аил",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Кондратьева",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

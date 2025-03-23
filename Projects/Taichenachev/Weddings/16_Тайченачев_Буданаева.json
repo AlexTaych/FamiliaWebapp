@@ -1,0 +1,41 @@
+{
+  "id": 16,
+  "date": "06.05.1918",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Евфимиевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Буданаева",
+    "name": "Наталия",
+    "patronym": "Леонтиевна",
+    "locality": "Кубаева"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Стефан",
+      "patronym": "Феодоров"
+    },
+    "2nd": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Стефанович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Игнатий",
+      "patronym": "Романович"
+    },
+    "2nd": {
+      "familia": "Буданаев",
+      "name": "Демиан",
+      "patronym": "Леонтиевич"
+    }
+  },
+  "notes": "жениху 19 лет"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 2,
+  "date": "17.07.1908",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Илия",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Елена",
+    "patronym": "Евфимиевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Усть-Сертенские крестьяне",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

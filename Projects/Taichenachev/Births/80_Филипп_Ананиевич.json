@@ -1,0 +1,33 @@
+{
+  "id": 80,
+  "date": "10.11.1905",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Филипп",
+    "patronym": "Ананиевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Николаевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Ананий",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Подунаева",
+      "name": "Феодосия",
+      "patronym": "...вна"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": 82,
+  "date": "29.08.1923",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Евфимиевич"
+  },
+  "death_cause": "понос",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Евфимий",
+    "patronym": "Козьмин",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "8 месяцев, запись ЗАГСа"
+}

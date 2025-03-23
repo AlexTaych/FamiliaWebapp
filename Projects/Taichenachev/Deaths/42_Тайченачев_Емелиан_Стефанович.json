@@ -1,0 +1,18 @@
+{
+  "id": 42,
+  "date": "25.11.1882",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Емелиан",
+    "patronym": "Стефанович"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Стефан",
+    "patronym": "Ермолаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Подаик",
+  "notes": "-"
+}

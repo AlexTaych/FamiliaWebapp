@@ -1,0 +1,33 @@
+{
+  "id": 19,
+  "date": "20.12.1912",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Анастасия",
+    "patronym": "Романовна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Андреевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаевы",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Буданаевы",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

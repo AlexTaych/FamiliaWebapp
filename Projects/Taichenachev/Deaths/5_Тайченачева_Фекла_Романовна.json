@@ -1,0 +1,18 @@
+{
+  "id": 5,
+  "date": "06.06.1914",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Фекла",
+    "patronym": "Романовна"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

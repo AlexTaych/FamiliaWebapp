@@ -1,0 +1,33 @@
+{
+  "id": 117,
+  "date": "23.10.1898",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Параскева",
+    "patronym": "Феодоровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Алексеевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Иосифовна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Подунаева",
+      "name": "Феодосия",
+      "patronym": "Адамовна"
+    }
+  },
+  "notes": "-"
+}

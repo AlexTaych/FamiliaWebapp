@@ -1,0 +1,33 @@
+{
+  "id": 76,
+  "date": "04.08.1904",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Максим",
+    "patronym": "Ананиевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Наталия",
+    "patronym": "Николаевна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Собакин",
+      "name": "Павел",
+      "patronym": "...ович"
+    },
+    "2nd": {
+      "familia": "...чева",
+      "name": "Татиана",
+      "patronym": "Илларионовна"
+    }
+  }
+}

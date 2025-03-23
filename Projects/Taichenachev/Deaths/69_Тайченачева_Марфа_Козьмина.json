@@ -1,0 +1,18 @@
+{
+  "id": 69,
+  "date": "14.07.1893",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Марфа",
+    "patronym": "Козьмина"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Козьма",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "3 недели"
+}

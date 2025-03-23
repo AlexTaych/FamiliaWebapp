@@ -1,0 +1,18 @@
+{
+  "id": 67,
+  "date": "03.12.1897",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Максим",
+    "patronym": "Ананиевич"
+  },
+  "death_cause": "коклюш",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "5 месяцев"
+}

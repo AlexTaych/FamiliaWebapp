@@ -1,0 +1,33 @@
+{
+  "id": 141,
+  "date": "29.06.1897",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна"
+  },
+  "locality": "Подаик",
+  "susceptors": {
+    "1st": {
+      "familia": "Утанаков",
+      "name": "Андрей",
+      "patronym": "...ьевич"
+    },
+    "2nd": {
+      "familia": "Шубина",
+      "name": "Варвара",
+      "patronym": "Константиновна"
+    }
+  },
+  "notes": "-"
+}

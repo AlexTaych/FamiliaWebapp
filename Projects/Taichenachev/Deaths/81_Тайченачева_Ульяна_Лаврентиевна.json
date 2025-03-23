@@ -1,0 +1,18 @@
+{
+  "id": 81,
+  "date": "26.08.1923",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Ульяна",
+    "patronym": "Лаврентиевна"
+  },
+  "death_cause": "жар",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Лаврентий",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "1 месяц, запись ЗАГСа"
+}

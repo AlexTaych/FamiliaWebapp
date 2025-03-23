@@ -1,0 +1,18 @@
+{
+  "id": 34,
+  "date": "13.09.1900",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Владимир",
+    "patronym": "Тимофеевич"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

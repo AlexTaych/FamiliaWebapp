@@ -1,0 +1,18 @@
+{
+  "id": 78,
+  "date": "27.08.1894",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Феодосия",
+    "patronym": "Романовна"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "3 чего-то"
+}

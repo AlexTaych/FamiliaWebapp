@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись о смерти</title>
+    <script>
+        function toggleInputField() {
+            const inputField = document.getElementById('relation_degree');
+            const notFather = document.getElementById('not_father');
+
+            if (notFather.checked) {
+                inputField.disabled = true;
+                inputField.value = ''; // Очищаем поле ввода
+            } else {
+                inputField.disabled = false; // Включаем поле ввода
+            }
+        }
+
+        window.onload = toggleInputField;
+    </script>
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Позиция всплывающего окна */
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Запись о смерти</h1>
+    <p>Текущий проект: {{ current_project }}</p>
+
+    <!-- Блок для отображения ошибок -->
+    {% if errors %}
+        <div style="color: red;">
+            <strong>Ошибки в заполнении данных:</strong>
+            <ul>
+                {% for field, message in errors.items() %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <form method="POST">
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date" value="{{ form_data.date if form_data }}" required><br><br>
+
+        <label>Пол умершего:</label><br>
+        <input type="radio" id="gender_f" name="gender" value="ж"
+               {% if form_data and form_data.gender == 'ж' %}checked{% endif %} required>
+        <label for="gender_f">Женский</label><br>
+        <input type="radio" id="gender_m" name="gender" value="м"
+               {% if form_data and form_data.gender == 'м' %}checked{% endif %} required>
+        <label for="gender_m">Мужской</label><br><br>
+
+        <label for="deceased">Имя и отчество умершего:</label>
+        <input type="text" id="deceased" name="deceased"
+               value="{{ form_data.deceased if form_data }}"
+               class="{% if 'deceased' in errors %}error{% endif %}"
+               required>
+        <span class="tooltip">ℹ️
+            <span class="tooltiptext">Имя вводится кириллицей,
+                в случае неполной информации отсутствующие элементы имени заменить троеточием ("...")</span>
+        </span>
+        <br><br>
+
+        <label for="death_cause">Причина смерти:</label>
+        <input type="text" id="death_cause" name="death_cause"
+               value="{{ form_data.death_cause if form_data }}">
+        <br><br>
+
+        <label for="relative">Имя и отчество родственника (при наличии):</label>
+        <input type="text" id="relative" name="relative"
+               value="{{ form_data.relative if form_data }}"
+               class="{% if 'relative' in errors %}error{% endif %}">
+        <br>
+        <label>
+            <input type="checkbox" id="not_father" name="field_option" checked onchange="toggleInputField()">
+            Родственник приходится умершему отцом. Если нет, то укажите
+        </label>
+        <label for="relation_degree">степень родства:</label>
+        <input type="text" id="relation_degree" name="relation_degree"
+               value="{{ form_data.relation_degree if form_data }}">
+        <br><br>
+
+        <label for="locality">Место смерти:</label>
+        <input type="text" id="locality" name="locality"
+               value="{{ locality }}"
+               required>
+        <br><br>
+
+        <label for="notes">Примечания:</label>
+        <textarea id="notes" name="notes" rows="4" cols="50">{{ form_data.notes if form_data }}</textarea><br><br>
+
+        <button type="submit">Сохранить запись</button>
+    </form>
+    <br>
+    <a href="{{ url_for('rec_select') }}"><button>Вернуться к выбору записи</button></a>
+</body>
+</html>

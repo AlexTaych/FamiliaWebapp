@@ -1,0 +1,18 @@
+{
+  "id": 28,
+  "date": "21.11.1903",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Степанида",
+    "patronym": "Михайловна"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Гавриилович",
+    "relation_degree": "муж"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

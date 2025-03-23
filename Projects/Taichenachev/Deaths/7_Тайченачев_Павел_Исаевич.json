@@ -1,0 +1,18 @@
+{
+  "id": 7,
+  "date": "01.02.1912",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Исаевич"
+  },
+  "death_cause": "корь",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Исай",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

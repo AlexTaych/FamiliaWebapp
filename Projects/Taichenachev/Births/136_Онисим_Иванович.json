@@ -1,0 +1,33 @@
+{
+  "id": 136,
+  "date": "14.02.1898",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Онисим",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Будунаев",
+      "name": "Егор",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Шубина",
+      "name": "Варвара",
+      "patronym": "Константиновна"
+    }
+  },
+  "notes": "-"
+}

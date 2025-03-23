@@ -1,0 +1,41 @@
+{
+  "id": 5,
+  "date": "30.01.1911",
+  "husband": {
+    "familia": "Буданаев",
+    "name": "Никифор",
+    "patronym": "Георгиевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Тайченачева",
+    "name": "Гликерия",
+    "patronym": "Тимофеевна",
+    "locality": "Кубаева"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "Емелиан",
+      "patronym": "Леонтиевич"
+    },
+    "2nd": {
+      "familia": "Буданаев",
+      "name": "Феодор",
+      "patronym": "Георгиевич"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Димитрий",
+      "patronym": "Тимофеевич"
+    },
+    "2nd": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Стефанович"
+    }
+  },
+  "notes": "жениху 18 лет"
+}

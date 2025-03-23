@@ -1,0 +1,33 @@
+{
+  "id": 6,
+  "date": "26.10.1908",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Симеоновна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Симеон",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Самуиловна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Крестьянка",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Крестьянин",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

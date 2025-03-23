@@ -1,0 +1,41 @@
+{
+  "id": 14,
+  "date": "17.01.1918",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Максим",
+    "patronym": "Иванович",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Назина",
+    "name": "Анастасия",
+    "patronym": "Романовна",
+    "locality": "Усть-Сертинское"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Буданаев",
+      "name": "Алексей",
+      "patronym": "Леонтиевич"
+    },
+    "2nd": {
+      "familia": "Буданаев",
+      "name": "Иван",
+      "patronym": "Феодорович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Ростов",
+      "name": "Николай",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "Литвиненков",
+      "name": "Прокопий",
+      "patronym": "Игнатиевич"
+    }
+  },
+  "notes": "жениху 18 лет"
+}

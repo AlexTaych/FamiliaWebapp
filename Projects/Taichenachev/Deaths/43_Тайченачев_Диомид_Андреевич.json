@@ -1,0 +1,18 @@
+{
+  "id": 43,
+  "date": "26.08.1900",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Диомид",
+    "patronym": "Андреевич"
+  },
+  "death_cause": "понос",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Андрей",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Подаик",
+  "notes": "возраст 2 недели"
+}

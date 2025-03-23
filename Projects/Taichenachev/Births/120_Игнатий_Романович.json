@@ -1,0 +1,33 @@
+{
+  "id": 120,
+  "date": "17.12.1898",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Игнатий",
+    "patronym": "Романович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Роман",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Андреевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "мещанин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Евдокия",
+      "patronym": "Ивановна"
+    }
+  },
+  "notes": "-"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 24,
+  "date": "21.06.1913",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Агрипина",
+    "patronym": "Петровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ирина",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаевы",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "...",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

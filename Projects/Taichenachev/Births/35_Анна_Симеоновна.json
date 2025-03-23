@@ -1,0 +1,33 @@
+{
+  "id": 35,
+  "date": "01.12.1906",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Симеоновна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Симеон",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Самуиловна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Евфимий",
+      "patronym": "...мич"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Анисия",
+      "patronym": "Стефановна"
+    }
+  }
+}

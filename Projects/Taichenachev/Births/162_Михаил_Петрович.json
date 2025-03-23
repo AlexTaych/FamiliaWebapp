@@ -1,0 +1,33 @@
+{
+  "id": 162,
+  "date": "01.09.1923",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Петрович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Романович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Трофимовна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "Отцу и матери по 20 лет; 1й ребенок; запись ЗАГСа"
+}

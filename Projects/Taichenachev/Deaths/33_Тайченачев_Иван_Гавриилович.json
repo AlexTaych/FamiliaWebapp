@@ -1,0 +1,18 @@
+{
+  "id": 33,
+  "date": "01.12.1905",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Гавриилович"
+  },
+  "death_cause": "-",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

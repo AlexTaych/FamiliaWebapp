@@ -1,0 +1,33 @@
+{
+  "id": 14,
+  "date": "28.03.1912",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Феодосия",
+    "patronym": "Петровна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ирина",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Павел",
+      "patronym": "Козьмин"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Евфросиния",
+      "patronym": "Ивановна"
+    }
+  }
+}

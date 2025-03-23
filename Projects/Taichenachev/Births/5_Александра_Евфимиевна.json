@@ -1,0 +1,33 @@
+{
+  "id": 5,
+  "date": "01.03.1908",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Евфимиевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Евфимий",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ксения",
+    "patronym": "Константиновна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Крестьянка",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачев",
+      "name": "Лаврентий",
+      "patronym": "Стефанович"
+    }
+  }
+}

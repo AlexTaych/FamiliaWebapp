@@ -1,0 +1,33 @@
+{
+  "id": 12,
+  "date": "15.02.1912",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Онисим",
+    "patronym": "Димитриевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Димитрий",
+    "patronym": "Саввин"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Никифоровна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Буданаевы",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Буданаевы",
+      "name": "-",
+      "patronym": "-"
+    }
+  }
+}

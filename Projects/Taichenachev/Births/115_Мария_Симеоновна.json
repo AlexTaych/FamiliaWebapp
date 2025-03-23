@@ -1,0 +1,33 @@
+{
+  "id": 115,
+  "date": "22.07.1898",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Симеоновна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Симеон",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Самуиловна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Булыгачев",
+      "name": "Иларион",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "Бабешкова",
+      "name": "Акилина",
+      "patronym": "Ивановна"
+    }
+  },
+  "notes": "-"
+}

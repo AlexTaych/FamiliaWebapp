@@ -1,0 +1,41 @@
+{
+  "id": 28,
+  "date": "25.01.1895",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Герасим",
+    "patronym": "Стефанович",
+    "locality": "Подаик"
+  },
+  "wife": {
+    "familia": "Ильина",
+    "name": "Феодосия",
+    "patronym": "Евфимиевна",
+    "locality": "Усть-Сертинское"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Шубин",
+      "name": "Мартын",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "Шубин",
+      "name": "Трофим",
+      "patronym": "Васильевич"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Ильин",
+      "name": "Василий",
+      "patronym": "Евфимиевич"
+    },
+    "2nd": {
+      "familia": "П...ов",
+      "name": "С...з",
+      "patronym": "Никитин"
+    }
+  },
+  "notes": "жениху 19 лет, невесте 18"
+}

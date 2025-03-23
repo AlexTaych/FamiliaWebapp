@@ -1,0 +1,33 @@
+{
+  "id": 53,
+  "date": "07.07.1918",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Алевтина",
+    "patronym": "Павловна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Козьмин"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Фекла",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Максим",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Феоктиста",
+      "patronym": "Марковна"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": 1,
+  "date": "26.01.1914",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Дмитрий",
+    "patronym": "Тимофеевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Шубина",
+    "name": "Пелагия",
+    "patronym": "Мартыновна",
+    "locality": "Подаик"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Роман",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Буданаев",
+      "name": "Никифор",
+      "patronym": "Георгиевич"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Шубин",
+      "name": "Григорий",
+      "patronym": "Трофимович"
+    },
+    "2nd": {
+      "familia": "Вельдянкин",
+      "name": "Николай",
+      "patronym": "Андреевич"
+    }
+  },
+  "notes": "жениху 18 лет, невесте менее 20"
+}

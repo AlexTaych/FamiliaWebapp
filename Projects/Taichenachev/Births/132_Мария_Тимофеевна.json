@@ -1,0 +1,33 @@
+{
+  "id": 132,
+  "date": "06.06.1899",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Тимофеевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Тимофей",
+    "patronym": "Иванович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Варвара",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Самойлов",
+      "name": "Иван",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "крестьянка",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "-"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 79,
+  "date": "07.09.1905",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Петр",
+    "patronym": "Феодорович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Алексеевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Иосифовна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Петр",
+      "patronym": "Николаевич"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "...сия",
+      "patronym": "Алексеевна"
+    }
+  }
+}

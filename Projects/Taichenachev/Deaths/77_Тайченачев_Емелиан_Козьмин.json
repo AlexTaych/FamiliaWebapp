@@ -1,0 +1,18 @@
+{
+  "id": 77,
+  "date": "19.08.1894",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Емелиан",
+    "patronym": "Козьмин"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Козьма",
+    "patronym": "Стефанович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "3 недели"
+}

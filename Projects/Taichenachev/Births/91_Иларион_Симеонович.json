@@ -1,0 +1,33 @@
+{
+  "id": 91,
+  "date": "22.03.1910",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Иларион",
+    "patronym": "Симеонович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Симеон",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Самуиловна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Буданаева",
+      "name": "Елена",
+      "patronym": "..."
+    }
+  }
+}

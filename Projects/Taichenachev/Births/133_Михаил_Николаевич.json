@@ -1,0 +1,33 @@
+{
+  "id": 133,
+  "date": "03.09.1899",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Николаевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Евфимия",
+    "patronym": "Фомина"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Подунаев",
+      "name": "Козьма",
+      "patronym": "Тимофеевич"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Матрона",
+      "patronym": "Андреевна"
+    }
+  },
+  "notes": "-"
+}

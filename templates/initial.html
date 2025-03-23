@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метрика</title>
+    <script>
+        function enableContinue() {
+            const select = document.getElementById("project_select");
+            const continueButton = document.getElementById("continue_button");
+            continueButton.disabled = select.value === "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Добро пожаловать в приложение для работы с метрическими книгами</h1>
+
+    <!-- Опция 1: Выбрать проект -->
+    <form method="POST">
+        <label for="project_select">Выбрать проект:</label>
+        <select id="project_select" name="project_select" onchange="enableContinue()">
+            <option value="">-- Выберите проект --</option>
+            {% for project in projects %}
+                <option value="{{ project }}">{{ project }}</option>
+            {% endfor %}
+        </select>
+        <button id="continue_button" type="submit" disabled>Продолжить</button>
+    </form>
+    <br>
+
+    <!-- Опция 2: Начать новый проект -->
+    <div>
+        <button onclick="window.location.href='{{ url_for('new_project') }}'">Начать новый проект</button>
+    </div>
+    <br>
+
+    <!-- Опция 3: Выйти -->
+    <div>
+        <button onclick="window.close()">Выйти</button>
+    </div>
+</body>
+</html>

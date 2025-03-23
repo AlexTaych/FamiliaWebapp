@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись о рождении</title>
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Позиция всплывающего окна */
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Запись о рождении</h1>
+    <p>Текущий проект: {{ current_project }}</p>
+
+    <!-- Блок для отображения ошибок -->
+    {% if errors %}
+        <div style="color: red;">
+            <strong>Ошибки в заполнении данных:</strong>
+            <ul>
+                {% for field, message in errors.items() %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <form method="POST">
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date" value="{{ form_data.date if form_data }}" required><br><br>
+
+        <label>Пол ребенка:</label><br>
+        <input type="radio" id="gender_f" name="gender" value="ж"
+               {% if form_data and form_data.gender == 'ж' %}checked{% endif %} required>
+        <label for="gender_f">Женский</label><br>
+        <input type="radio" id="gender_m" name="gender" value="м"
+               {% if form_data and form_data.gender == 'м' %}checked{% endif %} required>
+        <label for="gender_m">Мужской</label><br><br>
+
+        <label for="newborn">Имя и отчество родившегося:</label>
+        <input type="text" id="newborn" name="newborn"
+               value="{{ form_data.newborn if form_data }}"
+               class="{% if 'newborn' in errors %}error{% endif %}"
+               required>
+        <span class="tooltip">ℹ️
+            <span class="tooltiptext">Здесь и далее. Имя вводится кириллицей,
+                в случае неполной информации отсутствующие элементы имени заменить троеточием ("...")</span>
+        </span>
+        <br><br>
+
+        <label for="father">Имя и отчество отца:</label>
+        <input type="text" id="father" name="father"
+               value="{{ form_data.father if form_data }}"
+               class="{% if 'father' in errors %}error{% endif %}">
+        <span class="tooltip">ℹ️
+            <span class="tooltiptext">При отсутствии отца поле оставить пустым</span>
+        </span>
+        <br><br>
+
+        <label for="mother">Имя и отчество матери:</label>
+        <input type="text" id="mother" name="mother"
+               value="{{ form_data.mother if form_data }}"
+               class="{% if 'mother' in errors %}error{% endif %}"
+               required><br><br>
+
+        <label for="locality">Место рождения:</label>
+        <input type="text" id="locality" name="locality"
+               value="{{ locality }}"
+               required><br><br>
+
+        <label for="susceptor1">ФИО первого восприемника:</label>
+        <input type="text" id="susceptor1" name="susceptor1"
+               value="{{ form_data.susceptor1 if form_data }}"
+               class="{% if 'susceptor1' in errors %}error{% endif %}">
+        <span class="tooltip">ℹ️
+            <span class="tooltiptext">При необходимости поле можно оставить пустым</span>
+        </span>
+        <br><br>
+
+        <label for="susceptor2">ФИО второго восприемника:</label>
+        <input type="text" id="susceptor2" name="susceptor2"
+               value="{{ form_data.susceptor2 if form_data }}"
+               class="{% if 'susceptor2' in errors %}error{% endif %}">
+        <span class="tooltip">ℹ️
+            <span class="tooltiptext">При необходимости поле можно оставить пустым</span>
+        </span>
+        <br><br>
+
+        <label for="notes">Примечания:</label>
+        <textarea id="notes" name="notes" rows="4" cols="50">{{ form_data.notes if form_data }}</textarea><br><br>
+
+        <button type="submit">Сохранить запись</button>
+    </form>
+    <br>
+    <a href="{{ url_for('rec_select') }}"><button>Вернуться к выбору записи</button></a>
+</body>
+</html>

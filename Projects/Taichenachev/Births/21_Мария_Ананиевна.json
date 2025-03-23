@@ -1,0 +1,33 @@
+{
+  "id": 21,
+  "date": "30.03.1913",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Ананиевна"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Николаевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Татиана",
+    "patronym": "Петровна"
+  },
+  "locality": "Кубаева",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Уркин",
+      "name": "Онисим",
+      "patronym": "Гаврилович"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Анна",
+      "patronym": "Романовна"
+    }
+  }
+}

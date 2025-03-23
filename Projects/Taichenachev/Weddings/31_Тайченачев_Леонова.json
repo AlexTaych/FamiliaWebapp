@@ -1,0 +1,41 @@
+{
+  "id": 31,
+  "date": "02.02.1894",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Леонова",
+    "name": "Евдокия",
+    "patronym": "Ивановна",
+    "locality": "Димитриевская"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Подунаев",
+      "name": "Егор",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Булыгачев",
+      "name": "Василий",
+      "patronym": "Алексеевич"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Леонов",
+      "name": "Иван",
+      "patronym": "Иванович"
+    },
+    "2nd": {
+      "familia": "Леонов",
+      "name": "Петр",
+      "patronym": "Христофорович"
+    }
+  },
+  "notes": "жениху 22 года, невесте 20"
+}

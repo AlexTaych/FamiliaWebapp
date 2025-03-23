@@ -1,0 +1,18 @@
+{
+  "id": 39,
+  "date": "21.11.1902",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Ивановна"
+  },
+  "death_cause": "...туница",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич",
+    "relation_degree": "муж"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

@@ -1,0 +1,18 @@
+{
+  "id": 44,
+  "date": "31.04.1901",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Ивановна"
+  },
+  "death_cause": "кашель",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Подаик",
+  "notes": "-"
+}

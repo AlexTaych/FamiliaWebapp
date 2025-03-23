@@ -1,0 +1,33 @@
+{
+  "id": 77,
+  "date": "16.02.1905",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Андреевич"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Андрей",
+    "patronym": "Стефанович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Акилина",
+    "patronym": "Афанасиевна"
+  },
+  "locality": "Подаик",
+  "notes": "-",
+  "susceptors": {
+    "1st": {
+      "familia": "Григорьев",
+      "name": "Савелий",
+      "patronym": "Афанасиевич"
+    },
+    "2nd": {
+      "familia": "Шубина",
+      "name": "...",
+      "patronym": "Ивановна"
+    }
+  }
+}

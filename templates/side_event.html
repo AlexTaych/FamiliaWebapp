@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись о побочном событии</title>
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Позиция всплывающего окна */
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Запись о побочном событии</h1>
+    <p>Текущий проект: {{ current_project }}</p>
+
+    <!-- Блок для отображения ошибок -->
+    {% if errors %}
+        <div style="color: red;">
+            <strong>Ошибки в заполнении данных:</strong>
+            <ul>
+                {% for field, message in errors.items() %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <form method="POST">
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date" value="{{ form_data.date if form_data }}" required><br><br>
+
+        <label>Пол участника события:</label><br>
+        <input type="radio" id="gender_f" name="gender" value="ж"
+               {% if form_data and form_data.gender == 'ж' %}checked{% endif %} required>
+        <label for="gender_f">Женский</label><br>
+        <input type="radio" id="gender_m" name="gender" value="м"
+               {% if form_data and form_data.gender == 'м' %}checked{% endif %} required>
+        <label for="gender_m">Мужской</label><br><br>
+
+        <label for="participant">Имя и отчество участника события:</label>
+        <input type="text" id="participant" name="participant"
+               value="{{ form_data.participant if form_data }}"
+               class="{% if 'participant' in errors %}error{% endif %}"
+               required>
+        <span class="tooltip">ℹ️
+            <span class="tooltiptext">Здесь и далее. Имя вводится кириллицей,
+                в случае неполной информации отсутствующие элементы имени заменить троеточием ("...")</span>
+        </span>
+        <br><br>
+
+        <label for="role">Роль участника в событии:</label>
+        <textarea id="role" name="role" rows="3" cols="35" required>{{ form_data.role if form_data }}</textarea><br><br>
+
+        <label for="locality">Место события:</label>
+        <input type="text" id="locality" name="locality"
+               value="{{ locality }}"
+               required><br><br>
+
+        <label for="notes">Примечания:</label>
+        <textarea id="notes" name="notes" rows="3" cols="50">{{ form_data.notes if form_data }}</textarea><br><br>
+
+        <button type="submit">Сохранить запись</button>
+    </form>
+    <br>
+    <a href="{{ url_for('rec_select') }}"><button>Вернуться к выбору записи</button></a>
+</body>
+</html>

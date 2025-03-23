@@ -1,0 +1,18 @@
+{
+  "id": 19,
+  "date": "30.01.1907",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Степанида",
+    "patronym": "Ивановна"
+  },
+  "death_cause": "старость",
+  "relative": {
+    "familia": "вдова",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "-"
+}

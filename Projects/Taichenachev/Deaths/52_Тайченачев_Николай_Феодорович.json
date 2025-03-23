@@ -1,0 +1,18 @@
+{
+  "id": 52,
+  "date": "15.12.1897",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Феодорович"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Алексеевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "2 недели"
+}

@@ -1,0 +1,18 @@
+{
+  "id": 74,
+  "date": "27.03.1894",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Мария",
+    "patronym": "Стефановна"
+  },
+  "death_cause": "слабость",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Стефан",
+    "patronym": "Афанасиевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "пол года"
+}

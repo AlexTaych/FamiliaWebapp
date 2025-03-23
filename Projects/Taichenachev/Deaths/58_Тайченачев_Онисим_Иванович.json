@@ -1,0 +1,18 @@
+{
+  "id": 58,
+  "date": "07.07.1899",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Онисим",
+    "patronym": "Иванович"
+  },
+  "death_cause": "понос",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Николаевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "1 год"
+}

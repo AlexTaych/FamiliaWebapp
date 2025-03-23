@@ -1,0 +1,41 @@
+{
+  "id": 32,
+  "date": "02.03.1923",
+  "husband": {
+    "familia": "Воловодов",
+    "name": "Максим",
+    "patronym": "Алек...",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Филипповна",
+    "locality": "Раевка"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": "жениху 25 лет, первым браком, невесте 25 лет, вторым браком, вдова, вероятно это Д.Ф. из брак.№9; запись ЗАГСа"
+}

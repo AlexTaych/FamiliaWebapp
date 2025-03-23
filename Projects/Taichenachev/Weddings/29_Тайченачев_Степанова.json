@@ -1,0 +1,41 @@
+{
+  "id": 29,
+  "date": "14.01.1894",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Васильевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Степанова",
+    "name": "Дария",
+    "patronym": "Ивановна",
+    "locality": "Димитриевская"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Ананий",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "крестьянин",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Шубин",
+      "name": "Константин",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "Степанов",
+      "name": "Иаков",
+      "patronym": "Иванович"
+    }
+  },
+  "notes": "жениху 19 лет, невесте 19 лет"
+}

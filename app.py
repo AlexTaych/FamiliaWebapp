@@ -76,7 +76,7 @@ def get_id(rec_type):
         else:
             return 1
 
-
+# Функция для сохранения данных в json файл
 def rec_dump(rec_type, file_name, record, report):
     current_project = session.get('current_project')
     if current_project:
@@ -385,7 +385,7 @@ def wedding():
         familia_m=settings['familia_m']
     )
 
-# Страница 3
+# Запись о смерти
 @app.route('/death', methods=['GET', 'POST'])
 def death():
     current_project = session.get('current_project', 'Проект не выбран')
@@ -470,7 +470,7 @@ def death():
         locality=settings['locality']
     )
 
-# Страница 3
+# Запись о побочном событии
 @app.route('/side_event', methods=['GET', 'POST'])
 def side_event():
     current_project = session.get('current_project', 'Проект не выбран')

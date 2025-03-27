@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск по записям</title>
+    <link rel="icon" href="data:,">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0 0 40px; /* Добавляем отступ снизу для свернутой панели */
+            background-color: #f5f7fa;
+            color: #333;
+            transition: padding-bottom 0.3s ease;
+        }
+
+        .section {
+            width: 100%;
+            padding: 30px 0;
+            background-color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            text-align: left;
+            margin-bottom: 25px;
+            font-size: 28px;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 10px;
+            padding-left: 80px; /* Отступ слева */
+            margin-left: 0;
+            width: 100%; /* Оставляем на всю ширину */
+            box-sizing: border-box; /* Чтобы padding не влиял на ширину */
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 80px; /* Совмещаем с padding-left заголовка */
+            transform: none; /* Убираем центрирование */
+            width: 110px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        .record-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 0 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .record-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-left: 4px solid #3498db;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .record-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(155, 89, 182, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .record-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .record-card:hover:before {
+            opacity: 1;
+        }
+
+        .rec-name {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .rec-secondary {
+            color: #465660;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .list-count {
+            text-align: center;
+            margin-top: 15px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .search-section {
+            width: 100%;
+            padding: 20px 0;
+            background-color: #3498db;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .search-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .search-select {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .search-input {
+            flex-grow: 1;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .search-button {
+            padding: 8px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .search-button:hover {
+            background-color: #1a252f;
+        }
+
+        /* Стили для выдвижной панели */
+        #selection-section {
+            background-color: #e8f4fc;
+            border-top: 3px solid #3498db;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            height: 10px; /* Высота свернутой панели */
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0;
+        }
+
+        #selection-section.expanded {
+            height: auto; /* Автоматическая высота при раскрытии */
+            max-height: 50vh; /* Максимальная высота */
+            overflow-y: auto; /* Прокрутка при необходимости */
+            padding-bottom: 20px;
+        }
+
+        #selection-toggle {
+            position: absolute;
+            right: 20px;
+            top: 8px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.2s;
+        }
+
+        #selection-toggle:hover {
+            background-color: #2980b9;
+        }
+
+        #clear-selection {
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.2s;
+        }
+
+        #clear-selection:hover {
+            background-color: #2980b9;
+        }
+
+        #selection-container {
+            display: none; /* Сначала скрыт */
+            padding: 20px 30px 0;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #selection-section.expanded #selection-container {
+            display: grid; /* Показываем при раскрытии */
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        #selection-section.expanded #selection-count {
+            position: static;
+            text-align: center;
+            margin-top: 15px;
+            display: block;
+        }
+
+        #selection-section .section-title {
+            display: none;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        #selection-section.expanded .section-title {
+            display: block;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 768px) {
+            .record-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                padding: 0 15px;
+                gap: 15px;
+            }
+
+            .record-card {
+                padding: 15px;
+            }
+
+            #selection-section.expanded {
+                max-height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Секция поиска -->
+    <div class="search-section">
+        <div class="search-container">
+            <select class="search-select" id="rec-type">
+                <option value="all">Все типы записей</option>
+                <option value="Births">Рождения</option>
+                <option value="Weddings">Свадьбы</option>
+                <option value="Deaths">Смерти</option>
+                <option value="Side_events">Побочные события</option>
+            </select>
+            <select class="search-select" id="rec-field">
+                <option value="name">Имя</option>
+                <option value="id">ID</option>
+                <option value="date">Дата</option>
+                <option value="locality">Населенный пункт</option>
+                <option value="text">Поиск по тексту записи</option>
+            </select>
+            <input type="text" class="search-input" id="search-query" placeholder="Введите поисковый запрос...">
+            <button class="search-button" id="search-button">Найти</button>
+        </div>
+    </div>
+    <!-- Список записей о рождениях -->
+    <div class="section">
+        <h2 class="section-title">Рождения</h2>
+        <div class="record-container" id="Births">
+            {% for record in lists.Births %}
+            <div class="record-card" data-id="{{ rec.ID }}">
+                <div class="rec-name">{% if rec.main_char %} {{ rec.main_char }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.date %} {{ rec.date }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.secondary_char %} {{ rec.secondary_char }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.locality %} {{ rec.locality }}{% endif %}</div>
+                <div class="rec-secondary"><b>ID</b>: {% if rec.ID %} {{ rec.ID }}{% endif %}</div>
+                <div class="rec-secondary"><u>Примечания</u>: {% if rec.notes %} {{ rec.notes }}{% endif %}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="list-count">Найдено записей: {{ lists.Births|length }}</div>
+    </div>
+
+    <!-- Список записей о свадьбах -->
+    <div class="section">
+        <h2 class="section-title">Свадьбы</h2>
+        <div class="record-container" id="Weddings">
+            {% for rec in lists.Weddings %}
+            <div class="record-card" data-id="{{ rec.ID }}">
+                <div class="rec-name">{% if rec.main_char %} {{ rec.main_char }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.date %} {{ rec.date }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.secondary_char %} {{ rec.secondary_char }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.locality %} {{ rec.locality }}{% endif %}</div>
+                <div class="rec-secondary"><b>ID</b>: {% if rec.ID %} {{ rec.ID }}{% endif %}</div>
+                <div class="rec-secondary"><u>Примечания</u>: {% if rec.notes %} {{ rec.notes }}{% endif %}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="list-count">Найдено записей: {{ lists.Weddings|length }}</div>
+    </div>
+
+    <!-- Список записей о смертях -->
+    <div class="section">
+        <h2 class="section-title">Смерти</h2>
+        <div class="record-container" id="Deaths">
+            {% for rec in lists.Deaths %}
+            <div class="record-card" data-id="{{ rec.ID }}">
+                <div class="rec-name">{% if rec.main_char %} {{ rec.main_char }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.date %} {{ rec.date }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.secondary_char %} {{ rec.secondary_char }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.locality %} {{ rec.locality }}{% endif %}</div>
+                <div class="rec-secondary"><b>ID</b>: {% if rec.ID %} {{ rec.ID }}{% endif %}</div>
+                <div class="rec-secondary"><u>Примечания</u>: {% if rec.notes %} {{ rec.notes }}{% endif %}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="list-count">Найдено записей: {{ lists.Deaths|length }}</div>
+    </div>
+
+    <!-- Список побочных записей -->
+    <div class="section">
+        <h2 class="section-title">Побочные записи</h2>
+        <div class="record-container" id="Side_events">
+            {% for rec in lists.Side_events %}
+            <div class="record-card" data-id="{{ rec.ID }}">
+                <div class="rec-name">{% if rec.main_char %} {{ rec.main_char }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.date %} {{ rec.date }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.secondary_char %} {{ rec.secondary_char }}{% endif %}</div>
+                <div class="rec-secondary">{% if rec.locality %} {{ rec.locality }}{% endif %}</div>
+                <div class="rec-secondary"><b>ID</b>: {% if rec.ID %} {{ rec.ID }}{% endif %}</div>
+                <div class="rec-secondary"><u>Примечания</u>: {% if rec.notes %} {{ rec.notes }}{% endif %}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="list-count">Найдено записей: {{ lists.Side_events|length }}</div>
+    </div>
+
+    <!-- Выдвижная панель "Подборка записей" -->
+    <div class="section" id="selection-section">
+        <button id="clear-selection">Очистить подборку</button>
+        <button id="selection-toggle">Показать подборку</button>
+        <h2 class="section-title">Подборка записей</h2>
+        <div class="record-container" id="selection-container"></div>
+        <div class="list-count">Всего в подборке: <span id="selection-total">0</span></div>
+    </div>
+
+    <script>
+        // Инициализация
+        console.log('Приложение запущено');
+
+        const selectionSection = document.getElementById('selection-section');
+        const selectionContainer = document.getElementById('selection-container');
+        const clearSelectionBtn = document.getElementById('clear-selection');
+        const selectionToggle = document.getElementById('selection-toggle');
+        const selectionTotal = document.getElementById('selection-total');
+        const selectedRecs = new Map(); // Изменили на Map для удобства
+
+        // Обработчик поиска
+        document.getElementById('search-button').addEventListener('click', performSearch);
+        document.getElementById('search-query').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        async function performSearch() {
+            const query = document.getElementById('search-query').value.trim();
+            const rectype = document.getElementById('rec-type').value;
+            const field = document.getElementById('rec-field').value;
+
+            try {
+                const formData = new FormData();
+                formData.append('query', query);
+                formData.append('rectype', rectype);
+                formData.append('field', field);
+
+                const response = await fetch('/search', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const results = await response.json();
+                updateLists(results);
+
+            } catch (error) {
+                console.error('Ошибка поиска:', error);
+                alert('Произошла ошибка при поиске');
+            }
+        }
+
+        function updateLists(data) {
+            ['Births', 'Weddings', 'Deaths', 'Side_events'].forEach(listId => {
+                const container = document.getElementById(listId);
+                const countElement = container.nextElementSibling;
+                container.innerHTML = '';
+
+                data[listId].forEach(rec => {
+                    const card = document.createElement('div');
+                    card.className = 'record-card';
+                    card.dataset.id = rec.ID;
+                    card.dataset.list = listId;
+
+                    card.innerHTML = `
+                        <div class="rec-name">${rec.main_char || 'Имя не указано'}</div>
+                        <div class="rec-secondary">${rec.date || 'Дата не указана'}</div>
+                        <div class="rec-secondary">${rec.secondary_char || 'Родственник не указан'}</div>
+                        <div class="rec-secondary">${rec.locality || 'Место жительства не указано'}</div>
+                        <div class="rec-secondary"><b>ID</b>: ${rec.ID || 'Не указано'}</div>
+                        <div class="rec-secondary"><u>Прим.</u>: ${rec.notes || 'Примечания отсутствуют'}</div>
+                    `;
+
+                    // Обработчик для добавления
+                    card.addEventListener('click', handleCardClick);
+                    container.appendChild(card);
+                });
+
+                countElement.textContent = `Найдено записей: ${data[listId].length}`;
+            });
+        }
+
+        function handleCardClick(e) {
+            // Если клик по карточке в подборке - удаляем
+            if (this.parentElement === selectionContainer) {
+                const compositeKey = `${this.dataset.list}_${this.dataset.id}`;
+                this.remove();
+                selectedRecs.delete(compositeKey);
+                updateSelectionCount();
+            }
+            // Если клик по карточке в основном списке - добавляем
+            else {
+                addToSelection(this);
+            }
+        }
+
+        function addToSelection(card) {
+            const compositeKey = `${card.dataset.list}_${card.dataset.id}`;
+
+            if (!selectedRecs.has(compositeKey)) {
+                const clone = card.cloneNode(true);
+                clone.addEventListener('click', handleCardClick);
+                selectionContainer.appendChild(clone);
+                selectedRecs.set(compositeKey, clone); // Сохраняем ссылку на элемент
+                updateSelectionCount();
+            }
+        }
+
+        // Остальные функции остаются без изменений
+        selectionToggle.addEventListener('click', function() {
+            selectionSection.classList.toggle('expanded');
+            this.textContent = selectionSection.classList.contains('expanded') ?
+                'Скрыть подборку' : 'Показать подборку';
+        });
+
+        function clearSelection() {
+            selectionContainer.innerHTML = '';
+            selectedRecs.clear();
+            updateSelectionCount();
+        }
+
+        function updateSelectionCount() {
+            selectionTotal.textContent = selectedRecs.size;
+        }
+
+        clearSelectionBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            clearSelection();
+        });
+
+        function adjustLayout() {
+            const width = window.innerWidth;
+            const columns = width < 768 ? 2 : width < 1200 ? 4 : 6;
+            document.querySelectorAll('.record-container').forEach(container => {
+                container.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+            });
+        }
+
+        window.addEventListener('load', adjustLayout);
+        window.addEventListener('resize', adjustLayout);
+        updateSelectionCount();
+        console.log('Обработчики добавлены');
+    </script>
+</body>
+</html>

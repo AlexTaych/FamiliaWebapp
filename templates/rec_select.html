@@ -128,7 +128,7 @@
     <!-- Блок с дополнительными действиями -->
     <div class="card">
         <div class="button-stack">
-            <a href="{{ url_for('search_initial') }}" target="_blank" rel="noopener noreferrer">
+            <a href="{{ url_for('search_initial') }}" onclick="window.open(this.href, '_blank', 'fullscreen=yes'); return false;">
                 <button>Поиск по записям проекта</button>
             </a>
             <a href="{{ url_for('settings') }}"><button>Настройки</button></a>

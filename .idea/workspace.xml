@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="544872e3-7ab6-4c66-8f97-60f4d4a146c7" name="Changes" comment="Грамматические исправления">
+    <list default="true" id="544872e3-7ab6-4c66-8f97-60f4d4a146c7" name="Changes" comment="Поиск добавлен в основное приложение в &quot;меню проекта&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/Taichenachev/Deaths/20_Тайченачев_Александра_Ананиевна.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/Taichenachev/Deaths/4_Тайченачева_Мария_Ананиевна.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/Taichenachev/Deaths/4_Тайченачева_Мария_Ананиевна.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/birth.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/birth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/death.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/death.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/initial.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/initial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rec_select.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rec_select.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/side_event.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/side_event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/wedding.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wedding.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +166,31 @@
       <option name="project" value="LOCAL" />
       <updated>1742763378370</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Пробная версия поиска по записям">
+      <option name="closed" value="true" />
+      <created>1743111276483</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743111276483</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Пробная версия поиска по записям">
+      <option name="closed" value="true" />
+      <created>1743111289684</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743111289684</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Поиск добавлен в основное приложение в &quot;меню проекта&quot;">
+      <option name="closed" value="true" />
+      <created>1743354678118</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743354678118</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +207,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Гримматические исправления" />
     <MESSAGE value="Грамматические исправления" />
-    <option name="LAST_COMMIT_MESSAGE" value="Грамматические исправления" />
+    <MESSAGE value="Пробная версия поиска по записям" />
+    <MESSAGE value="Поиск добавлен в основное приложение в &quot;меню проекта&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поиск добавлен в основное приложение в &quot;меню проекта&quot;" />
   </component>
 </project>

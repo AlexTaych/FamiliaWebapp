@@ -1,66 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Запись о бракосочетании</title>
     <style>
-        /* Основной контейнер для формы */
-        .form-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto auto 20px auto auto;
-            gap: 20px;
-            max-width: 600px;
-            margin-left: 0;
+        :root {
+            --primary-color: #465660;
+            --light-bg: #f5f7fa;
+            --border-color: #d0d7e0;
+            --text-color: #2c3e50;
+            --divider-color: #a8c0d0;
+            --error-color: #e74c3c;
+            --section-bg: #f8fafc;
         }
 
-        /* Стили для каждой группы (метка + поле ввода) */
-        .input-group {
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px 0;
+            line-height: 1.6;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            min-width: 320px;
         }
 
-        .error {
-            border: 2px solid red;
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 500;
+            width: 400px;
+            padding-bottom: 15px;
+            box-sizing: border-box;
+            border-bottom: 2px solid var(--divider-color);
+        }
+
+        .card {
+            background: white;
+            width: 400px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            box-sizing: border-box;
+        }
+
+        .project-info {
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .error-message {
+            color: var(--error-color);
+            background-color: #fdecea;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--error-color);
+        }
+
+        .error-message ul {
+            margin: 5px 0 0 0;
+            padding-left: 20px;
+        }
+
+        .form-section {
+            background-color: var(--section-bg);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .form-section-title {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin: 0 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .date-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .label-with-tooltip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            transition: all 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(70, 86, 96, 0.1);
+        }
+
+        .error-field {
+            border-color: var(--error-color) !important;
+            box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
         }
 
         .tooltip {
             position: relative;
             display: inline-block;
             cursor: pointer;
+            color: var(--primary-color);
+            font-weight: bold;
         }
 
         .tooltip .tooltiptext {
             visibility: hidden;
             width: 200px;
-            background-color: #555;
-            color: #fff;
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
-            border-radius: 5px;
-            padding: 5px;
+            border-radius: 4px;
+            padding: 8px;
             position: absolute;
             z-index: 1;
-            bottom: 125%; /* Позиция всплывающего окна */
+            bottom: 125%;
             left: 50%;
-            margin-left: -100px;
+            transform: translateX(-50%);
             opacity: 0;
             transition: opacity 0.3s;
+            font-size: 0.8rem;
+            font-weight: normal;
         }
 
         .tooltip:hover .tooltiptext {
             visibility: visible;
             opacity: 1;
         }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #364853;
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
     <h1>Запись о бракосочетании</h1>
 
-    <p>Текущий проект: {{ current_project }}</p>
-    <!-- Блок для отображения ошибок -->
-    {% if errors %}
-        <div style="color: red;">
+    <div class="card">
+        <div class="project-info">Текущий проект: {{ current_project }}</div>
+
+        {% if errors %}
+        <div class="error-message">
             <strong>Ошибки в заполнении данных:</strong>
             <ul>
                 {% for field, message in errors.items() %}
@@ -68,85 +215,119 @@
                 {% endfor %}
             </ul>
         </div>
-    {% endif %}
+        {% endif %}
 
-    <form method="POST">
-        <label for="date">Дата:</label>
-        <input type="date" id="date" name="date" value="{{ form_data.date if form_data }}" required><br><br>
+        <form method="POST">
+            <div class="date-row">
+                <label for="date" style="margin-bottom: 0;">Дата:</label>
+                <input type="date" id="date" name="date" value="{{ form_data.date if form_data }}" required>
+            </div>
 
-        <div class="form-container">
-            <div class="input-group">
-                <label for="husband">Фамилия, имя и отчество жениха:</label>
-				<input type="text" id="husband" name="husband"
-					   value="{{ familia_m }}"
-					   class="{% if 'husband' in errors %}error{% endif %}"
-					   required>
-            </div>
-            <div class="input-group">
-                <label for="wife">Фамилия, имя и отчество невесты:</label>
-				<input type="text" id="wife" name="wife"
-					   value="{{ form_data.wife if form_data }}"
-					   class="{% if 'wife' in errors %}error{% endif %}"
-					   required>
-            </div>
-            <div class="input-group">
-                <label for="hus_locality">Место проживания жениха:</label>
-                <input type="text" id="hus_locality" name="hus_locality"
-                       value="{{ locality }}"
-                       required>
-            </div>
-            <div class="input-group">
-                <label for="wif_locality">Место проживания невесты:</label>
-                <input type="text" id="wif_locality" name="wif_locality"
-                       value="{{ form_data.wif_locality if form_data }}"
-                       required>
-            </div>
-            <div class="input-group">
-                <p>
+            <!-- Блок информации о женихе -->
+            <div class="form-section" style="border-left-color: #3498db;">
+                <div class="form-section-title">
+                    <b>Информация о женихе</b>
+                </div>
+
+                <div class="form-group">
+                    <label for="husband">Фамилия, имя и отчество:
+                        <span class="tooltip">ℹ️
+                            <span class="tooltiptext">Имя вводится кириллицей, в случае неполной информации отсутствующие элементы имени заменить троеточием ("...")</span>
+                        </span>
+                    </label>
+                    <input type="text" id="husband" name="husband"
+                           value="{{ familia_m }}"
+                           class="{% if 'husband' in errors %}error-field{% endif %}"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hus_locality">Место проживания:</label>
+                    <input type="text" id="hus_locality" name="hus_locality"
+                           value="{{ locality }}"
+                           required>
+                </div>
+
+                <div class="form-section-title">
                     Поручители жениха
                     <span class="tooltip">ℹ️
-                        <span class="tooltiptext">
-                            Информация о поручителях вводится в формате ФИО: "Иванов Иван Иванович".
-                            При необходимости можно оставить поля пустыми.
-                        </span>
+                        <span class="tooltiptext">Информация о поручителях вводится в формате ФИО. При необходимости можно оставить поля пустыми.</span>
                     </span>
-                </p>
-            </div>
-            <div class="input-group">
-                <p>Поручители невесты</p>
-            </div>
-            <div class="input-group">
-                <label for="hus_guarantor1">Первый поручитель:</label>
-                <input type="text" id="hus_guarantor1" name="hus_guarantor1"
-                       value="{{ form_data.hus_guarantor1 if form_data }}"
-                       class="{% if 'hus_guarantor1' in errors %}error{% endif %}">
-            </div>
-            <div class="input-group">
-                <label for="wif_guarantor1">Первый поручитель:</label>
-                <input type="text" id="wif_guarantor1" name="wif_guarantor1"
-                       value="{{ form_data.wif_guarantor1 if form_data }}"
-                       class="{% if 'wif_guarantor1' in errors %}error{% endif %}">
-            </div>
-            <div class="input-group">
-                <label for="hus_guarantor2">Второй поручитель:</label>
-                <input type="text" id="hus_guarantor2" name="hus_guarantor2"
-                       value="{{ form_data.hus_guarantor2 if form_data }}"
-                       class="{% if 'hus_guarantor2' in errors %}error{% endif %}">
-            </div>
-            <div class="input-group">
-                <label for="wif_guarantor2">Второй поручитель:</label>
-                <input type="text" id="wif_guarantor2" name="wif_guarantor2"
-                       value="{{ form_data.wif_guarantor2 if form_data }}"
-                       class="{% if 'wif_guarantor2' in errors %}error{% endif %}">
-            </div>
-        </div>
-        <br>
-        <label for="notes">Примечания:</label>
-        <textarea id="notes" name="notes" rows="4" cols="50">{{ form_data.notes if form_data }}</textarea><br><br>
+                </div>
 
-        <button type="submit">Сохранить запись</button><br>
-    </form>
-    <br>
-    <a href="{{ url_for('rec_select') }}"><button>Вернуться к выбору записи</button></a>
+                <div class="form-group">
+                    <label for="hus_guarantor1">Первый поручитель:</label>
+                    <input type="text" id="hus_guarantor1" name="hus_guarantor1"
+                           value="{{ form_data.hus_guarantor1 if form_data }}"
+                           class="{% if 'hus_guarantor1' in errors %}error-field{% endif %}">
+                </div>
+
+                <div class="form-group">
+                    <label for="hus_guarantor2">Второй поручитель:</label>
+                    <input type="text" id="hus_guarantor2" name="hus_guarantor2"
+                           value="{{ form_data.hus_guarantor2 if form_data }}"
+                           class="{% if 'hus_guarantor2' in errors %}error-field{% endif %}">
+                </div>
+            </div>
+
+            <!-- Блок информации о невесте -->
+            <div class="form-section" style="border-left-color: #3498db;">
+                <div class="form-section-title">
+                    <b>Информация о невесте</b>
+                </div>
+
+                <div class="form-group">
+                    <label for="wife">Фамилия, имя и отчество:
+                        <span class="tooltip">ℹ️
+                            <span class="tooltiptext">Имя вводится кириллицей, в случае неполной информации отсутствующие элементы имени заменить троеточием ("...")</span>
+                        </span>
+                    </label>
+                    <input type="text" id="wife" name="wife"
+                           value="{{ form_data.wife if form_data }}"
+                           class="{% if 'wife' in errors %}error-field{% endif %}"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="wif_locality">Место проживания:</label>
+                    <input type="text" id="wif_locality" name="wif_locality"
+                           value="{{ form_data.wif_locality if form_data }}"
+                           required>
+                </div>
+
+                <div class="form-section-title">
+                    Поручители невесты
+                    <span class="tooltip">ℹ️
+                        <span class="tooltiptext">Информация о поручителях вводится в формате ФИО. При необходимости можно оставить поля пустыми.</span>
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="wif_guarantor1">Первый поручитель:</label>
+                    <input type="text" id="wif_guarantor1" name="wif_guarantor1"
+                           value="{{ form_data.wif_guarantor1 if form_data }}"
+                           class="{% if 'wif_guarantor1' in errors %}error-field{% endif %}">
+                </div>
+
+                <div class="form-group">
+                    <label for="wif_guarantor2">Второй поручитель:</label>
+                    <input type="text" id="wif_guarantor2" name="wif_guarantor2"
+                           value="{{ form_data.wif_guarantor2 if form_data }}"
+                           class="{% if 'wif_guarantor2' in errors %}error-field{% endif %}">
+                </div>
+            </div>
+
+            <!-- Блок примечаний -->
+            <div class="form-group">
+                <label for="notes">Примечания:</label>
+                <textarea id="notes" name="notes">{{ form_data.notes if form_data }}</textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Сохранить запись</button>
+                <a href="{{ url_for('rec_select') }}"><button type="button">Вернуться к выбору записи</button></a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

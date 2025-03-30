@@ -90,7 +90,7 @@
         }
 
         .rec-name {
-            font-weight: 600;
+            font-weight: 400;
             margin-bottom: 8px;
             color: #2c3e50;
             font-size: 16px;
@@ -398,7 +398,7 @@
                 formData.append('rectype', rectype);
                 formData.append('field', field);
 
-                const response = await fetch('/search', {
+                const response = await fetch('/search_query', {
                     method: 'POST',
                     body: formData
                 });

@@ -1,0 +1,41 @@
+{
+  "id": 34,
+  "date": "13.01.1882",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Владимир",
+    "patronym": "Иванович",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Ступина",
+    "name": "Евлампия",
+    "patronym": "...лева",
+    "locality": "Сусловское"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Николай",
+      "patronym": "Димитриевич"
+    },
+    "2nd": {
+      "familia": "Подунаев",
+      "name": "Егор",
+      "patronym": "Иванович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Медведев",
+      "name": "Митрофан",
+      "patronym": "Васильев"
+    },
+    "2nd": {
+      "familia": "Суров",
+      "name": "Андриян",
+      "patronym": "Андреевич"
+    }
+  },
+  "notes": ""
+}

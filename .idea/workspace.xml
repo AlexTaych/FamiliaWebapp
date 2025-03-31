@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="544872e3-7ab6-4c66-8f97-60f4d4a146c7" name="Changes" comment="Поиск добавлен в основное приложение в &quot;меню проекта&quot;">
+    <list default="true" id="544872e3-7ab6-4c66-8f97-60f4d4a146c7" name="Changes" comment="Переименование файла приложения">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/birth.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/birth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/death.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/death.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/initial.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/initial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/new_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_select.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rec_select.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/side_event.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/side_event.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/wedding.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wedding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/Taichenachev/reports.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/Taichenachev/reports.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +51,7 @@
   "keyToString": {
     "Python.another_test.executor": "Run",
     "Python.app.executor": "Run",
+    "Python.familia_webapp.executor": "Run",
     "Python.sandbox.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -190,7 +184,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743354678118</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Новый дизайн страниц">
+      <option name="closed" value="true" />
+      <created>1743361883898</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743361883899</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Переименование файла приложения">
+      <option name="closed" value="true" />
+      <created>1743362756163</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743362756163</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +219,8 @@
     <MESSAGE value="Грамматические исправления" />
     <MESSAGE value="Пробная версия поиска по записям" />
     <MESSAGE value="Поиск добавлен в основное приложение в &quot;меню проекта&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поиск добавлен в основное приложение в &quot;меню проекта&quot;" />
+    <MESSAGE value="Новый дизайн страниц" />
+    <MESSAGE value="Переименование файла приложения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переименование файла приложения" />
   </component>
 </project>

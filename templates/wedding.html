@@ -230,7 +230,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="husband">Фамилия, имя и отчество:
+                    <label for="husband">Фамилия, имя и отчество жениха:
                         <span class="tooltip">ℹ️
                             <span class="tooltiptext">Имя вводится кириллицей, в случае неполной информации отсутствующие элементы имени заменить троеточием ("...")</span>
                         </span>
@@ -249,7 +249,33 @@
                 </div>
 
                 <div class="form-section-title">
-                    Поручители жениха
+                    <b>Информация о невесте</b>
+                </div>
+
+                <div class="form-group">
+                    <label for="wife">Фамилия, имя и отчество невесты:
+                        <span class="tooltip">ℹ️
+                            <span class="tooltiptext">Имя вводится кириллицей, в случае неполной информации отсутствующие элементы имени заменить троеточием ("...")</span>
+                        </span>
+                    </label>
+                    <input type="text" id="wife" name="wife"
+                           value="{{ form_data.wife if form_data }}"
+                           class="{% if 'wife' in errors %}error-field{% endif %}"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="wif_locality">Место проживания:</label>
+                    <input type="text" id="wif_locality" name="wif_locality"
+                           value="{{ form_data.wif_locality if form_data }}"
+                           required>
+                </div>
+            </div>
+
+            <!-- Блок информации о невесте -->
+            <div class="form-section" style="border-left-color: #3498db;">
+                <div class="form-section-title">
+                    <b>Поручители жениха</b>
                     <span class="tooltip">ℹ️
                         <span class="tooltiptext">Информация о поручителях вводится в формате ФИО. При необходимости можно оставить поля пустыми.</span>
                     </span>
@@ -268,35 +294,9 @@
                            value="{{ form_data.hus_guarantor2 if form_data }}"
                            class="{% if 'hus_guarantor2' in errors %}error-field{% endif %}">
                 </div>
-            </div>
-
-            <!-- Блок информации о невесте -->
-            <div class="form-section" style="border-left-color: #3498db;">
-                <div class="form-section-title">
-                    <b>Информация о невесте</b>
-                </div>
-
-                <div class="form-group">
-                    <label for="wife">Фамилия, имя и отчество:
-                        <span class="tooltip">ℹ️
-                            <span class="tooltiptext">Имя вводится кириллицей, в случае неполной информации отсутствующие элементы имени заменить троеточием ("...")</span>
-                        </span>
-                    </label>
-                    <input type="text" id="wife" name="wife"
-                           value="{{ form_data.wife if form_data }}"
-                           class="{% if 'wife' in errors %}error-field{% endif %}"
-                           required>
-                </div>
-
-                <div class="form-group">
-                    <label for="wif_locality">Место проживания:</label>
-                    <input type="text" id="wif_locality" name="wif_locality"
-                           value="{{ form_data.wif_locality if form_data }}"
-                           required>
-                </div>
 
                 <div class="form-section-title">
-                    Поручители невесты
+                    <b>Поручители невесты</b>
                     <span class="tooltip">ℹ️
                         <span class="tooltiptext">Информация о поручителях вводится в формате ФИО. При необходимости можно оставить поля пустыми.</span>
                     </span>

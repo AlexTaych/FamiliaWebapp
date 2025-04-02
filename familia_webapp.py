@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import re
 import datetime
+import copy
 
 
 # Регулярные выражения
@@ -86,6 +87,26 @@ def rec_dump(rec_type, file_name, record, report):
             temp_text = orig_file.read()
         with open(projects_dir.joinpath(current_project, "reports.txt"), "w", encoding="UTF-8") as mod_file:
             mod_file.write(f'{temp_text}{report}\n')
+
+# Функция записи результатов поиска
+def save_previous_results(results):
+    current_project = session.get('current_project')
+    temp_dict = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+    for k in temp_dict:
+        temp_dict[k] = results[k]
+    if current_project:
+        rec_type_path = projects_dir / current_project
+        with open(rec_type_path.joinpath("previous_results.json"), 'w', encoding="UTF-8") as file_out:
+            json.dump(temp_dict, file_out, ensure_ascii=False, indent=2)
+
+# Функция обращения к предыдущим результатам
+def get_previous_results():
+    current_project = session.get('current_project')
+    if current_project:
+        rec_type_path = projects_dir / current_project
+        with open(rec_type_path.joinpath("previous_results.json"), 'r', encoding="UTF-8") as f:
+            results = json.load(f)
+        return results
 
 # Функции поиска
 # Обращение к базе данных и формирование словарей для последующего поиска
@@ -487,7 +508,7 @@ def date_search(rec_dict, query, response_dict):
             response_dict[k] = response_list
     return  response_dict
 
-# Поиск по дате
+# Поиск по месту жительства
 def locality_search(rec_dict, query, response_dict):
     for k, v in rec_dict.items():
         if k == 'Births' and len(rec_dict[k]) > 0:
@@ -557,6 +578,35 @@ def text_search(rec_dict, query, response_dict):
             response_dict[k] = response_list
     return  response_dict
 
+# Поиск среди результатов
+def result_search(rec_dict, query, response_dict):
+    for k, v in rec_dict.items():
+        if k == 'Births' and len(rec_dict[k]) > 0:
+            response_list = []
+            for rec in v:
+                if re.search(query, str(rec)):
+                    response_list.append(rec)
+            response_dict[k] = response_list
+        if k == 'Weddings' and len(rec_dict[k]) > 0:
+            response_list = []
+            for rec in v:
+                if re.search(query, str(rec)):
+                    response_list.append(rec)
+            response_dict[k] = response_list
+        if k == 'Deaths' and len(rec_dict[k]) > 0:
+            response_list = []
+            for rec in v:
+                if re.search(query, str(rec)):
+                    response_list.append(rec)
+            response_dict[k] = response_list
+        if k == 'Side_events' and len(rec_dict[k]) > 0:
+            response_list = []
+            for rec in v:
+                if re.search(query, str(rec)):
+                    response_list.append(rec)
+            response_dict[k] = response_list
+    return  response_dict
+
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -589,8 +639,11 @@ def new_project():
             project_path.joinpath(d).mkdir(parents=True, exist_ok=True)
         with open(project_path.joinpath('reports.txt'), "w", encoding="utf-8") as f:
             pass
+        with open(project_path.joinpath('previous_results.json'), "w", encoding="utf-8") as f:
+            temp_dict = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+            json.dump(temp_dict, f, ensure_ascii=False, indent=2)
 
-        # Сохраняем настройки в settings.json внутри папки проекта
+        # Сохранение настроек в settings.json внутри папки проекта
         settings_path = project_path / 'settings.json'
         settings = {
             'familia_m': familia_m,
@@ -600,7 +653,7 @@ def new_project():
         with open(settings_path, "w", encoding="utf-8") as f:
             json.dump(settings, f, ensure_ascii=False, indent=4)
 
-        # Сохраняем текущий проект в сессии
+        # Сохранение текущего проекта в сессии
         session['current_project'] = project_name
 
         return redirect(url_for('rec_select'))
@@ -1057,19 +1110,24 @@ def search_query():
     # Формирование словаря из базы данных
     rec_dict = record_request(rec_types, projects_path)
 
+    # Поиск по найденным результатам
+    if rec_field == 'results':
+        previous_results = get_previous_results()
+        results = result_search(previous_results, query, response_dict)
     # Осуществление поиска по заданному полю
-    if rec_field == 'name':
-        results = name_search(rec_dict, query, response_dict)
-    elif rec_field == 'id':
-        results = id_search(rec_dict, query, response_dict)
-    elif rec_field == 'date':
-        results = date_search(rec_dict, query, response_dict)
-    elif rec_field == 'locality':
-        results = locality_search(rec_dict, query, response_dict)
-    elif rec_field == 'text':
-        results = text_search(rec_dict, query, response_dict)
     else:
-        results = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+        if rec_field == 'name':
+            results = name_search(rec_dict, query, response_dict)
+        elif rec_field == 'id':
+            results = id_search(rec_dict, query, response_dict)
+        elif rec_field == 'date':
+            results = date_search(rec_dict, query, response_dict)
+        elif rec_field == 'locality':
+            results = locality_search(rec_dict, query, response_dict)
+        elif rec_field == 'text':
+            results = text_search(rec_dict, query, response_dict)
+        else:
+            results = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
 
     # Корявая очистка результатов поиска по побочным записям от рождений и свадеб
     if 'Side_events' not in rec_types:
@@ -1077,6 +1135,9 @@ def search_query():
     if rec_types == ['Births', 'Weddings', 'Side_events']:
         results['Births'] = []
         results['Weddings'] = []
+
+    # Сохранение результатов для возможного поиска по ним
+    save_previous_results(results)
 
     return jsonify(results)
 

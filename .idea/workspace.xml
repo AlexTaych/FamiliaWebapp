@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="544872e3-7ab6-4c66-8f97-60f4d4a146c7" name="Changes" comment="Переименование файла приложения">
+    <list default="true" id="544872e3-7ab6-4c66-8f97-60f4d4a146c7" name="Changes" comment="Небольшие изменения дизайна записей о браке">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects/Taichenachev/reports.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/Taichenachev/reports.txt" afterDir="false" />
     </list>
@@ -47,28 +47,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.another_test.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.familia_webapp.executor": "Run",
-    "Python.sandbox.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/ts/PycharmProjects/Familia",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.another_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.familia_webapp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sandbox.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ts/PycharmProjects/Familia&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ts\PycharmProjects\webapp" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.app">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Streamlit" />
       <option name="ENV_FILES" value="" />
@@ -200,7 +200,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743362756163</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Проба нового интерфейса на случайных записях метрических книг за 70-80 гг. XIX в.">
+      <option name="closed" value="true" />
+      <created>1743380072583</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743380072583</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Небольшие изменения дизайна записей о браке">
+      <option name="closed" value="true" />
+      <created>1743447885554</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743447885554</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +237,8 @@
     <MESSAGE value="Поиск добавлен в основное приложение в &quot;меню проекта&quot;" />
     <MESSAGE value="Новый дизайн страниц" />
     <MESSAGE value="Переименование файла приложения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переименование файла приложения" />
+    <MESSAGE value="Проба нового интерфейса на случайных записях метрических книг за 70-80 гг. XIX в." />
+    <MESSAGE value="Небольшие изменения дизайна записей о браке" />
+    <option name="LAST_COMMIT_MESSAGE" value="Небольшие изменения дизайна записей о браке" />
   </component>
 </project>

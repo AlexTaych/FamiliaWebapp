@@ -1,0 +1,33 @@
+{
+  "id": 181,
+  "date": "18.05.1899",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Константин",
+    "patronym": "Иванович"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Михайлович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Григориевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Гусев",
+      "name": "Иван",
+      "patronym": "Васильевич"
+    },
+    "2nd": {
+      "familia": "Степанова",
+      "name": "Серафима",
+      "patronym": "Феодо...я"
+    }
+  },
+  "notes": ""
+}

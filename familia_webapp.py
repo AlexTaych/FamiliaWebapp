@@ -130,57 +130,57 @@ def name_search(rec_dict, query, response_dict):
             for rec in v:
                 if re.search(
                         query,
-                        f'{rec['newborn']['familia']} {rec['newborn']['name']} {rec['newborn']['patronym']}'
+                        f'{rec["newborn"]["familia"]} {rec["newborn"]["name"]} {rec["newborn"]["patronym"]}'
                 ):
-                    if rec['newborn']['familia'] == get_settings()['familia_f']:
+                    if rec["newborn"]["familia"] == get_settings()['familia_f']:
                         gender_text = 'родилась'
                     else:
                         gender_text = 'родился'
                     temp_dict = {
-                        'main_char': f'<b>{rec['newborn']['familia']} {rec['newborn']['name']} '
-                                     f'{rec['newborn']['patronym']}</b>',
-                        'date': f'<u>{gender_text}</u> {rec['date']}',
-                        'secondary_char': f'<u>Отец</u>: <b>{rec['father']['name']} {rec['father']['patronym']}</b><br>'
-                                          f'<u>Мать</u>: <b>{rec['mother']['name']} {rec['mother']['patronym']}</b><br>'
-                                          f'<u>Восприемники</u>: {' '.join(rec['susceptors']['1st'].values())} и '
-                                          f'{' '.join(rec['susceptors']['2nd'].values())}',
-                        'locality': f'<u>Место рождения</u>: {rec['locality']}',
+                        'main_char': f'<b>{rec["newborn"]["familia"]} {rec["newborn"]["name"]} '
+                                     f'{rec["newborn"]["patronym"]}</b>',
+                        "date": f'<u>{gender_text}</u> {rec["date"]}',
+                        'secondary_char': f'<u>Отец</u>: <b>{rec["father"]["name"]} {rec["father"]["patronym"]}</b><br>'
+                                          f'<u>Мать</u>: <b>{rec["mother"]["name"]} {rec["mother"]["patronym"]}</b><br>'
+                                          f'<u>Восприемники</u>: {" ".join(rec["susceptors"]["1st"].values())} и '
+                                          f'{" ".join(rec["susceptors"]["2nd"].values())}',
+                        "locality": f'<u>Место рождения</u>: {rec["locality"]}',
                         'ID': rec['id'],
                         'notes': rec['notes']
                     }
                     response_list.append(temp_dict)
                 if re.search(
                         query,
-                        f'{rec['father']['familia']} {rec['father']['name']} {rec['father']['patronym']}'
+                        f'{rec["father"]["familia"]} {rec["father"]["name"]} {rec["father"]["patronym"]}'
                 ):
                     temp_dict = {
-                        'main_char': f'<b>{rec['father']['familia']} {rec['father']['name']} '
-                                     f'{rec['father']['patronym']}</b>',
-                        'date': f'{rec['date']} записан как <u>отец</u>',
-                        'secondary_char': f'<u>Ребенок</u>: <b>{rec['newborn']['name']} '
-                                          f'{rec['newborn']['patronym']}</b><br>'
-                                          f'<u>Жена</u>: <b>{rec['mother']['name']} {rec['mother']['patronym']}</b><br>'
-                                          f'<u>Восприемники</u>: {' '.join(rec['susceptors']['1st'].values())} и '
-                                          f'{' '.join(rec['susceptors']['2nd'].values())}',
-                        'locality': f'<u>Место проживания</u>: {rec['locality']}',
+                        'main_char': f'<b>{rec["father"]["familia"]} {rec["father"]["name"]} '
+                                     f'{rec["father"]["patronym"]}</b>',
+                        "date": f'{rec["date"]} записан как <u>отец</u>',
+                        'secondary_char': f'<u>Ребенок</u>: <b>{rec["newborn"]["name"]} '
+                                          f'{rec["newborn"]["patronym"]}</b><br>'
+                                          f'<u>Жена</u>: <b>{rec["mother"]["name"]} {rec["mother"]["patronym"]}</b><br>'
+                                          f'<u>Восприемники</u>: {" ".join(rec["susceptors"]["1st"].values())} и '
+                                          f'{" ".join(rec["susceptors"]["2nd"].values())}',
+                        "locality": f'<u>Место проживания</u>: {rec["locality"]}',
                         'ID': rec['id'],
                         'notes': rec['notes']
                     }
                     response_list.append(temp_dict)
                 if re.search(
                         query,
-                        f'{rec['mother']['familia']} {rec['mother']['name']} {rec['mother']['patronym']}'
+                        f'{rec["mother"]["familia"]} {rec["mother"]["name"]} {rec["mother"]["patronym"]}'
                 ):
                     temp_dict = {
-                        'main_char': f'<b>{rec['mother']['familia']} {rec['mother']['name']} '
-                                     f'{rec['mother']['patronym']}</b>',
-                        'date': f'{rec['date']} записана как <u>мать</u>',
-                        'secondary_char': f'<u>Ребенок</u>: <b>{rec['newborn']['name']} '
-                                          f'{rec['newborn']['patronym']}</b><br>'
-                                          f'<u>Муж</u>: <b>{rec['father']['name']} {rec['father']['patronym']}</b><br>'
-                                          f'<u>Восприемники</u>: {' '.join(rec['susceptors']['1st'].values())} и '
-                                          f'{' '.join(rec['susceptors']['2nd'].values())}',
-                        'locality': f'<u>Место проживания</u>: {rec['locality']}',
+                        'main_char': f'<b>{rec["mother"]["familia"]} {rec["mother"]["name"]} '
+                                     f'{rec["mother"]["patronym"]}</b>',
+                        "date": f'{rec["date"]} записана как <u>мать</u>',
+                        'secondary_char': f'<u>Ребенок</u>: <b>{rec["newborn"]["name"]} '
+                                          f'{rec["newborn"]["patronym"]}</b><br>'
+                                          f'<u>Муж</u>: <b>{rec["father"]["name"]} {rec["father"]["patronym"]}</b><br>'
+                                          f'<u>Восприемники</u>: {" ".join(rec["susceptors"]["1st"].values())} и '
+                                          f'{" ".join(rec["susceptors"]["2nd"].values())}',
+                        "locality": f'<u>Место проживания</u>: {rec["locality"]}',
                         'ID': rec['id'],
                         'notes': rec['notes']
                     }
@@ -191,40 +191,40 @@ def name_search(rec_dict, query, response_dict):
             for rec in v:
                 if re.search(
                         query,
-                        f'{rec['husband']['familia']} {rec['husband']['name']} {rec['husband']['patronym']}'
+                        f'{rec["husband"]["familia"]} {rec["husband"]["name"]} {rec["husband"]["patronym"]}'
                 ):
                     temp_dict = {
-                        'main_char': f'<b>{rec['husband']['familia']} {rec['husband']['name']} '
-                                     f'{rec['husband']['patronym']}</b>',
-                        'date': f'{rec['date']} записан как <u>жених</u>',
-                        'secondary_char': f'<u>Невеста</u>: <b>{rec['wife']['familia']} {rec['wife']['name']} '
-                                          f'{rec['wife']['patronym']}</b>; '
-                                          f'родом из {rec['wife']['locality']}<br>'
-                                          f'<u>Поручители жениха</u>: {' '.join(rec['husband_guarantors']['1st'].values())} и '
-                                          f'{' '.join(rec['husband_guarantors']['2nd'].values())}<br>'
-                                          f'<u>Поручители невесты</u>: {' '.join(rec['wife_guarantors']['1st'].values())} и '
-                                          f'{' '.join(rec['wife_guarantors']['2nd'].values())}',
-                        'locality': f'<u>Место проживания</u>: {rec['husband']['locality']}',
+                        'main_char': f'<b>{rec["husband"]["familia"]} {rec["husband"]["name"]} '
+                                     f'{rec["husband"]["patronym"]}</b>',
+                        "date": f'{rec["date"]} записан как <u>жених</u>',
+                        'secondary_char': f'<u>Невеста</u>: <b>{rec["wife"]["familia"]} {rec["wife"]["name"]} '
+                                          f'{rec["wife"]["patronym"]}</b>; '
+                                          f'родом из {rec["wife"]["locality"]}<br>'
+                                          f'<u>Поручители жениха</u>: {" ".join(rec["husband_guarantors"]["1st"].values())} и '
+                                          f'{" ".join(rec["husband_guarantors"]["2nd"].values())}<br>'
+                                          f'<u>Поручители невесты</u>: {" ".join(rec["wife_guarantors"]["1st"].values())} и '
+                                          f'{" ".join(rec["wife_guarantors"]["2nd"].values())}',
+                        "locality": f'<u>Место проживания</u>: {rec["husband"]["locality"]}',
                         'ID': rec['id'],
                         'notes': rec['notes']
                     }
                     response_list.append(temp_dict)
                 if re.search(
                         query,
-                        f'{rec['wife']['familia']} {rec['wife']['name']} {rec['wife']['patronym']}'
+                        f'{rec["wife"]["familia"]} {rec["wife"]["name"]} {rec["wife"]["patronym"]}'
                 ):
                     temp_dict = {
-                        'main_char': f'<b>{rec['wife']['familia']} {rec['wife']['name']} '
-                                     f'{rec['wife']['patronym']}</b>',
-                        'date': f'{rec['date']} записана как <u>невеста</u>',
-                        'secondary_char': f'<u>Муж</u>: <b>{rec['husband']['familia']} {rec['husband']['name']} '
-                                          f'{rec['husband']['patronym']}</b>; '
-                                          f'родом из {rec['husband']['locality']}<br>'
-                                          f'<u>Поручители жениха</u>: {' '.join(rec['husband_guarantors']['1st'].values())} и '
-                                          f'{' '.join(rec['husband_guarantors']['2nd'].values())}<br>'
-                                          f'<u>Поручители невесты</u>: {' '.join(rec['wife_guarantors']['1st'].values())} и '
-                                          f'{' '.join(rec['wife_guarantors']['2nd'].values())}',
-                        'locality': f'<u>Место проживания</u>: {rec['wife']['locality']}',
+                        'main_char': f'<b>{rec["wife"]["familia"]} {rec["wife"]["name"]} '
+                                     f'{rec["wife"]["patronym"]}</b>',
+                        "date": f'{rec["date"]} записана как <u>невеста</u>',
+                        'secondary_char': f'<u>Муж</u>: <b>{rec["husband"]["familia"]} {rec["husband"]["name"]} '
+                                          f'{rec["husband"]["patronym"]}</b>; '
+                                          f'родом из {rec["husband"]["locality"]}<br>'
+                                          f'<u>Поручители жениха</u>: {" ".join(rec["husband_guarantors"]["1st"].values())} и '
+                                          f'{" ".join(rec["husband_guarantors"]["2nd"].values())}<br>'
+                                          f'<u>Поручители невесты</u>: {" ".join(rec["wife_guarantors"]["1st"].values())} и '
+                                          f'{" ".join(rec["wife_guarantors"]["2nd"].values())}',
+                        "locality": f'<u>Место проживания</u>: {rec["wife"]["locality"]}',
                         'ID': rec['id'],
                         'notes': rec['notes']
                     }
@@ -235,50 +235,50 @@ def name_search(rec_dict, query, response_dict):
             for rec in v:
                 if re.search(
                         query,
-                        f'{rec['deceased']['familia']} {rec['deceased']['name']} {rec['deceased']['patronym']}'
+                        f'{rec["deceased"]["familia"]} {rec["deceased"]["name"]} {rec["deceased"]["patronym"]}'
                 ):
-                    if rec['deceased']['familia'] == get_settings()['familia_f']:
-                        gender_text = f'{rec['date']} <u>умерла</u> от: {rec['death_cause']}'
+                    if rec["deceased"]["familia"] == get_settings()['familia_f']:
+                        gender_text = f'{rec["date"]} <u>умерла</u> от: {rec["death_cause"]}'
                     else:
-                        gender_text = f'{rec['date']} <u>умер</u> от: {rec['death_cause']}'
-                    if rec['relative']['patronym'] == '-':
+                        gender_text = f'{rec["date"]} <u>умер</u> от: {rec["death_cause"]}'
+                    if rec["relative"]["patronym"] == '-':
                         relative_text = ''
                     else:
-                        relative_text = (f'<u>{rec['relative']['relation_degree']}</u>: <b>{rec['relative']['name']} '
-                                         f'{rec['relative']['patronym']}</b>')
+                        relative_text = (f'<u>{rec["relative"]["relation_degree"]}</u>: <b>{rec["relative"]["name"]} '
+                                         f'{rec["relative"]["patronym"]}</b>')
                     temp_dict = {
-                        'main_char': f'<b>{rec['deceased']['familia']} {rec['deceased']['name']} '
-                                     f'{rec['deceased']['patronym']}</b>',
-                        'date': gender_text,
+                        'main_char': f'<b>{rec["deceased"]["familia"]} {rec["deceased"]["name"]} '
+                                     f'{rec["deceased"]["patronym"]}</b>',
+                        "date": gender_text,
                         'secondary_char': relative_text,
-                        'locality': f'<u>Место смерти</u>: {rec['locality']}',
+                        "locality": f'<u>Место смерти</u>: {rec["locality"]}',
                         'ID': rec['id'],
                         'notes': rec['notes']
                     }
                     response_list.append(temp_dict)
                 if re.search(
                         query,
-                        f'{rec['relative']['familia']} {rec['relative']['name']} {rec['relative']['patronym']}'
+                        f'{rec["relative"]["familia"]} {rec["relative"]["name"]} {rec["relative"]["patronym"]}'
                 ):
-                    if rec['relative']['relation_degree'] == 'отец':
-                        rel_text = (f'<u>отец</u> умершего ребенка; причина смерти: {rec['death_cause']};<br>'
-                                    f'<u>дата смерти</u>: {rec['date']}')
+                    if rec["relative"]["relation_degree"] == 'отец':
+                        rel_text = (f'<u>отец</u> умершего ребенка; причина смерти: {rec["death_cause"]};<br>'
+                                    f'<u>дата смерти</u>: {rec["date"]}')
                         deceased = '<u>Ребенок</u>'
-                    elif rec['relative']['relation_degree'] == 'муж':
-                        rel_text = (f'<u>муж</u> умершей; причина смерти: {rec['death_cause']};<br>'
-                                    f'<u>дата смерти</u>: {rec['date']}')
+                    elif rec["relative"]["relation_degree"] == 'муж':
+                        rel_text = (f'<u>муж</u> умершей; причина смерти: {rec["death_cause"]};<br>'
+                                    f'<u>дата смерти</u>: {rec["date"]}')
                         deceased = '<u>Жена</u>'
                     else:
-                        rel_text = (f'<u>родственник</u> умершего; причина смерти: {rec['death_cause']};<br>'
-                                    f'<u>дата смерти</u>: {rec['date']}')
+                        rel_text = (f'<u>родственник</u> умершего; причина смерти: {rec["death_cause"]};<br>'
+                                    f'<u>дата смерти</u>: {rec["date"]}')
                         deceased = '<u>Родственник</u>'
                     temp_dict = {
-                        'main_char': f'<b>{rec['relative']['familia']} {rec['relative']['name']} '
-                                     f'{rec['relative']['patronym']}</b>',
-                        'date': rel_text,
-                        'secondary_char': f'{deceased}: <b>{rec['deceased']['name']} '
-                                          f'{rec['deceased']['patronym']}</b>',
-                        'locality': f'<u>Место смерти</u>: {rec['locality']}',
+                        'main_char': f'<b>{rec["relative"]["familia"]} {rec["relative"]["name"]} '
+                                     f'{rec["relative"]["patronym"]}</b>',
+                        "date": rel_text,
+                        'secondary_char': f'{deceased}: <b>{rec["deceased"]["name"]} '
+                                          f'{rec["deceased"]["patronym"]}</b>',
+                        "locality": f'<u>Место смерти</u>: {rec["locality"]}',
                         'ID': rec['id'],
                         'notes': rec['notes']
                     }
@@ -289,87 +289,87 @@ def name_search(rec_dict, query, response_dict):
             for rec in v:
                 if re.search(
                         query,
-                        f'{rec['participant']['familia']} {rec['participant']['name']} '
-                        f'{rec['participant']['patronym']}'
+                        f'{rec["participant"]["familia"]} {rec["participant"]["name"]} '
+                        f'{rec["participant"]["patronym"]}'
                 ):
-                    if rec['participant']['patronym'][-1] == 'а':
+                    if rec["participant"]["patronym"][-1] == 'а':
                         gender_text = 'Записана как'
                     else:
                         gender_text = 'Записан как'
                     temp_dict = {
-                        'main_char': f'<b>{rec['participant']['familia']} {rec['participant']['name']} '
-                                     f'{rec['participant']['patronym']}</b>',
-                        'date': f'Дата события: {rec['date']}',
-                        'secondary_char': f'<u>{gender_text}</u>: {rec['role']}',
-                        'locality': f'<u>Место события</u>: {rec['locality']}',
+                        'main_char': f'<b>{rec["participant"]["familia"]} {rec["participant"]["name"]} '
+                                     f'{rec["participant"]["patronym"]}</b>',
+                        "date": f'Дата события: {rec["date"]}',
+                        'secondary_char': f'<u>{gender_text}</u>: {rec["role"]}',
+                        "locality": f'<u>Место события</u>: {rec["locality"]}',
                         'ID': rec['id'],
                         'notes': rec['notes']
                     }
                     response_list.append(temp_dict)
             for rec in rec_dict['Births']:
-                for n in ['1st', '2nd']:
+                for n in ["1st", "2nd"]:
                     if re.search(
                             query,
-                            f'{rec['susceptors'][n]['familia']} {rec['susceptors'][n]['name']} '
-                            f'{rec['susceptors'][n]['patronym']}'
+                            f'{rec["susceptors"][n]["familia"]} {rec["susceptors"][n]["name"]} '
+                            f'{rec["susceptors"][n]["patronym"]}'
                     ):
-                        if rec['susceptors'][n]['patronym'][-1] == 'а':
+                        if rec["susceptors"][n]["patronym"][-1] == 'а':
                             gender_text = 'Записана как <u>восприемница</u>'
                         else:
                             gender_text = 'Записан как <u>восприемник</u>'
                         temp_dict = {
-                            'main_char': f'<b>{rec['susceptors'][n]['familia']} {rec['susceptors'][n]['name']} '
-                                         f'{rec['susceptors'][n]['patronym']}</b>',
-                            'date': f'Дата события: {rec['date']}',
-                            'secondary_char': f'{gender_text} при рождении: <b>{rec['newborn']['familia']} '
-                                              f'{rec['newborn']['name']} {rec['newborn']['patronym']}</b><br>'
-                                              f'<u>Отец</u>: <b>{rec['father']['name']} '
-                                              f'{rec['father']['patronym']}</b><br>'
-                                              f'<u>Мать</u>: <b>{rec['mother']['name']} '
-                                              f'{rec['mother']['patronym']}</b><br>',
-                            'locality': f'<u>Место события</u>: {rec['locality']}',
+                            'main_char': f'<b>{rec["susceptors"][n]["familia"]} {rec["susceptors"][n]["name"]} '
+                                         f'{rec["susceptors"][n]["patronym"]}</b>',
+                            "date": f'Дата события: {rec["date"]}',
+                            'secondary_char': f'{gender_text} при рождении: <b>{rec["newborn"]["familia"]} '
+                                              f'{rec["newborn"]["name"]} {rec["newborn"]["patronym"]}</b><br>'
+                                              f'<u>Отец</u>: <b>{rec["father"]["name"]} '
+                                              f'{rec["father"]["patronym"]}</b><br>'
+                                              f'<u>Мать</u>: <b>{rec["mother"]["name"]} '
+                                              f'{rec["mother"]["patronym"]}</b><br>',
+                            "locality": f'<u>Место события</u>: {rec["locality"]}',
                             'ID': rec['id'],
                             'notes': rec['notes']
                         }
                         response_list.append(temp_dict)
             for rec in rec_dict['Weddings']:
-                for n in ['1st', '2nd']:
+                for n in ["1st", "2nd"]:
                     if re.search(
                             query,
-                            f'{rec['husband_guarantors'][n]['familia']} {rec['husband_guarantors'][n]['name']} '
-                            f'{rec['husband_guarantors'][n]['patronym']}'
+                            f'{rec["husband_guarantors"][n]["familia"]} {rec["husband_guarantors"][n]["name"]} '
+                            f'{rec["husband_guarantors"][n]["patronym"]}'
                     ):
                         temp_dict = {
-                            'main_char': f'<b>{rec['husband_guarantors'][n]['familia']} '
-                                         f'{rec['husband_guarantors'][n]['name']} '
-                                         f'{rec['husband_guarantors'][n]['patronym']}</b>',
-                            'date': f'Дата события: {rec['date']}',
+                            'main_char': f'<b>{rec["husband_guarantors"][n]["familia"]} '
+                                         f'{rec["husband_guarantors"][n]["name"]} '
+                                         f'{rec["husband_guarantors"][n]["patronym"]}</b>',
+                            "date": f'Дата события: {rec["date"]}',
                             'secondary_char': f'Записан как <u>поручитель жениха</u> на свадьбе:<br>'
-                                              f'<u>Жених</u>: <b>{rec['husband']['familia']} {rec['husband']['name']} '
-                                              f'{rec['husband']['patronym']}</b><br>'
-                                              f'<u>Невеста</u>: <b>{rec['wife']['familia']} {rec['wife']['name']} '
-                                              f'{rec['wife']['patronym']}</b><br>',
-                            'locality': f'<u>Место события</u>: {rec['husband']['locality']}',
+                                              f'<u>Жених</u>: <b>{rec["husband"]["familia"]} {rec["husband"]["name"]} '
+                                              f'{rec["husband"]["patronym"]}</b><br>'
+                                              f'<u>Невеста</u>: <b>{rec["wife"]["familia"]} {rec["wife"]["name"]} '
+                                              f'{rec["wife"]["patronym"]}</b><br>',
+                            "locality": f'<u>Место события</u>: {rec["husband"]["locality"]}',
                             'ID': rec['id'],
                             'notes': rec['notes']
                         }
                         response_list.append(temp_dict)
                     if re.search(
                             query,
-                            f'{rec['wife_guarantors'][n]['familia']} {rec['wife_guarantors'][n]['name']} '
-                            f'{rec['wife_guarantors'][n]['patronym']}'
+                            f'{rec["wife_guarantors"][n]["familia"]} {rec["wife_guarantors"][n]["name"]} '
+                            f'{rec["wife_guarantors"][n]["patronym"]}'
                     ):
                         temp_dict = {
-                            'main_char': f'<b>{rec['wife_guarantors'][n]['familia']} '
-                                         f'{rec['wife_guarantors'][n]['name']} '
-                                         f'{rec['wife_guarantors'][n]['patronym']}</b>',
-                            'date': f'Дата события: {rec['date']}',
+                            'main_char': f'<b>{rec["wife_guarantors"][n]["familia"]} '
+                                         f'{rec["wife_guarantors"][n]["name"]} '
+                                         f'{rec["wife_guarantors"][n]["patronym"]}</b>',
+                            "date": f'Дата события: {rec["date"]}',
                             'secondary_char': f'Записан как <u>поручитель невесты</u> на свадьбе:<br>'
-                                              f'<u>Жених</u>: <b>{rec['husband']['familia']} {rec['husband']['name']} '
-                                              f'{rec['husband']['patronym']}</b><br>'
-                                              f'<u>Невеста</u>: <b>{rec['wife']['familia']} {rec['wife']['name']} '
-                                              f'{rec['wife']['patronym']}</b><br>',
-                            'locality': f'<u>Место события</u>: {rec['husband']['locality']}',
+                                              f'<u>Жених</u>: <b>{rec["husband"]["familia"]} {rec["husband"]["name"]} '
+                                              f'{rec["husband"]["patronym"]}</b><br>'
+                                              f'<u>Невеста</u>: <b>{rec["wife"]["familia"]} {rec["wife"]["name"]} '
+                                              f'{rec["wife"]["patronym"]}</b><br>',
+                            "locality": f'<u>Место события</u>: {rec["husband"]["locality"]}',
                             'ID': rec['id'],
                             'notes': rec['notes']
                         }
@@ -380,71 +380,71 @@ def name_search(rec_dict, query, response_dict):
 # Функция формирования записей для поисковых запросов к неименным элементам записей
 def get_rec_pattern(rec_type, rec):
     if rec_type == 'Births':
-        if rec['newborn']['familia'] == get_settings()['familia_f']:
+        if rec["newborn"]["familia"] == get_settings()['familia_f']:
             gender_text = 'родилась'
         else:
             gender_text = 'родился'
         temp_dict = {
-            'main_char': f'<b>{rec['newborn']['familia']} {rec['newborn']['name']} '
-                         f'{rec['newborn']['patronym']}</b>',
-            'date': f'<u>{gender_text}</u> {rec['date']}',
-            'secondary_char': f'<u>Отец</u>: <b>{rec['father']['name']} {rec['father']['patronym']}</b><br>'
-                              f'<u>Мать</u>: <b>{rec['mother']['name']} {rec['mother']['patronym']}</b><br>'
-                              f'<u>Восприемники</u>: {' '.join(rec['susceptors']['1st'].values())} и '
-                              f'{' '.join(rec['susceptors']['2nd'].values())}',
-            'locality': f'<u>Место рождения</u>: {rec['locality']}',
+            'main_char': f'<b>{rec["newborn"]["familia"]} {rec["newborn"]["name"]} '
+                         f'{rec["newborn"]["patronym"]}</b>',
+            "date": f'<u>{gender_text}</u> {rec["date"]}',
+            'secondary_char': f'<u>Отец</u>: <b>{rec["father"]["name"]} {rec["father"]["patronym"]}</b><br>'
+                              f'<u>Мать</u>: <b>{rec["mother"]["name"]} {rec["mother"]["patronym"]}</b><br>'
+                              f'<u>Восприемники</u>: {" ".join(rec["susceptors"]["1st"].values())} и '
+                              f'{" ".join(rec["susceptors"]["2nd"].values())}',
+            "locality": f'<u>Место рождения</u>: {rec["locality"]}',
             'ID': rec['id'],
             'notes': rec['notes']
         }
         return temp_dict
     if rec_type == 'Weddings':
         temp_dict = {
-            'main_char': f'Жених: <b>{rec['husband']['familia']} {rec['husband']['name']} '
-                         f'{rec['husband']['patronym']}</b><br>'
-                         f'Невеста: <b>{rec['wife']['familia']} {rec['wife']['name']} '
-                         f'{rec['wife']['patronym']}</b>',
-            'date': f'<u>Дата свадьбы</u>: {rec['date']}',
-            'secondary_char': f'<u>Поручители жениха</u>: {' '.join(rec['husband_guarantors']['1st'].values())} и '
-                              f'{' '.join(rec['husband_guarantors']['2nd'].values())}<br>'
-                              f'<u>Поручители невесты</u>: {' '.join(rec['wife_guarantors']['1st'].values())} и '
-                              f'{' '.join(rec['wife_guarantors']['2nd'].values())}',
-            'locality': f'<u>Место жительства жениха</u>: {rec['husband']['locality']}<br>'
-                        f'<u>Место жительства невесты</u>: {rec['wife']['locality']}',
+            'main_char': f'Жених: <b>{rec["husband"]["familia"]} {rec["husband"]["name"]} '
+                         f'{rec["husband"]["patronym"]}</b><br>'
+                         f'Невеста: <b>{rec["wife"]["familia"]} {rec["wife"]["name"]} '
+                         f'{rec["wife"]["patronym"]}</b>',
+            "date": f'<u>Дата свадьбы</u>: {rec["date"]}',
+            'secondary_char': f'<u>Поручители жениха</u>: {" ".join(rec["husband_guarantors"]["1st"].values())} и '
+                              f'{" ".join(rec["husband_guarantors"]["2nd"].values())}<br>'
+                              f'<u>Поручители невесты</u>: {" ".join(rec["wife_guarantors"]["1st"].values())} и '
+                              f'{" ".join(rec["wife_guarantors"]["2nd"].values())}',
+            "locality": f'<u>Место жительства жениха</u>: {rec["husband"]["locality"]}<br>'
+                        f'<u>Место жительства невесты</u>: {rec["wife"]["locality"]}',
             'ID': rec['id'],
             'notes': rec['notes']
         }
         return temp_dict
     if rec_type == 'Deaths':
-        if rec['deceased']['familia'] == get_settings()['familia_f']:
-            gender_text = f'{rec['date']} <u>умерла</u> от: {rec['death_cause']}'
+        if rec["deceased"]["familia"] == get_settings()['familia_f']:
+            gender_text = f'{rec["date"]} <u>умерла</u> от: {rec["death_cause"]}'
         else:
-            gender_text = f'{rec['date']} <u>умер</u> от: {rec['death_cause']}'
-        if rec['relative']['patronym'] == '-':
+            gender_text = f'{rec["date"]} <u>умер</u> от: {rec["death_cause"]}'
+        if rec["relative"]["patronym"] == '-':
             relative_text = ''
         else:
-            relative_text = (f'<u>{rec['relative']['relation_degree']}</u>: <b>{rec['relative']['name']} '
-                             f'{rec['relative']['patronym']}</b>')
+            relative_text = (f'<u>{rec["relative"]["relation_degree"]}</u>: <b>{rec["relative"]["name"]} '
+                             f'{rec["relative"]["patronym"]}</b>')
         temp_dict = {
-            'main_char': f'<b>{rec['deceased']['familia']} {rec['deceased']['name']} '
-                         f'{rec['deceased']['patronym']}</b>',
-            'date': gender_text,
+            'main_char': f'<b>{rec["deceased"]["familia"]} {rec["deceased"]["name"]} '
+                         f'{rec["deceased"]["patronym"]}</b>',
+            "date": gender_text,
             'secondary_char': relative_text,
-            'locality': f'<u>Место смерти</u>: {rec['locality']}',
+            "locality": f'<u>Место смерти</u>: {rec["locality"]}',
             'ID': rec['id'],
             'notes': rec['notes']
         }
         return temp_dict
     if rec_type == 'Side_events':
-        if rec['participant']['patronym'][-1] == 'а':
+        if rec["participant"]["patronym"][-1] == 'а':
             gender_text = 'Записана как'
         else:
             gender_text = 'Записан как'
         temp_dict = {
-            'main_char': f'<b>{rec['participant']['familia']} {rec['participant']['name']} '
-                         f'{rec['participant']['patronym']}</b>',
-            'date': f'<u>Дата события</u>: {rec['date']}',
-            'secondary_char': f'<u>{gender_text}</u>: {rec['role']}',
-            'locality': f'<u>Место события</u>: {rec['locality']}',
+            'main_char': f'<b>{rec["participant"]["familia"]} {rec["participant"]["name"]} '
+                         f'{rec["participant"]["patronym"]}</b>',
+            "date": f'<u>Дата события</u>: {rec["date"]}',
+            'secondary_char': f'<u>{gender_text}</u>: {rec["role"]}',
+            "locality": f'<u>Место события</u>: {rec["locality"]}',
             'ID': rec['id'],
             'notes': rec['notes']
         }
@@ -485,25 +485,25 @@ def date_search(rec_dict, query, response_dict):
         if k == 'Births' and len(rec_dict[k]) > 0:
             response_list = []
             for rec in v:
-                if str(query) in rec['date']:
+                if str(query) in rec["date"]:
                     response_list.append(get_rec_pattern(k, rec))
             response_dict[k] = response_list
         if k == 'Weddings' and len(rec_dict[k]) > 0:
             response_list = []
             for rec in v:
-                if str(query) in rec['date']:
+                if str(query) in rec["date"]:
                     response_list.append(get_rec_pattern(k, rec))
             response_dict[k] = response_list
         if k == 'Deaths' and len(rec_dict[k]) > 0:
             response_list = []
             for rec in v:
-                if str(query) in rec['date']:
+                if str(query) in rec["date"]:
                     response_list.append(get_rec_pattern(k, rec))
             response_dict[k] = response_list
         if k == 'Side_events' and len(rec_dict[k]) > 0:
             response_list = []
             for rec in v:
-                if str(query) in rec['date']:
+                if str(query) in rec["date"]:
                     response_list.append(get_rec_pattern(k, rec))
             response_dict[k] = response_list
     return  response_dict
@@ -514,25 +514,25 @@ def locality_search(rec_dict, query, response_dict):
         if k == 'Births' and len(rec_dict[k]) > 0:
             response_list = []
             for rec in v:
-                if re.fullmatch(query, rec['locality']):
+                if re.fullmatch(query, rec["locality"]):
                     response_list.append(get_rec_pattern(k, rec))
             response_dict[k] = response_list
         if k == 'Weddings' and len(rec_dict[k]) > 0:
             response_list = []
             for rec in v:
-                if re.fullmatch(query, rec['husband']['locality']) or re.fullmatch(query, rec['wife']['locality']):
+                if re.fullmatch(query, rec["husband"]["locality"]) or re.fullmatch(query, rec["wife"]["locality"]):
                     response_list.append(get_rec_pattern(k, rec))
             response_dict[k] = response_list
         if k == 'Deaths' and len(rec_dict[k]) > 0:
             response_list = []
             for rec in v:
-                if re.fullmatch(query, rec['locality']):
+                if re.fullmatch(query, rec["locality"]):
                     response_list.append(get_rec_pattern(k, rec))
             response_dict[k] = response_list
         if k == 'Side_events' and len(rec_dict[k]) > 0:
             response_list = []
             for rec in v:
-                if re.fullmatch(query, rec['locality']):
+                if re.fullmatch(query, rec["locality"]):
                     response_list.append(get_rec_pattern(k, rec))
             response_dict[k] = response_list
     return  response_dict
@@ -629,7 +629,7 @@ def new_project():
         pr_name = request.form.get('pr_name')
         familia_m = request.form.get('familia_m')
         familia_f = request.form.get('familia_f')
-        locality = request.form.get('locality')
+        locality = request.form.get("locality")
 
         # Создание папки проекта и внутренней структуры папок
         project_name = pr_name
@@ -648,7 +648,7 @@ def new_project():
         settings = {
             'familia_m': familia_m,
             "familia_f": familia_f,
-            'locality': locality
+            "locality": locality
         }
         with open(settings_path, "w", encoding="utf-8") as f:
             json.dump(settings, f, ensure_ascii=False, indent=4)
@@ -673,12 +673,12 @@ def birth():
     rec_type = 'Births'
     if request.method == 'POST':
         # Получаем данные из формы
-        date_list = request.form.get('date').split('-')
+        date_list = request.form.get("date").split('-')
         gender = request.form.get('gender')
-        newborn = request.form.get('newborn')
-        father = request.form.get('father')
-        mother = request.form.get('mother')
-        locality = request.form.get('locality')
+        newborn = request.form.get("newborn")
+        father = request.form.get("father")
+        mother = request.form.get("mother")
+        locality = request.form.get("locality")
         susceptor1 = request.form.get('susceptor1')
         susceptor2 = request.form.get('susceptor2')
         notes = request.form.get('notes')
@@ -746,21 +746,21 @@ def birth():
         # Формирование словаря для последующей передачи в json файл
         record = {
             'id': rec_id,
-            'date': date,
-            'newborn': {'familia': newborn_familia, 'name': newborn_name, 'patronym': newborn_patronym},
-            'father': {'familia': father_familia, 'name': father_name, 'patronym': father_patronym},
-            'mother': {'familia': familia_f, 'name': mother_name, 'patronym': mother_patronym},
-            'locality': locality,
-            'susceptors': {
-                '1st': {
-                    'familia': susceptor_prim_familia,
-                    'name': susceptor_prim_name,
-                    'patronym': susceptor_prim_patronym
+            "date": date,
+            "newborn": {"familia": newborn_familia, "name": newborn_name, "patronym": newborn_patronym},
+            "father": {"familia": father_familia, "name": father_name, "patronym": father_patronym},
+            "mother": {"familia": familia_f, "name": mother_name, "patronym": mother_patronym},
+            "locality": locality,
+            "susceptors": {
+                "1st": {
+                    "familia": susceptor_prim_familia,
+                    "name": susceptor_prim_name,
+                    "patronym": susceptor_prim_patronym
                 },
-                '2nd': {
-                    'familia': susceptor_sec_familia,
-                    'name': susceptor_sec_name,
-                    'patronym': susceptor_sec_patronym
+                "2nd": {
+                    "familia": susceptor_sec_familia,
+                    "name": susceptor_sec_name,
+                    "patronym": susceptor_sec_patronym
                 }
             },
             'notes': notes
@@ -773,7 +773,7 @@ def birth():
     return render_template(
         'birth.html',
         current_project=current_project,
-        locality=settings['locality']
+        locality=settings["locality"]
     )
 
 # Запись о бракосочетании
@@ -784,9 +784,9 @@ def wedding():
     rec_type = "Weddings"
     if request.method == 'POST':
         # Получаем данные из формы
-        date_list = request.form.get('date').split('-')
-        husband = request.form.get('husband')
-        wife = request.form.get('wife')
+        date_list = request.form.get("date").split('-')
+        husband = request.form.get("husband")
+        wife = request.form.get("wife")
         hus_locality = request.form.get('hus_locality')
         wif_locality = request.form.get('wif_locality')
         hus_guarantor1 = request.form.get('hus_guarantor1')
@@ -856,41 +856,41 @@ def wedding():
         # Формирование словаря для последующей передачи в json файл
         record = {
             'id': rec_id,
-            'date': date,
-            'husband': {
-                'familia': husband_familia,
-                'name': husband_name,
-                'patronym': husband_patronym,
-                'locality': hus_locality
+            "date": date,
+            "husband": {
+                "familia": husband_familia,
+                "name": husband_name,
+                "patronym": husband_patronym,
+                "locality": hus_locality
             },
-            'wife': {
-                'familia': wife_familia,
-                'name': wife_name,
-                'patronym': wife_patronym,
-                'locality': wif_locality
+            "wife": {
+                "familia": wife_familia,
+                "name": wife_name,
+                "patronym": wife_patronym,
+                "locality": wif_locality
             },
-            'husband_guarantors': {
-                '1st': {
-                    'familia': hus_guarantor_prim_familia,
-                    'name': hus_guarantor_prim_name,
-                    'patronym': hus_guarantor_prim_patronym
+            "husband_guarantors": {
+                "1st": {
+                    "familia": hus_guarantor_prim_familia,
+                    "name": hus_guarantor_prim_name,
+                    "patronym": hus_guarantor_prim_patronym
                 },
-                '2nd': {
-                    'familia': hus_guarantor_sec_familia,
-                    'name': hus_guarantor_sec_name,
-                    'patronym': hus_guarantor_sec_patronym
+                "2nd": {
+                    "familia": hus_guarantor_sec_familia,
+                    "name": hus_guarantor_sec_name,
+                    "patronym": hus_guarantor_sec_patronym
                 }
             },
-            'wife_guarantors': {
-                '1st': {
-                    'familia': wif_guarantor_prim_familia,
-                    'name': wif_guarantor_prim_name,
-                    'patronym': wif_guarantor_prim_patronym
+            "wife_guarantors": {
+                "1st": {
+                    "familia": wif_guarantor_prim_familia,
+                    "name": wif_guarantor_prim_name,
+                    "patronym": wif_guarantor_prim_patronym
                 },
-                '2nd': {
-                    'familia': wif_guarantor_sec_familia,
-                    'name': wif_guarantor_sec_name,
-                    'patronym': wif_guarantor_sec_patronym
+                "2nd": {
+                    "familia": wif_guarantor_sec_familia,
+                    "name": wif_guarantor_sec_name,
+                    "patronym": wif_guarantor_sec_patronym
                 }
             },
             'notes': notes
@@ -903,7 +903,7 @@ def wedding():
     return render_template(
         'wedding.html',
         current_project=current_project,
-        locality=settings['locality'],
+        locality=settings["locality"],
         familia_m=settings['familia_m']
     )
 
@@ -915,13 +915,13 @@ def death():
     rec_type = "Deaths"
     if request.method == 'POST':
         # Получаем данные из формы
-        date_list = request.form.get('date').split('-')
+        date_list = request.form.get("date").split('-')
         gender = request.form.get('gender')
-        deceased = request.form.get('deceased')
-        death_cause = request.form.get('death_cause')
-        relative = request.form.get('relative')
-        relation_degree = request.form.get('relation_degree')
-        locality = request.form.get('locality')
+        deceased = request.form.get("deceased")
+        death_cause = request.form.get("death_cause")
+        relative = request.form.get("relative")
+        relation_degree = request.form.get("relation_degree")
+        locality = request.form.get("locality")
         notes = request.form.get('notes')
 
         # Проверка на заполнение полей
@@ -969,16 +969,16 @@ def death():
         # Формирование словаря для последующей передачи в json файл
         record = {
             'id': rec_id,
-            'date': date,
-            'deceased': {'familia': deceased_familia, 'name': deceased_name, 'patronym': deceased_patronym},
-            'death_cause': death_cause,
-            'relative': {
-                'familia': relative_familia,
-                'name': relative_name,
-                'patronym': relative_patronym,
-                'relation_degree': relation_degree
+            "date": date,
+            "deceased": {"familia": deceased_familia, "name": deceased_name, "patronym": deceased_patronym},
+            "death_cause": death_cause,
+            "relative": {
+                "familia": relative_familia,
+                "name": relative_name,
+                "patronym": relative_patronym,
+                "relation_degree": relation_degree
             },
-            'locality': locality,
+            "locality": locality,
             'notes': notes
         }
 
@@ -989,7 +989,7 @@ def death():
     return render_template(
         'death.html',
         current_project=current_project,
-        locality=settings['locality']
+        locality=settings["locality"]
     )
 
 # Запись о побочном событии
@@ -1000,11 +1000,11 @@ def side_event():
     rec_type = "Side_events"
     if request.method == 'POST':
         # Получаем данные из формы
-        date_list = request.form.get('date').split('-')
+        date_list = request.form.get("date").split('-')
         gender = request.form.get('gender')
-        participant = request.form.get('participant')
-        role = request.form.get('role')
-        locality = request.form.get('locality')
+        participant = request.form.get("participant")
+        role = request.form.get("role")
+        locality = request.form.get("locality")
         notes = request.form.get('notes')
 
         # Проверка на наличие ошибок
@@ -1034,14 +1034,14 @@ def side_event():
         # Формирование словаря для последующей передачи в json файл
         record = {
             'id': rec_id,
-            'date': date,
-            'participant': {
-                'familia': participant_familia,
-                'name': participant_name,
-                'patronym': participant_patronym
+            "date": date,
+            "participant": {
+                "familia": participant_familia,
+                "name": participant_name,
+                "patronym": participant_patronym
             },
-            'role': role,
-            'locality': locality,
+            "role": role,
+            "locality": locality,
             'notes': notes
         }
 
@@ -1052,7 +1052,7 @@ def side_event():
     return render_template(
         'side_event.html',
         current_project=current_project,
-        locality=settings['locality']
+        locality=settings["locality"]
     )
 
 # Страница "Настройки"
@@ -1061,7 +1061,7 @@ def settings():
     if request.method == 'POST':
         familia_m = request.form.get('familia_m')
         familia_f = request.form.get('familia_f')
-        locality = request.form.get('locality')
+        locality = request.form.get("locality")
         save_settings(familia_m, familia_f, locality)
         return redirect(url_for('rec_select'))
 
@@ -1071,7 +1071,7 @@ def settings():
         'settings.html',
         familia_m=settings['familia_m'],
         familia_f=settings['familia_f'],
-        locality=settings['locality']
+        locality=settings["locality"]
     )
 
 
@@ -1089,11 +1089,11 @@ def search_initial():
 def search_query():
     query = request.form.get('query', '')
     rec_types = request.form.get('rectype', 'all')
-    rec_field = request.form.get('field', 'name')
-    if rec_field == 'name':
+    rec_field = request.form.get('field', "name")
+    if rec_field == "name":
         query = f'(?<![а-яА-ЯёЁ]){query}(?![а-яА-ЯёЁ])'
-    if '...' in query:
-        query = f'{query.replace('...', '[а-яА-ЯёЁ.]+')}'
+    if "..." in query:
+        query = f'{query.replace("...", "[а-яА-ЯёЁ.]+")}'
     current_project = session.get('current_project', 'Проект не выбран')
     projects_path = projects_dir.joinpath(current_project)
 
@@ -1116,13 +1116,13 @@ def search_query():
         results = result_search(previous_results, query, response_dict)
     # Осуществление поиска по заданному полю
     else:
-        if rec_field == 'name':
+        if rec_field == "name":
             results = name_search(rec_dict, query, response_dict)
         elif rec_field == 'id':
             results = id_search(rec_dict, query, response_dict)
-        elif rec_field == 'date':
+        elif rec_field == "date":
             results = date_search(rec_dict, query, response_dict)
-        elif rec_field == 'locality':
+        elif rec_field == "locality":
             results = locality_search(rec_dict, query, response_dict)
         elif rec_field == 'text':
             results = text_search(rec_dict, query, response_dict)

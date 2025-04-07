@@ -7,18 +7,39 @@ class FileHandler:
 
     def __init__(self, project):
         self.project = project
+        self.records_dict = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
         self.base_folder = Path(__file__).resolve().parent
         self.projects_folder = self.base_folder.joinpath('Projects')
         self.current_project_folder = self.projects_folder.joinpath(self.project)
         self.settings_path = self.current_project_folder.joinpath('settings.json')
 
+    def project_initiation(self):
+        """Формирует папки и рабочие файлы нового проекта.
+
+        Создает 4 папки по типам записи, названия берет из ключей record_dict,
+        также создает файл для отчетов - 'reports.txt'
+        и файл для сохранения результатов последнего поиска по БД - 'previous_results.json'.
+        """
+        if self.project:
+            cpf = self.current_project_folder
+            for rec_type in self.records_dict:
+                cpf.joinpath(rec_type).mkdir(parents=True, exist_ok=True)
+            with open(cpf.joinpath('reports.txt'), "w", encoding="utf-8") as f:
+                pass
+            with open(cpf.joinpath('settings.json'), "w", encoding="utf-8") as f:
+                pass
+            with open(cpf.joinpath('previous_results.json'), "w", encoding="utf-8") as f:
+                json.dump(self.records_dict, f, ensure_ascii=False, indent=2)
+
     def get_base_folder(self):
         """Возвращает папку приложения."""
-        return self.base_folder
+        if self.base_folder:
+            return self.base_folder
 
     def get_projects_folder(self):
         """Возвращает папку с проектами."""
-        return self.projects_folder
+        if self.projects_folder:
+            return self.projects_folder
 
     def get_settings(self):
         """Возвращает настройки текущего проекта; возвращает словарь."""
@@ -92,12 +113,13 @@ class FileHandler:
             report (str): сообщение о новой записи
         """
         if self.project:
-            rec_type_folder = self.current_project_folder.joinpath(rec_type)
+            cpf = self.current_project_folder
+            rec_type_folder = cpf.joinpath(rec_type)
             with open(rec_type_folder.joinpath(f"{file_name}.json"), 'w', encoding="UTF-8") as new_record:
                 json.dump(record, new_record, ensure_ascii=False, indent=2)
-            with open(self.current_project_folder.joinpath("reports.txt"), "r", encoding="UTF-8") as orig_reports:
+            with open(cpf.joinpath("reports.txt"), "r", encoding="UTF-8") as orig_reports:
                 temp_text = orig_reports.read()
-            with open(self.current_project_folder.joinpath("reports.txt"), "w", encoding="UTF-8") as mod_reports:
+            with open(cpf.joinpath("reports.txt"), "w", encoding="UTF-8") as mod_reports:
                 mod_reports.write(f'{temp_text}{report}\n')
 
     def save_previous_results(self, results):
@@ -132,7 +154,7 @@ class FileHandler:
         Returns:
             dict: словарь из записей БД
         """
-        rec_dict = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+        rec_dict = self.records_dict
         for rec_type in rec_types:
             rec_type_folder = self.current_project_folder.joinpath(rec_type)
             rec_list = [self.get_rec_text(f) for f in rec_type_folder.iterdir()]

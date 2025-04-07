@@ -1,9 +1,8 @@
-from flask import  Flask, render_template, request, redirect, url_for, session, jsonify
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import json
 from pathlib import Path
 import re
 import datetime
-import copy
 
 
 # Регулярные выражения

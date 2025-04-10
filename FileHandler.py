@@ -2,10 +2,25 @@ import json
 from pathlib import Path
 
 
-
 class FileHandler:
+    """Производит все операции с файлами проекта.
+
+    Attributes:
+        project (str): Название проекта / название папки проекта.
+        records_dict (dict): Словарь с типами записей / названия папок с типами записей.
+            Структура: {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+        base_folder (Path): Путь к папке приложения.
+        projects_folder (Path): Путь к папке с проектами.
+        current_project_folder (Path): Путь к текущему проекту.
+        settings_path (Path): Путь к файлу настроек проекта.
+    """
 
     def __init__(self, project):
+        """Инициализирует объект обработчика файлов.
+
+        Args:
+            project (str): Название проекта / название папки проекта.
+        """
         self.project = project
         self.records_dict = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
         self.base_folder = Path(__file__).resolve().parent
@@ -52,9 +67,9 @@ class FileHandler:
         """Сохраняет настройки текущего проекта.
 
         Args:
-            familia_m (str): мужская фамилия по умолчанию,
-            familia_f (str): женская фамилия по умолчанию,
-            locality (str): населенный пункт по умолчанию
+            familia_m (str): Мужская фамилия по умолчанию.
+            familia_f (str): Женская фамилия по умолчанию.
+            locality (str): Населенный пункт по умолчанию.
         """
         if self.settings_path.exists():
             settings = {"familia_m": familia_m, "familia_f": familia_f, "locality": locality}
@@ -76,10 +91,10 @@ class FileHandler:
         """Функция для чтения json файла - стандартной записи БД.
 
         Args:
-            rec (str): путь к файлу
+            rec (str): Путь к файлу.
 
         Returns:
-            dict: словарь с записью из БД
+            dict: Словарь с записью из БД.
         """
         with open(rec, 'r', encoding="UTF-8") as record:
             text = json.load(record)
@@ -89,10 +104,10 @@ class FileHandler:
         """Присваивает актуальный номер ID для записи.
 
         Args:
-            rec_type (str): тип записи: 'Births'/'Weddings'/'Deaths'/'Side_events'
+            rec_type (str): Тип записи: 'Births'/'Weddings'/'Deaths'/'Side_events'.
 
         Returns:
-            int: актуальный ID записи в виде числа
+            int: Актуальный ID записи в виде числа.
         """
         if self.project:
             rec_type_folder = self.current_project_folder.joinpath(rec_type)
@@ -107,26 +122,24 @@ class FileHandler:
         """Записывает новую запись в json файл, а также оставляет сообщение о новой записи в файле 'reports.txt'.
 
         Args:
-            rec_type (str): тип записи: 'Births'/'Weddings'/'Deaths'/'Side_events',
-            file_name (str): название файла: f'{file_name}.json',
-            record (dict): новая запись БД в формате словаря,
-            report (str): сообщение о новой записи
+            rec_type (str): Тип записи: 'Births'/'Weddings'/'Deaths'/'Side_events'.
+            file_name (str): Название файла: f'{file_name}.json'.
+            record (dict): Новая запись БД в формате словаря.
+            report (str): Сообщение о новой записи.
         """
         if self.project:
             cpf = self.current_project_folder
             rec_type_folder = cpf.joinpath(rec_type)
             with open(rec_type_folder.joinpath(f"{file_name}.json"), 'w', encoding="UTF-8") as new_record:
                 json.dump(record, new_record, ensure_ascii=False, indent=2)
-            with open(cpf.joinpath("reports.txt"), "r", encoding="UTF-8") as orig_reports:
-                temp_text = orig_reports.read()
-            with open(cpf.joinpath("reports.txt"), "w", encoding="UTF-8") as mod_reports:
-                mod_reports.write(f'{temp_text}{report}\n')
+            with open(cpf.joinpath("reports.txt"), "a", encoding="UTF-8") as mod_reports:
+                mod_reports.write(f'{report}\n')
 
     def save_previous_results(self, results):
         """Сохраняет последний результат поиска по БД в файл 'previous_results.json'.
 
         Args:
-            results (dict): результат поиска по БД в формате словаря
+            results (dict): Результат поиска по БД в формате словаря.
         """
         if self.project:
             with open(self.current_project_folder.joinpath("previous_results.json"), 'w', encoding="UTF-8") as f:
@@ -136,7 +149,7 @@ class FileHandler:
         """Возвращает последний результат поиска по БД из файла 'previous_results.json'.
 
         Returns:
-            dict: результат поиска по БД
+            dict: Результат поиска по БД.
         """
         if self.project:
             with open(self.current_project_folder.joinpath("previous_results.json"), 'r', encoding="UTF-8") as f:
@@ -149,10 +162,10 @@ class FileHandler:
         Функция возвращает словарь с четырьмя ключами, соответствующими типам записей в БД,
         значениями выступают списки со словарями из отдельных записей БД.
         Args:
-            rec_types (list): список из типов записей: 'Births'/'Weddings'/'Deaths'/'Side_events'
+            rec_types (list): Список из типов записей: 'Births'/'Weddings'/'Deaths'/'Side_events'.
 
         Returns:
-            dict: словарь из записей БД
+            dict: Словарь из записей БД.
         """
         rec_dict = self.records_dict
         for rec_type in rec_types:

@@ -57,7 +57,11 @@ class FileHandler:
             return self.projects_folder
 
     def get_settings(self):
-        """Возвращает настройки текущего проекта; возвращает словарь."""
+        """Возвращает настройки текущего проекта.
+
+        Returns:
+            dict
+        """
         if self.settings_path.exists():
             with open(self.settings_path, "r", encoding="utf-8") as f:
                 return json.load(f)

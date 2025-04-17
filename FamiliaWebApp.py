@@ -142,13 +142,13 @@ def wedding():
         date_list = request.form.get("date").split('-')
         husband = request.form.get("husband")
         wife = request.form.get("wife")
-        hus_locality = request.form.get('hus_locality')
-        wif_locality = request.form.get('wif_locality')
-        hus_guarantor1 = request.form.get('hus_guarantor1')
-        hus_guarantor2 = request.form.get('hus_guarantor2')
-        wif_guarantor1 = request.form.get('wif_guarantor1')
-        wif_guarantor2 = request.form.get('wif_guarantor2')
-        notes = request.form.get('notes')
+        hus_locality = request.form.get("hus_locality")
+        wif_locality = request.form.get("wif_locality")
+        hus_guarantor1 = request.form.get("hus_guarantor1")
+        hus_guarantor2 = request.form.get("hus_guarantor2")
+        wif_guarantor1 = request.form.get("wif_guarantor1")
+        wif_guarantor2 = request.form.get("wif_guarantor2")
+        notes = request.form.get("notes")
 
         # Проверка на заполнение полей
         check_list = [husband, wife]
@@ -209,7 +209,7 @@ def wedding():
         'wedding.html',
         current_project=current_project,
         locality=settings["locality"],
-        familia_m=settings['familia_m']
+        familia_m=settings["familia_m"]
     )
 
 
@@ -223,14 +223,14 @@ def death():
     rec_id = handler.get_id(rec_type)
     if request.method == 'POST':
         # Получаем данные из формы
-        date_list = request.form.get("date").split('-')
-        gender = request.form.get('gender')
+        date_list = request.form.get("date").split("-")
+        gender = request.form.get("gender")
         deceased = request.form.get("deceased")
         death_cause = request.form.get("death_cause")
         relative = request.form.get("relative")
         relation_degree = request.form.get("relation_degree")
         locality = request.form.get("locality")
-        notes = request.form.get('notes')
+        notes = request.form.get("notes")
 
         # Проверка на заполнение полей
         check_list = [deceased]
@@ -290,12 +290,12 @@ def side_event():
     rec_id = handler.get_id(rec_type)
     if request.method == 'POST':
         # Получаем данные из формы
-        date_list = request.form.get("date").split('-')
-        gender = request.form.get('gender')
+        date_list = request.form.get("date").split("-")
+        gender = request.form.get("gender")
         participant = request.form.get("participant")
         role = request.form.get("role")
         locality = request.form.get("locality")
-        notes = request.form.get('notes')
+        notes = request.form.get("notes")
 
         # Проверка на наличие ошибок
         errors = {}
@@ -340,18 +340,18 @@ def settings():
     current_project = session.get('current_project')
     handler = FileHandler(current_project)
     if request.method == 'POST':
-        familia_m = request.form.get('familia_m')
-        familia_f = request.form.get('familia_f')
+        familia_m = request.form.get("familia_m")
+        familia_f = request.form.get("familia_f")
         locality = request.form.get("locality")
         handler.save_settings(familia_m, familia_f, locality)
-        return redirect(url_for('rec_select'))
+        return redirect(url_for("rec_select"))
 
     # Получаем текущие настройки
     settings = handler.get_settings()
     return render_template(
         'settings.html',
-        familia_m=settings['familia_m'],
-        familia_f=settings['familia_f'],
+        familia_m=settings["familia_m"],
+        familia_f=settings["familia_f"],
         locality=settings["locality"]
     )
 
@@ -372,11 +372,11 @@ def search_query():
     handler = FileHandler(current_project)
     settings = handler.get_settings()
     query = request.form.get('query', '')
-    rec_types = request.form.get('rectype', 'all')
-    rec_field = request.form.get('field', "name")
-    if rec_field == "name":
+    rec_types = request.form.get("rectype", "all")
+    rec_field = request.form.get("field", "name")
+    if rec_field == 'name':
         query = f'(?<![а-яА-ЯёЁ]){query}(?![а-яА-ЯёЁ])'
-    if "..." in query:
+    if '...' in query:
         query = f'{query.replace("...", "[а-яА-ЯёЁ.]+")}'
 
     # При поиске по 'Side_events' необходимо производить поиск по записям других типов
@@ -398,13 +398,13 @@ def search_query():
         previous_results = handler.get_previous_results()
         results = search.result_search(previous_results)
     else:
-        if rec_field == "name":
+        if rec_field == 'name':
             results = search.name_search()
         elif rec_field == 'id':
             results = search.id_search()
-        elif rec_field == "date":
+        elif rec_field == 'date':
             results = search.date_search()
-        elif rec_field == "locality":
+        elif rec_field == 'locality':
             results = search.locality_search()
         elif rec_field == 'text':
             results = search.text_search()

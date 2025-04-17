@@ -96,7 +96,7 @@ class FileHandler:
         Returns:
             dict: Словарь с записью из БД.
         """
-        with open(rec, 'r', encoding="UTF-8") as record:
+        with open(rec, "r", encoding="UTF-8") as record:
             text = json.load(record)
         return text
 
@@ -130,7 +130,7 @@ class FileHandler:
         if self.project:
             cpf = self.current_project_folder
             rec_type_folder = cpf.joinpath(rec_type)
-            with open(rec_type_folder.joinpath(f"{file_name}.json"), 'w', encoding="UTF-8") as new_record:
+            with open(rec_type_folder.joinpath(f"{file_name}.json"), "w", encoding="UTF-8") as new_record:
                 json.dump(record, new_record, ensure_ascii=False, indent=2)
             with open(cpf.joinpath("reports.txt"), "a", encoding="UTF-8") as mod_reports:
                 mod_reports.write(f'{report}\n')
@@ -142,7 +142,7 @@ class FileHandler:
             results (dict): Результат поиска по БД в формате словаря.
         """
         if self.project:
-            with open(self.current_project_folder.joinpath("previous_results.json"), 'w', encoding="UTF-8") as f:
+            with open(self.current_project_folder.joinpath("previous_results.json"), "w", encoding="UTF-8") as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
 
     def get_previous_results(self):
@@ -152,7 +152,7 @@ class FileHandler:
             dict: Результат поиска по БД.
         """
         if self.project:
-            with open(self.current_project_folder.joinpath("previous_results.json"), 'r', encoding="UTF-8") as f:
+            with open(self.current_project_folder.joinpath("previous_results.json"), "r", encoding="UTF-8") as f:
                 results = json.load(f)
             return results
 

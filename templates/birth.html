@@ -12,7 +12,47 @@
             --text-color: #2c3e50;
             --divider-color: #a8c0d0;
             --error-color: #e74c3c;
+			--mobile-breakpoint: 768px;
         }
+
+		@media (max-width: 768px) {
+			body {
+				padding: 10px;
+			}
+			
+			.card, form, .option-container {
+				width: 100%;
+				max-width: 100%;
+				padding: 15px;
+			}
+			
+			h1 {
+				width: 100%;
+				font-size: 1.3rem;
+			}
+			
+			input[type="text"],
+			input[type="date"],
+			textarea,
+			select,
+			button {
+				font-size: 1rem;
+				padding: 12px;
+			}
+			
+			button {
+				padding: 14px;
+			}
+			
+			.radio-group {
+				flex-direction: column;
+				gap: 10px;
+			}
+			
+			.button-group, .button-container {
+				gap: 12px;
+			}
+		}
         
         body {
             font-family: 'Segoe UI', Roboto, sans-serif;
@@ -191,6 +231,30 @@
             background-color: #364853;
             transform: translateY(-1px);
         }
+		
+		@media (max-width: 768px) {
+			.form-group {
+				margin-bottom: 25px;
+			}
+			
+			.date-row {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			
+			.date-row label {
+				margin-bottom: 8px;
+			}
+			
+			.date-row input[type="date"] {
+				width: 100%;
+			}
+			
+			.tooltip .tooltiptext {
+				width: 150px;
+				font-size: 0.7rem;
+			}
+		}
     </style>
 </head>
 <body>

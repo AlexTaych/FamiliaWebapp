@@ -10,7 +10,47 @@
             --light-bg: #f5f7fa;
             --border-color: #d0d7e0;
             --text-color: #2c3e50;
+			--mobile-breakpoint: 768px;
         }
+
+		@media (max-width: 768px) {
+			body {
+				padding: 10px;
+			}
+			
+			.card, form, .option-container {
+				width: 100%;
+				max-width: 100%;
+				padding: 15px;
+			}
+			
+			h1 {
+				width: 100%;
+				font-size: 1.3rem;
+			}
+			
+			input[type="text"],
+			input[type="date"],
+			textarea,
+			select,
+			button {
+				font-size: 1rem;
+				padding: 12px;
+			}
+			
+			button {
+				padding: 14px;
+			}
+			
+			.radio-group {
+				flex-direction: column;
+				gap: 10px;
+			}
+			
+			.button-group, .button-container {
+				gap: 12px;
+			}
+		}
         
         body {
             font-family: 'Segoe UI', Roboto, sans-serif;
@@ -98,6 +138,16 @@
             cursor: not-allowed;
             transform: none;
         }
+		
+		@media (max-width: 768px) {
+			.button-group {
+				flex-direction: column;
+			}
+			
+			button {
+				width: 100%;
+			}
+		}
     </style>
     <script>
         function enableContinue() {

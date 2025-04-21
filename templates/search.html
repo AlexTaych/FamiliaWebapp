@@ -6,10 +6,53 @@
     <title>Поиск по записям</title>
     <link rel="icon" href="data:,">
     <style>
+        :root {
+            --mobile-breakpoint: 768px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .card, form, .option-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 15px;
+            }
+            
+            h1 {
+                width: 100%;
+                font-size: 1.3rem;
+            }
+            
+            input[type="text"],
+            input[type="date"],
+            textarea,
+            select,
+            button {
+                font-size: 1rem;
+                padding: 12px;
+            }
+            
+            button {
+                padding: 14px;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .button-group, .button-container {
+                gap: 12px;
+            }
+        }
+    
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0 0 40px; /* Добавляем отступ снизу для свернутой панели */
+            padding: 0 0 40px;
             background-color: #f5f7fa;
             color: #333;
             transition: padding-bottom 0.3s ease;
@@ -30,18 +73,18 @@
             color: #2c3e50;
             position: relative;
             padding-bottom: 10px;
-            padding-left: 80px; /* Отступ слева */
+            padding-left: 80px;
             margin-left: 0;
-            width: 100%; /* Оставляем на всю ширину */
-            box-sizing: border-box; /* Чтобы padding не влиял на ширину */
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .section-title:after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 80px; /* Совмещаем с padding-left заголовка */
-            transform: none; /* Убираем центрирование */
+            left: 80px;
+            transform: none;
             width: 110px;
             height: 3px;
             background: #3498db;
@@ -119,6 +162,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            transition: transform 0.3s ease;
         }
 
         .search-container {
@@ -169,7 +213,7 @@
             left: 0;
             right: 0;
             z-index: 100;
-            height: 10px; /* Высота свернутой панели */
+            height: 10px;
             overflow: hidden;
             transition: all 0.3s ease;
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
@@ -177,9 +221,9 @@
         }
 
         #selection-section.expanded {
-            height: auto; /* Автоматическая высота при раскрытии */
-            max-height: 50vh; /* Максимальная высота */
-            overflow-y: auto; /* Прокрутка при необходимости */
+            height: auto;
+            max-height: 50vh;
+            overflow-y: auto;
             padding-bottom: 20px;
         }
 
@@ -220,14 +264,14 @@
         }
 
         #selection-container {
-            display: none; /* Сначала скрыт */
+            display: none;
             padding: 20px 30px 0;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         #selection-section.expanded #selection-container {
-            display: grid; /* Показываем при раскрытии */
+            display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 20px;
         }
@@ -249,27 +293,47 @@
             display: block;
         }
 
-        /* Адаптация под мобильные устройства */
         @media (max-width: 768px) {
-            .record-container {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            .search-container {
+                flex-direction: column;
                 padding: 0 15px;
-                gap: 15px;
             }
-
-            .record-card {
-                padding: 15px;
+            
+            .search-input, 
+            .search-select,
+            .search-button {
+                width: 100%;
+                margin-bottom: 8px;
             }
-
+            
+            .record-container {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                padding-left: 15px;
+            }
+            
+            .section-title:after {
+                left: 15px;
+            }
+            
             #selection-section.expanded {
                 max-height: 70vh;
             }
+            
+            /* Скрытая панель поиска */
+            .search-section.hidden {
+                transform: translateY(-100%);
+            }
         }
+
     </style>
 </head>
 <body>
     <!-- Секция поиска -->
-    <div class="search-section">
+    <div class="search-section" id="search-section">
         <div class="search-container">
             <select class="search-select" id="rec-type">
                 <option value="all">Все типы записей</option>
@@ -290,6 +354,8 @@
             <button class="search-button" id="search-button">Найти</button>
         </div>
     </div>
+
+    <!-- Остальная часть страницы остается без изменений -->
     <!-- Список записей о рождениях -->
     <div class="section">
         <h2 class="section-title">Рождения</h2>
@@ -380,7 +446,10 @@
         const clearSelectionBtn = document.getElementById('clear-selection');
         const selectionToggle = document.getElementById('selection-toggle');
         const selectionTotal = document.getElementById('selection-total');
-        const selectedRecs = new Map(); // Изменили на Map для удобства
+        const selectedRecs = new Map();
+        const searchSection = document.getElementById('search-section');
+        let lastScrollPosition = 0;
+        let isSearchHidden = false;
 
         // Обработчик поиска
         document.getElementById('search-button').addEventListener('click', performSearch);
@@ -388,6 +457,48 @@
             if (e.key === 'Enter') performSearch();
         });
 
+        window.addEventListener('scroll', function() {
+			if (window.innerWidth > 768) return;
+			
+			const currentScrollPosition = window.pageYOffset;
+			
+			if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
+				// Прокрутка вниз - скрываем панель
+				if (!searchSection.classList.contains('hidden')) {
+					searchSection.classList.add('hidden');
+				}
+			} else if (currentScrollPosition < lastScrollPosition && currentScrollPosition < 50) {
+				// Прокрутка вверх в самом верху - показываем панель
+				if (searchSection.classList.contains('hidden')) {
+					searchSection.classList.remove('hidden');
+				}
+			}
+			
+			lastScrollPosition = currentScrollPosition;
+		});
+
+        // Автоматическое скрытие панели поиска при прокрутке вниз на мобильных
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth > 768) return;
+            
+            const currentScrollPosition = window.pageYOffset;
+            
+            if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
+                // Прокрутка вниз - скрываем панель
+                if (!isSearchHidden) {
+                    toggleSearchPanel(false);
+                }
+            } else if (currentScrollPosition < lastScrollPosition && currentScrollPosition < 50) {
+                // Прокрутка вверх в самом верху - показываем панель
+                if (isSearchHidden) {
+                    toggleSearchPanel(true);
+                }
+            }
+            
+            lastScrollPosition = currentScrollPosition;
+        });
+
+        // Остальной код остается без изменений
         async function performSearch() {
             const query = document.getElementById('search-query').value.trim();
             const rectype = document.getElementById('rec-type').value;
@@ -434,7 +545,6 @@
                         <div class="rec-secondary"><u>Прим.</u>: ${rec.notes || 'Примечания отсутствуют'}</div>
                     `;
 
-                    // Обработчик для добавления
                     card.addEventListener('click', handleCardClick);
                     container.appendChild(card);
                 });
@@ -444,15 +554,12 @@
         }
 
         function handleCardClick(e) {
-            // Если клик по карточке в подборке - удаляем
             if (this.parentElement === selectionContainer) {
                 const compositeKey = `${this.dataset.list}_${this.dataset.id}`;
                 this.remove();
                 selectedRecs.delete(compositeKey);
                 updateSelectionCount();
-            }
-            // Если клик по карточке в основном списке - добавляем
-            else {
+            } else {
                 addToSelection(this);
             }
         }
@@ -464,12 +571,11 @@
                 const clone = card.cloneNode(true);
                 clone.addEventListener('click', handleCardClick);
                 selectionContainer.appendChild(clone);
-                selectedRecs.set(compositeKey, clone); // Сохраняем ссылку на элемент
+                selectedRecs.set(compositeKey, clone);
                 updateSelectionCount();
             }
         }
 
-        // Остальные функции остаются без изменений
         selectionToggle.addEventListener('click', function() {
             selectionSection.classList.toggle('expanded');
             this.textContent = selectionSection.classList.contains('expanded') ?

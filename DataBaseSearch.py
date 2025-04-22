@@ -1,6 +1,6 @@
+import re
 from itertools import chain
 from Patterns import name_pattern, non_name_pattern, name_search_pattern
-import re
 
 
 class DataBaseSearch:

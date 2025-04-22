@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import re
 import datetime
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from FileHandler import FileHandler
 from DataBaseSearch import DataBaseSearch
 from Patterns import name_pat_reg, full_name_reg, record_pattern, name_pat_error, full_name_error
@@ -8,6 +8,7 @@ from Patterns import name_pat_reg, full_name_reg, record_pattern, name_pat_error
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
+
 
 # Начальная страница
 @app.route('/', methods=['GET', 'POST'])
@@ -19,7 +20,6 @@ def initial():
             return redirect(url_for('rec_select'))
     projects = FileHandler('None').get_projects()
     return render_template('initial.html', projects=projects)
-
 
 # Страница "Задать настройки нового проекта"
 @app.route('/new_project', methods=['GET', 'POST'])
@@ -43,13 +43,11 @@ def new_project():
         return redirect(url_for('rec_select'))
     return render_template('new_project.html')
 
-
 # Страница выбора типа записи
 @app.route('/rec_select')
 def rec_select():
     current_project = session.get('current_project', 'Проект не выбран')
     return render_template('rec_select.html', current_project=current_project)
-
 
 # Запись о рождении
 @app.route('/birth', methods=['GET', 'POST'])
@@ -127,7 +125,6 @@ def birth():
         current_project=current_project,
         locality=settings["locality"]
     )
-
 
 # Запись о бракосочетании
 @app.route('/wedding', methods=['GET', 'POST'])
@@ -212,7 +209,6 @@ def wedding():
         familia_m=settings["familia_m"]
     )
 
-
 # Запись о смерти
 @app.route('/death', methods=['GET', 'POST'])
 def death():
@@ -279,7 +275,6 @@ def death():
         locality=settings["locality"]
     )
 
-
 # Запись о побочном событии
 @app.route('/side_event', methods=['GET', 'POST'])
 def side_event():
@@ -333,7 +328,6 @@ def side_event():
         locality=settings["locality"]
     )
 
-
 # Страница "Настройки"
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
@@ -355,8 +349,7 @@ def settings():
         locality=settings["locality"]
     )
 
-
-# ПОИСК
+# Поиск
 @app.route('/search_initial')
 def search_initial():
     # При первой загрузке отправляем пустые списки
@@ -365,7 +358,7 @@ def search_initial():
         lists={'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
     )
 
-
+# Обработка поискового запроса
 @app.route('/search_query', methods=['POST'])
 def search_query():
     current_project = session.get('current_project', 'Проект не выбран')

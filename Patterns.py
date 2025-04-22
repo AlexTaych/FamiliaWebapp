@@ -1,6 +1,6 @@
 # Свалка всех шаблонов
 
-def name_pattern(record, character, settings):
+def name_pattern(record: dict, character: str, settings: dict) -> dict:
     """Функция формирует словарь с данными из БД для отображения на странице HTML.
 
     В отличие от non_name_pattern() формирует персонаж-зависимый словарь, т. е.
@@ -57,21 +57,25 @@ def name_pattern(record, character, settings):
         if character == 'husband':
             gender_text = ["записан", "жених"]
             spouse = ["Невеста", "wife"]
+            self_locality = record["husband"]["locality"]
+            spouse_locality = record["wife"]["locality"]
         else:
             gender_text = ["записана", "невеста"]
             spouse = ["Жених", "husband"]
+            self_locality = record["wife"]["locality"]
+            spouse_locality = record["husband"]["locality"]
         pattern = {
             'main_char': f'<b>{record[character]["familia"]} {record[character]["name"]} '
                          f'{record[character]["patronym"]}</b>',
             "date": f'{record["date"]} {gender_text[0]} как <u>{gender_text[1]}</u>',
             'secondary_char': f'<u>{spouse[0]}</u>: <b>{record[spouse[1]]["familia"]} {record[spouse[1]]["name"]} '
                               f'{record[spouse[1]]["patronym"]}</b>; '
-                              f'родом из {record["wife"]["locality"]}<br>'
+                              f'родом из {spouse_locality}<br>'
                               f'<u>Поручители жениха</u>: {" ".join(record["husband_guarantors"]["1st"].values())} и '
                               f'{" ".join(record["husband_guarantors"]["2nd"].values())}<br>'
                               f'<u>Поручители невесты</u>: {" ".join(record["wife_guarantors"]["1st"].values())} и '
                               f'{" ".join(record["wife_guarantors"]["2nd"].values())}',
-            "locality": f'<u>Место проживания</u>: {record["husband"]["locality"]}',
+            "locality": f'<u>Место проживания</u>: {self_locality}',
             'ID': record['id'],
             'notes': record['notes']
         }
@@ -182,7 +186,7 @@ def name_pattern(record, character, settings):
         return pattern
 
 
-def non_name_pattern(record, record_type, settings):
+def non_name_pattern(record: dict, record_type: str, settings: dict) -> dict:
     """Функция формирует словарь с данными из БД для отображения на странице HTML.
 
     Формирует словарь с данными для неименных поисковых запросов, поэтому результат
@@ -267,7 +271,7 @@ def non_name_pattern(record, record_type, settings):
         return pattern
 
 
-def name_search_pattern(record, character):
+def name_search_pattern(record: dict, character: str) -> str:
     """Функция формирует строку с ФИО персоны для именных поисковых запросов к БД.
 
     Формирует словарь с данными для неименных поисковых запросов, поэтому результат

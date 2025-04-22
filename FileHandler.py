@@ -15,7 +15,7 @@ class FileHandler:
         settings_path (Path): Путь к файлу настроек проекта.
     """
 
-    def __init__(self, project):
+    def __init__(self, project: str) -> None:
         """Инициализирует объект обработчика файлов.
 
         Args:
@@ -28,7 +28,7 @@ class FileHandler:
         self.current_project_folder = self.projects_folder.joinpath(self.project)
         self.settings_path = self.current_project_folder.joinpath('settings.json')
 
-    def project_initiation(self):
+    def project_initiation(self) -> None:
         """Формирует папки и рабочие файлы нового проекта.
 
         Создает 4 папки по типам записи, названия берет из ключей record_dict,
@@ -46,17 +46,17 @@ class FileHandler:
             with open(cpf.joinpath('previous_results.json'), "w", encoding="utf-8") as f:
                 json.dump(self.records_dict, f, ensure_ascii=False, indent=2)
 
-    def get_base_folder(self):
+    def get_base_folder(self) -> Path:
         """Возвращает папку приложения."""
         if self.base_folder:
             return self.base_folder
 
-    def get_projects_folder(self):
+    def get_projects_folder(self) -> Path:
         """Возвращает папку с проектами."""
         if self.projects_folder:
             return self.projects_folder
 
-    def get_settings(self):
+    def get_settings(self) -> dict:
         """Возвращает настройки текущего проекта.
 
         Returns:
@@ -67,7 +67,7 @@ class FileHandler:
                 return json.load(f)
         return {"familia_m": "", "familia_f": "", "locality": ""}
 
-    def save_settings(self, familia_m, familia_f, locality):
+    def save_settings(self, familia_m: str, familia_f: str, locality: str) -> None:
         """Сохраняет настройки текущего проекта.
 
         Args:
@@ -80,7 +80,7 @@ class FileHandler:
             with open(self.settings_path, "w", encoding="utf-8") as f:
                 json.dump(settings, f, ensure_ascii=False, indent=4)
 
-    def get_projects(self):
+    def get_projects(self) -> list:
         """Возвращает список с названиями существующих проектов.
 
         Returns:
@@ -91,20 +91,20 @@ class FileHandler:
         return []
 
     @staticmethod
-    def get_rec_text(rec):
+    def get_rec_text(rec_path: Path) -> dict:
         """Функция для чтения json файла - стандартной записи БД.
 
         Args:
-            rec (str): Путь к файлу.
+            rec_path (Path): Путь к файлу.
 
         Returns:
             dict: Словарь с записью из БД.
         """
-        with open(rec, "r", encoding="UTF-8") as record:
-            text = json.load(record)
-        return text
+        with open(rec_path, "r", encoding="UTF-8") as rec:
+            record = json.load(rec)
+        return record
 
-    def get_id(self, rec_type):
+    def get_id(self, rec_type: str) -> int:
         """Присваивает актуальный номер ID для записи.
 
         Args:
@@ -122,12 +122,12 @@ class FileHandler:
             else:
                 return 1
 
-    def rec_dump(self, rec_type, file_name, record, report):
+    def rec_dump(self, rec_type: str, file_name: str, record: dict, report: str) -> None:
         """Записывает новую запись в json файл, а также оставляет сообщение о новой записи в файле 'reports.txt'.
 
         Args:
             rec_type (str): Тип записи: 'Births'/'Weddings'/'Deaths'/'Side_events'.
-            file_name (str): Название файла: f'{file_name}.json'.
+            file_name (str): Название файла.
             record (dict): Новая запись БД в формате словаря.
             report (str): Сообщение о новой записи.
         """
@@ -139,7 +139,7 @@ class FileHandler:
             with open(cpf.joinpath("reports.txt"), "a", encoding="UTF-8") as mod_reports:
                 mod_reports.write(f'{report}\n')
 
-    def save_previous_results(self, results):
+    def save_previous_results(self, results: dict) -> None:
         """Сохраняет последний результат поиска по БД в файл 'previous_results.json'.
 
         Args:
@@ -149,7 +149,7 @@ class FileHandler:
             with open(self.current_project_folder.joinpath("previous_results.json"), "w", encoding="UTF-8") as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
 
-    def get_previous_results(self):
+    def get_previous_results(self) -> dict:
         """Возвращает последний результат поиска по БД из файла 'previous_results.json'.
 
         Returns:
@@ -160,7 +160,7 @@ class FileHandler:
                 results = json.load(f)
             return results
 
-    def record_request(self, rec_types):
+    def record_request(self, rec_types: list) -> dict:
         """Формирует словарь из записей БД.
 
         Функция возвращает словарь с четырьмя ключами, соответствующими типам записей в БД,

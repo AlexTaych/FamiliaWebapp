@@ -14,7 +14,7 @@ class DataBaseSearch:
                 Структура: {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
         """
 
-    def __init__(self, records, query, settings):
+    def __init__(self, records: dict, query: str, settings: dict) -> None:
         """Инициализирует объект поиска по записям БД.
 
         Args:
@@ -27,7 +27,7 @@ class DataBaseSearch:
         self.settings = settings
         self.response_dict = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
 
-    def name_search(self):
+    def name_search(self) -> dict:
         """Поиск среди записей БД по элементам имени.
 
         Returns:
@@ -86,7 +86,7 @@ class DataBaseSearch:
                 response_dict[record_type] = response_list
         return response_dict
 
-    def id_search(self):
+    def id_search(self) -> dict:
         """Поиск среди записей БД по ID записи.
 
         Returns:
@@ -115,7 +115,7 @@ class DataBaseSearch:
                 response_dict[record_type] = response_list
         return response_dict
 
-    def date_search(self):
+    def date_search(self) -> dict:
         """Поиск среди записей БД по дате записи.
 
         Returns:
@@ -144,7 +144,7 @@ class DataBaseSearch:
                 response_dict[record_type] = response_list
         return response_dict
 
-    def locality_search(self):
+    def locality_search(self) -> dict:
         """Поиск среди записей БД по населенному пункту.
 
         Returns:
@@ -174,7 +174,7 @@ class DataBaseSearch:
                 response_dict[record_type] = response_list
         return response_dict
 
-    def text_search(self):
+    def text_search(self) -> dict:
         """Поиск среди записей БД по текстовому формату записи.
 
         Returns:
@@ -203,7 +203,7 @@ class DataBaseSearch:
                 response_dict[record_type] = response_list
         return response_dict
 
-    def result_search(self, previous_results):
+    def result_search(self, previous_results: dict) -> dict:
         """Поиск среди результатов предыдущего поискового запроса.
 
         Args:

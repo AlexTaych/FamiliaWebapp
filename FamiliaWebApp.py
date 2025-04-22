@@ -376,8 +376,10 @@ def search_query():
     rec_field = request.form.get("field", "name")
     if rec_field == 'name':
         query = f'(?<![а-яА-ЯёЁ]){query}(?![а-яА-ЯёЁ])'
-    if '...' in query:
+    if '...' in query and query != '...':
         query = f'{query.replace("...", "[а-яА-ЯёЁ.]+")}'
+    if query == '...':
+        query = '\\.\\.\\.'
 
     # При поиске по 'Side_events' необходимо производить поиск по записям других типов
     if rec_types == 'all':

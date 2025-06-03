@@ -231,7 +231,7 @@ def death():
         # Проверка на заполнение полей
         check_list = [deceased]
         if not relative.strip():
-            relative = '- - -'
+            relative = '- -'
             relation_degree = '-'
         else:
             check_list.append(relative)

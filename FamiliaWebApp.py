@@ -72,18 +72,18 @@ def birth():
         # Проверка на заполнение полей "father", "susceptor1/2"
         check_list1 = [newborn, mother]
         check_list2 = []
-        if not father.strip():
-            father = '- -'
-        else:
+        if father.strip():
             check_list1.append(father)
-        if not susceptor1.strip():
-            susceptor1 = '- - -'
         else:
+            father = "- -"
+        if susceptor1.strip():
             check_list2.append(susceptor1)
-        if not susceptor2.strip():
-            susceptor2 = '- - -'
         else:
+            susceptor1 = "- - -"
+        if susceptor2.strip():
             check_list2.append(susceptor2)
+        else:
+            susceptor2 = "- - -"
 
         # Проверка на наличие ошибок
         errors = {}
@@ -420,4 +420,4 @@ def search_query():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

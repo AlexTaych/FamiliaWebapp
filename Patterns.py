@@ -4,7 +4,7 @@ def name_pattern(record: dict, character: str, settings: dict) -> dict:
     """Функция формирует словарь с данными из БД для отображения на странице HTML.
 
     В отличие от non_name_pattern() формирует персонаж-зависимый словарь, т. е.
-    текст записи меняется в зависимости от роли представленной в character.
+    текст записи меняется в зависимости от роли представленной в 'character'.
     Подобный подход облегчает восприятие результатов поиска.
     Args:
         record (dict): Исходная запись БД.
@@ -15,7 +15,7 @@ def name_pattern(record: dict, character: str, settings: dict) -> dict:
         dict: Словарь с данными из БД для отображения на странице HTML.
     """
     if character == 'newborn':
-        if record["newborn"]["familia"] == settings['familia_f']:
+        if record["newborn"]["familia"] == settings["familia_f"]:
             gender_text = 'родилась'
         else:
             gender_text = 'родился'

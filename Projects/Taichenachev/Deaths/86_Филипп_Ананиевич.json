@@ -1,0 +1,18 @@
+{
+  "id": 86,
+  "date": "26.06.1905",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Филипп",
+    "patronym": "Ананиевич"
+  },
+  "death_cause": "",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": ""
+}

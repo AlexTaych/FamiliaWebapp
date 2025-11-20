@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "...",
-    "patronym": "Васильевич"
+    "patronym": "Васильевич",
+    "gender": "м"
   },
   "role": "восприемник у семьи из Подайки, familia неизвестна",
   "locality": "Кубаева",

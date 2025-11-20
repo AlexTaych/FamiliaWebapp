@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Иван",
-    "patronym": "Гавриилович"
+    "patronym": "Гавриилович",
+    "gender": "м"
   },
   "death_cause": "-",
   "relative": {

@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Емелиан",
-    "patronym": "Козьмин"
+    "patronym": "Козьмин",
+    "gender": "м"
   },
   "death_cause": "слабость",
   "relative": {

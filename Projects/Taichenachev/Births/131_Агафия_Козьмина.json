@@ -4,7 +4,8 @@
   "newborn": {
     "familia": "Тайченачева",
     "name": "Агафия",
-    "patronym": "Козьмина"
+    "patronym": "Козьмина",
+    "gender": "ж"
   },
   "father": {
     "familia": "Тайченачев",

@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачева",
     "name": "Фекла",
-    "patronym": "Ивановна"
+    "patronym": "Ивановна",
+    "gender": "ж"
   },
   "role": "восприемник у Буданаевых",
   "locality": "Кубаева",

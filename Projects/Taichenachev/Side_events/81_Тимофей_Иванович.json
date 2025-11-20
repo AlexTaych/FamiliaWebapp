@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Тимофей",
-    "patronym": "Иванович"
+    "patronym": "Иванович",
+    "gender": "м"
   },
   "role": "восприемник у Подунаевых",
   "locality": "Кубаева",

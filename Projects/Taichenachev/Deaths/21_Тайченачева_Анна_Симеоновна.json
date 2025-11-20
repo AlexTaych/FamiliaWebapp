@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Анна",
-    "patronym": "Симеоновна"
+    "patronym": "Симеоновна",
+    "gender": "ж"
   },
   "death_cause": "-",
   "relative": {

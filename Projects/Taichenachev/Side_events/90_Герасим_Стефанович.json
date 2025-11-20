@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Герасим",
-    "patronym": "Стефанович"
+    "patronym": "Стефанович",
+    "gender": "м"
   },
   "role": "восприемник у Шубиных",
   "locality": "Подаик",

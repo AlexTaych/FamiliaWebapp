@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Онисим",
-    "patronym": "Иванович"
+    "patronym": "Иванович",
+    "gender": "м"
   },
   "death_cause": "понос",
   "relative": {

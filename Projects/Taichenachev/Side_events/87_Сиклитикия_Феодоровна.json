@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачева",
     "name": "Сиклитикия",
-    "patronym": "Феодоровна"
+    "patronym": "Феодоровна",
+    "gender": "ж"
   },
   "role": "восприемник у Уркиных",
   "locality": "Подаик",

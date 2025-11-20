@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "...",
-    "patronym": "Дмитриевич"
+    "patronym": "Дмитриевич",
+    "gender": "м"
   },
   "role": "восприемник у Буданаевых",
   "locality": "Кубаева",

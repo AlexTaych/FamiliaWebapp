@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Степанида",
-    "patronym": "Михайловна"
+    "patronym": "Михайловна",
+    "gender": "ж"
   },
   "death_cause": "слабость",
   "relative": {

@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Прокопий",
-    "patronym": "Никифорович"
+    "patronym": "Никифорович",
+    "gender": "м"
   },
   "death_cause": "Тиф",
   "relative": {

@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Марфа",
-    "patronym": "Козьмина"
+    "patronym": "Козьмина",
+    "gender": "ж"
   },
   "death_cause": "слабость",
   "relative": {

@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Христиния",
-    "patronym": "Тимофеевна"
+    "patronym": "Тимофеевна",
+    "gender": "ж"
   },
   "death_cause": "слабость",
   "relative": {

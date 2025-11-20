@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Нина",
-    "patronym": "Исаевна"
+    "patronym": "Исаевна",
+    "gender": "ж"
   },
   "death_cause": "слабость",
   "relative": {

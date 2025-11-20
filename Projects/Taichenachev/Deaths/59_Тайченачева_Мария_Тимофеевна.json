@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Мария",
-    "patronym": "Тимофеевна"
+    "patronym": "Тимофеевна",
+    "gender": "ж"
   },
   "death_cause": "понос",
   "relative": {

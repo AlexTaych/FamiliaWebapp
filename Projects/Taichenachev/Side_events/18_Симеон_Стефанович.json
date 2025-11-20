@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Симеон",
-    "patronym": "Стефанович"
+    "patronym": "Стефанович",
+    "gender": "м"
   },
   "role": "поручитель у Собакиных",
   "locality": "Кубаева",

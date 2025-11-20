@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Евдокия",
-    "patronym": "Ивановна"
+    "patronym": "Ивановна",
+    "gender": "ж"
   },
   "death_cause": "...туница",
   "relative": {

@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Гавриил",
-    "patronym": "Романович"
+    "patronym": "Романович",
+    "gender": "м"
   },
   "role": "восприемник у буданаевых",
   "locality": "Кубаева",

@@ -4,7 +4,8 @@
   "newborn": {
     "familia": "Тайченачев",
     "name": "Евфимий",
-    "patronym": "Андреевич"
+    "patronym": "Андреевич",
+    "gender": "м"
   },
   "father": {
     "familia": "Тайченачев",

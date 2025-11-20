@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Василий",
-    "patronym": "Тимофеевич"
+    "patronym": "Тимофеевич",
+    "gender": "м"
   },
   "death_cause": "понос",
   "relative": {

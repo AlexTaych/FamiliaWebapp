@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачева",
     "name": "Матрона",
-    "patronym": "Иосифовна"
+    "patronym": "Иосифовна",
+    "gender": "ж"
   },
   "role": "восприемник у Подунаевых",
   "locality": "Кубаева",

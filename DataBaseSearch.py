@@ -35,49 +35,48 @@ class DataBaseSearch:
         """
         records = self.records
         query = self.query
-        settings = self.settings
         response_dict = self.response_dict
         for record_type, record_list in records.items():
             if record_type == 'Births' and len(records[record_type]) > 0:
-                newborn_list = [name_pattern(rec, 'newborn', settings) for rec in record_list if
+                newborn_list = [name_pattern(rec, 'newborn') for rec in record_list if
                                 re.search(query, name_search_pattern(rec, 'newborn'))]
-                father_list = [name_pattern(rec, 'father', settings) for rec in record_list if
+                father_list = [name_pattern(rec, 'father') for rec in record_list if
                                re.search(query, name_search_pattern(rec, 'father'))]
-                mother_list = [name_pattern(rec, 'mother', settings) for rec in record_list if
+                mother_list = [name_pattern(rec, 'mother') for rec in record_list if
                                re.search(query, name_search_pattern(rec, 'mother'))]
                 response_list = list(chain(newborn_list, father_list, mother_list))
                 response_dict[record_type] = response_list
             if record_type == 'Weddings' and len(records[record_type]) > 0:
-                husband_list = [name_pattern(rec, 'husband', settings) for rec in record_list if
+                husband_list = [name_pattern(rec, 'husband') for rec in record_list if
                                 re.search(query, name_search_pattern(rec, 'husband'))]
-                wife_list = [name_pattern(rec, 'wife', settings) for rec in record_list if
+                wife_list = [name_pattern(rec, 'wife') for rec in record_list if
                              re.search(query, name_search_pattern(rec, 'wife'))]
                 response_list = list(chain(husband_list, wife_list))
                 response_dict[record_type] = response_list
             if record_type == 'Deaths' and len(records[record_type]) > 0:
-                deceased_list = [name_pattern(rec, 'deceased', settings) for rec in record_list if
+                deceased_list = [name_pattern(rec, 'deceased') for rec in record_list if
                                  re.search(query, name_search_pattern(rec, 'deceased'))]
-                relative_list = [name_pattern(rec, 'relative', settings) for rec in record_list if
+                relative_list = [name_pattern(rec, 'relative') for rec in record_list if
                                  re.search(query, name_search_pattern(rec, 'relative'))]
                 response_list = list(chain(deceased_list, relative_list))
                 response_dict[record_type] = response_list
             if record_type == 'Side_events' and len(records[record_type]) > 0:
-                participant_list = [name_pattern(rec, 'participant', settings) for rec in record_list if
+                participant_list = [name_pattern(rec, 'participant') for rec in record_list if
                                     re.search(query, name_search_pattern(rec, 'participant'))]
-                susceptor1_list = [name_pattern(rec, 'susceptor1', settings) for rec in records['Births']
+                susceptor1_list = [name_pattern(rec, 'susceptor1') for rec in records['Births']
                                    if re.search(query, name_search_pattern(rec, 'susceptor1'))]
-                susceptor2_list = [name_pattern(rec, 'susceptor2', settings) for rec in records['Births']
+                susceptor2_list = [name_pattern(rec, 'susceptor2') for rec in records['Births']
                                    if re.search(query, name_search_pattern(rec, 'susceptor2'))]
-                husband_guarantor1_list = [name_pattern(rec, 'husband_guarantor1', settings)
+                husband_guarantor1_list = [name_pattern(rec, 'husband_guarantor1')
                                            for rec in records['Weddings']
                                            if re.search(query, name_search_pattern(rec, 'husband_guarantor1'))]
-                husband_guarantor2_list = [name_pattern(rec, 'husband_guarantor2', settings)
+                husband_guarantor2_list = [name_pattern(rec, 'husband_guarantor2')
                                            for rec in records['Weddings']
                                            if re.search(query, name_search_pattern(rec, 'husband_guarantor2'))]
-                wife_guarantor1_list = [name_pattern(rec, 'wife_guarantor1', settings)
+                wife_guarantor1_list = [name_pattern(rec, 'wife_guarantor1')
                                         for rec in records['Weddings']
                                         if re.search(query, name_search_pattern(rec, 'wife_guarantor1'))]
-                wife_guarantor2_list = [name_pattern(rec, 'wife_guarantor2', settings)
+                wife_guarantor2_list = [name_pattern(rec, 'wife_guarantor2')
                                         for rec in records['Weddings']
                                         if re.search(query, name_search_pattern(rec, 'wife_guarantor2'))]
                 response_list = list(chain(participant_list, susceptor1_list, susceptor2_list,
@@ -141,6 +140,67 @@ class DataBaseSearch:
             if record_type == 'Side_events' and len(records[record_type]) > 0:
                 response_list = [non_name_pattern(rec, record_type, settings) for rec in record_list
                                  if query in rec["date"]]
+                response_dict[record_type] = response_list
+        return response_dict
+
+    def gender_search(self) -> dict:
+        """Поиск среди записей БД по гендеру.
+
+        Returns:
+            dict: Словарь с результатами поиска структурированный по типам записей БД.
+        """
+        records = self.records
+        query = self.query
+        response_dict = self.response_dict
+        for record_type, record_list in records.items():
+            if record_type == 'Births' and len(records[record_type]) > 0:
+                newborn_list = [name_pattern(rec, 'newborn') for rec in record_list
+                                if query in rec['newborn']['gender']]
+                if query == 'ж':
+                    parent_list = [name_pattern(rec, 'mother') for rec in record_list]
+                elif query == 'м':
+                    parent_list = [name_pattern(rec, 'father') for rec in record_list
+                                   if rec['father']['familia'] != '-']
+                else:
+                    parent_list = []
+                response_list = list(chain(newborn_list, parent_list))
+                response_dict[record_type] = response_list
+            if record_type == 'Weddings' and len(records[record_type]) > 0:
+                if query == "ж":
+                    response_list = [name_pattern(rec, 'wife') for rec in record_list]
+                elif query == "м":
+                    response_list = [name_pattern(rec, 'husband') for rec in record_list]
+                else:
+                    response_list = []
+                response_dict[record_type] = response_list
+            if record_type == 'Deaths' and len(records[record_type]) > 0:
+                response_list = [name_pattern(rec, 'deceased') for rec in record_list
+                                 if query in rec['deceased']['gender']]
+                response_dict[record_type] = response_list
+            if record_type == 'Side_events' and len(records[record_type]) > 0:
+                participant_list = [name_pattern(rec, 'participant') for rec in record_list
+                                    if query in rec['participant']['gender']]
+                if query == 'ж':
+                    side_list = [name_pattern(rec, 'susceptor2') for rec in records['Births']
+                                 if rec['susceptors']['2nd']['familia'] != '-']
+                elif query == "м":
+                    susceptor_list = [name_pattern(rec, 'susceptor1') for rec in records['Births']
+                                      if rec['susceptors']['1st']['familia'] != '-']
+                    husband_guarantor1_list = [name_pattern(rec, 'husband_guarantor1')
+                                               for rec in records['Weddings']]
+                    husband_guarantor2_list = [name_pattern(rec, 'husband_guarantor2')
+                                               for rec in records['Weddings']]
+                    wife_guarantor1_list = [name_pattern(rec, 'wife_guarantor1')
+                                            for rec in records['Weddings']]
+                    wife_guarantor2_list = [name_pattern(rec, 'wife_guarantor2')
+                                            for rec in records['Weddings']]
+                    relative_list = [name_pattern(rec, 'relative') for rec in records['Deaths']
+                                     if rec['relative']['familia'] != '-']
+                    side_list = list(chain(susceptor_list, husband_guarantor1_list, husband_guarantor2_list,
+                                           wife_guarantor1_list, wife_guarantor2_list, relative_list))
+                else:
+                    side_list = []
+                response_list = list(chain(participant_list, side_list))
                 response_dict[record_type] = response_list
         return response_dict
 

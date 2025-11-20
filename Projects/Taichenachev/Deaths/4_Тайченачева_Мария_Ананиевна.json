@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Мария",
-    "patronym": "Ананиевна"
+    "patronym": "Ананиевна",
+    "gender": "ж"
   },
   "death_cause": "-",
   "relative": {

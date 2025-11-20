@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Феодосия",
-    "patronym": "Евфимиевна"
+    "patronym": "Евфимиевна",
+    "gender": "ж"
   },
   "death_cause": "горячка",
   "relative": {

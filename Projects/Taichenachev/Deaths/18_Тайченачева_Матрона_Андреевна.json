@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Матрона",
-    "patronym": "Андреевна"
+    "patronym": "Андреевна",
+    "gender": "ж"
   },
   "death_cause": "тиф",
   "relative": {

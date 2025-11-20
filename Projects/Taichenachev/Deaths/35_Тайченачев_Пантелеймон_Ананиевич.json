@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Пантелеймон",
-    "patronym": "Ананиевич"
+    "patronym": "Ананиевич",
+    "gender": "м"
   },
   "death_cause": "слабость",
   "relative": {

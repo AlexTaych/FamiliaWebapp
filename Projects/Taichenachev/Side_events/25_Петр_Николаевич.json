@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Петр",
-    "patronym": "Николаевич"
+    "patronym": "Николаевич",
+    "gender": "м"
   },
   "role": "поручитель у Буданаевых",
   "locality": "Кубаева",

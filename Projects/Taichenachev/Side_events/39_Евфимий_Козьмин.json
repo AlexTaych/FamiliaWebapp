@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Евфимий",
-    "patronym": "Козьмин"
+    "patronym": "Козьмин",
+    "gender": "м"
   },
   "role": "поручитель у буданаевых",
   "locality": "Кубаева",

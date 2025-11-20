@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Михаил",
-    "patronym": "Евфимиевич"
+    "patronym": "Евфимиевич",
+    "gender": "м"
   },
   "death_cause": "понос",
   "relative": {

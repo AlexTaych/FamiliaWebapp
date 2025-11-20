@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Василий",
-    "patronym": "Диомидович"
+    "patronym": "Диомидович",
+    "gender": "м"
   },
   "role": "восприемник у Буданаевых",
   "locality": "Кубаева",

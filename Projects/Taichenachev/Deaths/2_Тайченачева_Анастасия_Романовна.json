@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Анастасия",
-    "patronym": "Романовна"
+    "patronym": "Романовна",
+    "gender": "ж"
   },
   "death_cause": "слабость",
   "relative": {

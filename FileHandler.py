@@ -78,7 +78,7 @@ class FileHandler:
         if self.settings_path.exists():
             settings = {"familia_m": familia_m, "familia_f": familia_f, "locality": locality}
             with open(self.settings_path, "w", encoding="utf-8") as f:
-                json.dump(settings, f, ensure_ascii=False, indent=4)
+                json.dump(settings, f, ensure_ascii=False, indent=2)
 
     def get_projects(self) -> list:
         """Возвращает список с названиями существующих проектов.

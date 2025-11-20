@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Фрол",
-    "patronym": "Ананиевич"
+    "patronym": "Ананиевич",
+    "gender": "м"
   },
   "role": "поручитель на свадьбе Собакина",
   "locality": "Кубаева",

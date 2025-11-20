@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Устиния",
-    "patronym": "Романовна"
+    "patronym": "Романовна",
+    "gender": "ж"
   },
   "death_cause": "корь",
   "relative": {

@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Ананий",
-    "patronym": "Николаевич"
+    "patronym": "Николаевич",
+    "gender": "м"
   },
   "role": "поручитель у Булгачевых",
   "locality": "Кубаева",

@@ -21,6 +21,7 @@ def initial():
     projects = FileHandler('None').get_projects()
     return render_template('initial.html', projects=projects)
 
+
 # Страница "Задать настройки нового проекта"
 @app.route('/new_project', methods=['GET', 'POST'])
 def new_project():
@@ -43,11 +44,13 @@ def new_project():
         return redirect(url_for('rec_select'))
     return render_template('new_project.html')
 
+
 # Страница выбора типа записи
 @app.route('/rec_select')
 def rec_select():
     current_project = session.get('current_project', 'Проект не выбран')
     return render_template('rec_select.html', current_project=current_project)
+
 
 # Запись о рождении
 @app.route('/birth', methods=['GET', 'POST'])
@@ -125,6 +128,7 @@ def birth():
         current_project=current_project,
         locality=settings["locality"]
     )
+
 
 # Запись о бракосочетании
 @app.route('/wedding', methods=['GET', 'POST'])
@@ -209,6 +213,7 @@ def wedding():
         familia_m=settings["familia_m"]
     )
 
+
 # Запись о смерти
 @app.route('/death', methods=['GET', 'POST'])
 def death():
@@ -275,6 +280,7 @@ def death():
         locality=settings["locality"]
     )
 
+
 # Запись о побочном событии
 @app.route('/side_event', methods=['GET', 'POST'])
 def side_event():
@@ -328,6 +334,7 @@ def side_event():
         locality=settings["locality"]
     )
 
+
 # Страница "Настройки"
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
@@ -349,6 +356,7 @@ def settings():
         locality=settings["locality"]
     )
 
+
 # Поиск
 @app.route('/search_initial')
 def search_initial():
@@ -357,6 +365,7 @@ def search_initial():
         'search.html',
         lists={'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
     )
+
 
 # Обработка поискового запроса
 @app.route('/search_query', methods=['POST'])
@@ -367,6 +376,9 @@ def search_query():
     query = request.form.get('query', '')
     rec_types = request.form.get("rectype", "all")
     rec_field = request.form.get("field", "name")
+#    search_in_previous = request.form.get('search_in_previous') == 'on'
+
+    # Обработка пропусков("...") в поисковых запросах
     if rec_field == 'name':
         query = f'(?<![а-яА-ЯёЁ]){query}(?![а-яА-ЯёЁ])'
     if '...' in query and query != '...':
@@ -399,6 +411,8 @@ def search_query():
             results = search.id_search()
         elif rec_field == 'date':
             results = search.date_search()
+        elif rec_field == 'gender':
+            results = search.gender_search()
         elif rec_field == 'locality':
             results = search.locality_search()
         elif rec_field == 'text':

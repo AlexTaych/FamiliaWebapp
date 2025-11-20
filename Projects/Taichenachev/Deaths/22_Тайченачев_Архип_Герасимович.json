@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Архип",
-    "patronym": "Герасимович"
+    "patronym": "Герасимович",
+    "gender": "м"
   },
   "death_cause": "-",
   "relative": {

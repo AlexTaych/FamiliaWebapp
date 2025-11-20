@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачева",
     "name": "Евдокия",
-    "patronym": "Ивановна"
+    "patronym": "Ивановна",
+    "gender": "ж"
   },
   "role": "восприемник у Булыгачевых",
   "locality": "Кубаева",

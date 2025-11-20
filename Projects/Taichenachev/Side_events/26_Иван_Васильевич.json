@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Иван",
-    "patronym": "Васильевич"
+    "patronym": "Васильевич",
+    "gender": "м"
   },
   "role": "поручитель у Собакиных",
   "locality": "Кубаева",

@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Стефан",
-    "patronym": "Николаевич"
+    "patronym": "Николаевич",
+    "gender": "м"
   },
   "death_cause": "чахотка",
   "relative": {

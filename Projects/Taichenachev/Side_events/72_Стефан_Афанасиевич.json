@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Стефан",
-    "patronym": "Афанасиевич"
+    "patronym": "Афанасиевич",
+    "gender": "м"
   },
   "role": "восприемник у Подунаевых",
   "locality": "Кубаева",

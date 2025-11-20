@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Пелагия",
-    "patronym": "Феодоровна"
+    "patronym": "Феодоровна",
+    "gender": "ж"
   },
   "death_cause": "неразборчиво",
   "relative": {

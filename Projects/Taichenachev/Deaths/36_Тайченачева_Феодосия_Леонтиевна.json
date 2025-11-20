@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачева",
     "name": "Феодосия",
-    "patronym": "Леонтиевна"
+    "patronym": "Леонтиевна",
+    "gender": "ж"
   },
   "death_cause": "неразборчиво",
   "relative": {

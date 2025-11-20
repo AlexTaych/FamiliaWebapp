@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Николай",
-    "patronym": "(Романович)"
+    "patronym": "(Романович)",
+    "gender": "м"
   },
   "death_cause": "-",
   "relative": {

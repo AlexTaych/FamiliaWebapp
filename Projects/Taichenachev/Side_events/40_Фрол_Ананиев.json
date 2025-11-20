@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачев",
     "name": "Фрол",
-    "patronym": "Ананиев"
+    "patronym": "Ананиев",
+    "gender": "м"
   },
   "role": "восприемник",
   "locality": "Кубаева",

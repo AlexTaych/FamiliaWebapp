@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачева",
     "name": "Дария",
-    "patronym": "...нова"
+    "patronym": "...нова",
+    "gender": "ж"
   },
   "role": "восприемник у Собакиных",
   "locality": "Кубаева",

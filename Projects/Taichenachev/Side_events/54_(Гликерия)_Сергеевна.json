@@ -4,7 +4,8 @@
   "participant": {
     "familia": "Тайченачева",
     "name": "(Гликерия)",
-    "patronym": "Сергеевна"
+    "patronym": "Сергеевна",
+    "gender": "ж"
   },
   "role": "восприемник подунаевых",
   "locality": "Кубаева",

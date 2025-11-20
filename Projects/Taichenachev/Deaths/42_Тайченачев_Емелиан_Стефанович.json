@@ -4,7 +4,8 @@
   "deceased": {
     "familia": "Тайченачев",
     "name": "Емелиан",
-    "patronym": "Стефанович"
+    "patronym": "Стефанович",
+    "gender": "м"
   },
   "death_cause": "-",
   "relative": {

@@ -33,7 +33,7 @@ class FileHandler:
 
         Создает 4 папки по типам записи, названия берет из ключей record_dict,
         также создает файл для отчетов - 'reports.txt'
-        и файл для сохранения результатов последнего поиска по БД - 'previous_results.json'.
+        и файл для сохранения результатов последнего поиска по БД - 'previous_results_ids.json'.
         """
         if self.project:
             cpf = self.current_project_folder

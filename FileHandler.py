@@ -43,7 +43,7 @@ class FileHandler:
                 pass
             with open(cpf.joinpath('settings.json'), "w", encoding="utf-8") as f:
                 pass
-            with open(cpf.joinpath('previous_results.json'), "w", encoding="utf-8") as f:
+            with open(cpf.joinpath('previous_results_ids.json'), "w", encoding="utf-8") as f:
                 json.dump(self.records_dict, f, ensure_ascii=False, indent=2)
 
     def get_base_folder(self) -> Path:

@@ -376,7 +376,8 @@ def search_query():
     query = request.form.get('query', '')
     rec_types = request.form.get("rectype", "all")
     rec_field = request.form.get("field", "name")
-#    search_in_previous = request.form.get('search_in_previous') == 'on'
+    search_in_previous_value = request.form.get('search_in_previous', 'false').lower()
+    search_in_previous = search_in_previous_value == 'true'
 
     # Обработка пропусков("...") в поисковых запросах
     if rec_field == 'name':
@@ -395,30 +396,29 @@ def search_query():
         rec_types = [rec_types]
 
     # Формирование словаря из базы данных
-    rec_dict = handler.record_request(rec_types)
+    if search_in_previous:
+        rec_dict = handler.record_request(rec_types, prev_res=True)
+    else:
+        rec_dict = handler.record_request(rec_types)
 
     # Инициация поиска
     search = DataBaseSearch(rec_dict, query, settings)
 
     # Осуществление поиска по заданному полю
-    if rec_field == 'results':
-        previous_results = handler.get_previous_results()
-        results = search.result_search(previous_results)
+    if rec_field == 'name':
+        results = search.name_search()
+    elif rec_field == 'id':
+        results = search.id_search()
+    elif rec_field == 'date':
+        results = search.date_search()
+    elif rec_field == 'gender':
+        results = search.gender_search()
+    elif rec_field == 'locality':
+        results = search.locality_search()
+    elif rec_field == 'text':
+        results = search.text_search()
     else:
-        if rec_field == 'name':
-            results = search.name_search()
-        elif rec_field == 'id':
-            results = search.id_search()
-        elif rec_field == 'date':
-            results = search.date_search()
-        elif rec_field == 'gender':
-            results = search.gender_search()
-        elif rec_field == 'locality':
-            results = search.locality_search()
-        elif rec_field == 'text':
-            results = search.text_search()
-        else:
-            results = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+        results = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
 
     # Корявая очистка результатов поиска по побочным записям от рождений и свадеб
     if 'Side_events' not in rec_types:
@@ -427,8 +427,8 @@ def search_query():
         results['Births'] = []
         results['Weddings'] = []
 
-    # Сохранение результатов для возможного поиска по ним
-    handler.save_previous_results(results)
+    # Сохранение ID записей предыдущего поискового запроса
+    handler.save_previous_results_ids(results)
 
     return jsonify(results)
 

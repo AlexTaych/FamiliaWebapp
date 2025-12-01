@@ -139,41 +139,51 @@ class FileHandler:
             with open(cpf.joinpath("reports.txt"), "a", encoding="UTF-8") as mod_reports:
                 mod_reports.write(f'{report}\n')
 
-    def save_previous_results(self, results: dict) -> None:
-        """Сохраняет последний результат поиска по БД в файл 'previous_results.json'.
+    def save_previous_results_ids(self, results: dict) -> None:
+        """Сохраняет ID записей из последнего поиска по БД в файл 'previous_results_ids.json'.
 
         Args:
-            results (dict): Результат поиска по БД в формате словаря.
+            results (dict): ID записей из последнего поиска по БД.
         """
+        rec_dict = self.records_dict
+        id_list = [[character['ID'] for character in rec_type] for rec_type in results.values()]
+        id_list = [sorted(list(set(sublist))) for sublist in id_list]
+        id_dict = dict(zip(rec_dict, id_list))
         if self.project:
-            with open(self.current_project_folder.joinpath("previous_results.json"), "w", encoding="UTF-8") as f:
-                json.dump(results, f, ensure_ascii=False, indent=2)
+            with open(self.current_project_folder.joinpath("previous_results_ids.json"), "w", encoding="UTF-8") as f:
+                json.dump(id_dict, f, ensure_ascii=False, indent=2)
 
-    def get_previous_results(self) -> dict:
+    def get_previous_results_ids(self) -> dict:
         """Возвращает последний результат поиска по БД из файла 'previous_results.json'.
 
         Returns:
             dict: Результат поиска по БД.
         """
         if self.project:
-            with open(self.current_project_folder.joinpath("previous_results.json"), "r", encoding="UTF-8") as f:
+            with open(self.current_project_folder.joinpath("previous_results_ids.json"), "r", encoding="UTF-8") as f:
                 results = json.load(f)
             return results
 
-    def record_request(self, rec_types: list) -> dict:
+    def record_request(self, rec_types: list, prev_res: bool = False) -> dict:
         """Формирует словарь из записей БД.
 
         Функция возвращает словарь с четырьмя ключами, соответствующими типам записей в БД,
         значениями выступают списки со словарями из отдельных записей БД.
         Args:
             rec_types (list): Список из типов записей: 'Births'/'Weddings'/'Deaths'/'Side_events'.
+            prev_res (bool): Параметр отвечающий за поиск среди результатов предыдущего поискового запроса.
 
         Returns:
             dict: Словарь из записей БД.
         """
         rec_dict = self.records_dict
+        previous_results = self.get_previous_results_ids()
         for rec_type in rec_types:
             rec_type_folder = self.current_project_folder.joinpath(rec_type)
-            rec_list = [self.get_rec_text(f) for f in rec_type_folder.iterdir()]
+            if prev_res:
+                rec_list = [self.get_rec_text(record) for record in rec_type_folder.iterdir()
+                            if self.get_rec_text(record)['id'] in previous_results[rec_type]]
+            else:
+                rec_list = [self.get_rec_text(record) for record in rec_type_folder.iterdir()]
             rec_dict[rec_type] = rec_list
         return rec_dict

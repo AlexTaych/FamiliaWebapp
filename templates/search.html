@@ -293,68 +293,112 @@
             display: block;
         }
 
+		/* Обновленные стили для чекбокса */
+		.checkbox-container {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			color: white;
+			font-size: 14px;
+			white-space: nowrap;
+			margin-left: 10px;
+			height: 34px;
+			justify-content: center;
+		}
+
+		.checkbox-container input[type="checkbox"] {
+			width: 20px;
+			height: 20px;
+			margin-right: 8px;
+			cursor: pointer;
+			accent-color: #2c3e50;
+		}
+
         @media (max-width: 768px) {
             .search-container {
                 flex-direction: column;
                 padding: 0 15px;
             }
-            
-            .search-input, 
+
+            .search-input,
             .search-select,
             .search-button {
                 width: 100%;
                 margin-bottom: 8px;
             }
-            
+
             .record-container {
                 grid-template-columns: 1fr;
                 padding: 0 15px;
             }
-            
+
             .section-title {
                 padding-left: 15px;
             }
-            
+
             .section-title:after {
                 left: 15px;
             }
-            
+
             #selection-section.expanded {
                 max-height: 70vh;
             }
-            
+
             /* Скрытая панель поиска */
             .search-section.hidden {
                 transform: translateY(-100%);
             }
+
+			/* Адаптация чекбокса для мобильных устройств */
+			.checkbox-container {
+				margin-top: 8px;
+				margin-left: 0;
+				width: 100%;
+				justify-content: center;
+				height: auto;
+				padding: 8px 0;
+				background-color: rgba(255, 255, 255, 0.2);
+				border-radius: 4px;
+			}
+
+			.checkbox-container input[type="checkbox"] {
+				width: 18px;
+				height: 18px;
+			}
         }
 
     </style>
 </head>
 <body>
     <!-- Секция поиска -->
-    <div class="search-section" id="search-section">
-        <div class="search-container">
-            <select class="search-select" id="rec-type">
-                <option value="all">Все типы записей</option>
-                <option value="Births">Рождения</option>
-                <option value="Weddings">Свадьбы</option>
-                <option value="Deaths">Смерти</option>
-                <option value="Side_events">Побочные события</option>
-            </select>
-            <select class="search-select" id="rec-field">
-                <option value="name">Имя</option>
-                <option value="id">ID</option>
-                <option value="date">Дата</option>
-                <option value="gender">Гендер</option>
-                <option value="locality">Населенный пункт</option>
-                <option value="text">Поиск по тексту записи</option>
-                <option value="results">Поиск среди найденных результатов</option>
-            </select>
-            <input type="text" class="search-input" id="search-query" placeholder="Введите поисковый запрос...">
-            <button class="search-button" id="search-button">Найти</button>
-        </div>
-    </div>
+    <!-- Секция поиска -->
+	<div class="search-section" id="search-section">
+		<div class="search-container">
+			<select class="search-select" id="rec-type">
+				<option value="all">Все типы записей</option>
+				<option value="Births">Рождения</option>
+				<option value="Weddings">Свадьбы</option>
+				<option value="Deaths">Смерти</option>
+				<option value="Side_events">Побочные события</option>
+			</select>
+			<select class="search-select" id="rec-field">
+				<option value="name">Имя</option>
+				<option value="id">ID</option>
+				<option value="date">Дата</option>
+				<option value="gender">Гендер</option>
+				<option value="locality">Населенный пункт</option>
+				<option value="text">Поиск по тексту записи</option>
+			</select>
+			<input type="text" class="search-input" id="search-query" placeholder="Введите поисковый запрос...">
+			<button class="search-button" id="search-button">Найти</button>
+
+			<!-- Обновленный чекбокс -->
+			<label class="checkbox-container">
+				<input type="checkbox" id="search-in-previous" name="search_in_previous">
+				Искать в предыдущих результатах
+			</label>
+		</div>
+	</div>
 
     <!-- Остальная часть страницы остается без изменений -->
     <!-- Список записей о рождениях -->
@@ -460,9 +504,9 @@
 
         window.addEventListener('scroll', function() {
 			if (window.innerWidth > 768) return;
-			
+
 			const currentScrollPosition = window.pageYOffset;
-			
+
 			if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
 				// Прокрутка вниз - скрываем панель
 				if (!searchSection.classList.contains('hidden')) {
@@ -474,16 +518,16 @@
 					searchSection.classList.remove('hidden');
 				}
 			}
-			
+
 			lastScrollPosition = currentScrollPosition;
 		});
 
         // Автоматическое скрытие панели поиска при прокрутке вниз на мобильных
         window.addEventListener('scroll', function() {
             if (window.innerWidth > 768) return;
-            
+
             const currentScrollPosition = window.pageYOffset;
-            
+
             if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
                 // Прокрутка вниз - скрываем панель
                 if (!isSearchHidden) {
@@ -495,35 +539,38 @@
                     toggleSearchPanel(true);
                 }
             }
-            
+
             lastScrollPosition = currentScrollPosition;
         });
 
         // Остальной код остается без изменений
-        async function performSearch() {
-            const query = document.getElementById('search-query').value.trim();
-            const rectype = document.getElementById('rec-type').value;
-            const field = document.getElementById('rec-field').value;
+        // В функции performSearch добавьте получение состояния чекбокса
+		async function performSearch() {
+			const query = document.getElementById('search-query').value.trim();
+			const rectype = document.getElementById('rec-type').value;
+			const field = document.getElementById('rec-field').value;
+			const searchInPrevious = document.getElementById('search-in-previous').checked;
 
-            try {
-                const formData = new FormData();
-                formData.append('query', query);
-                formData.append('rectype', rectype);
-                formData.append('field', field);
+			try {
+				const formData = new FormData();
+				formData.append('query', query);
+				formData.append('rectype', rectype);
+				formData.append('field', field);
+				formData.append('search_in_previous', searchInPrevious); // Добавляем состояние чекбокса
 
-                const response = await fetch('/search_query', {
-                    method: 'POST',
-                    body: formData
-                });
+				const response = await fetch('/search_query', {
+					method: 'POST',
+					body: formData
+				});
 
-                const results = await response.json();
-                updateLists(results);
+				const results = await response.json();
+				updateLists(results);
 
-            } catch (error) {
-                console.error('Ошибка поиска:', error);
-                alert('Произошла ошибка при поиске');
-            }
-        }
+			} catch (error) {
+				console.error('Ошибка поиска:', error);
+				alert('Произошла ошибка при поиске');
+			}
+		}
 
         function updateLists(data) {
             ['Births', 'Weddings', 'Deaths', 'Side_events'].forEach(listId => {

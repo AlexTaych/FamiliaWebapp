@@ -1,0 +1,34 @@
+{
+  "id": 183,
+  "date": "23.01.1872",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Никифоровна",
+    "gender": "ж"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Никифор",
+    "patronym": "Симеонович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Марфа",
+    "patronym": "Яковлевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Иван",
+      "patronym": "Гавриилович"
+    },
+    "2nd": {
+      "familia": "...чекова",
+      "name": "Анна",
+      "patronym": "Яковлевна"
+    }
+  },
+  "notes": ""
+}

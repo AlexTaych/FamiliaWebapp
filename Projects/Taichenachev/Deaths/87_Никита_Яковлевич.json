@@ -1,0 +1,19 @@
+{
+  "id": 87,
+  "date": "29.07.1871",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Никита",
+    "patronym": "Яковлевич",
+    "gender": "м"
+  },
+  "death_cause": "Чахотка",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Яков",
+    "patronym": "Терентиевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "Умершему 14 лет"
+}

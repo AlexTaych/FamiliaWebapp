@@ -1,0 +1,34 @@
+{
+  "id": 182,
+  "date": "30.10.1871",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Козьма",
+    "patronym": "Стефанович",
+    "gender": "м"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Стефан",
+    "patronym": "Афанасиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Феодосия",
+    "patronym": "Леонтиевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Подунаев",
+      "name": "...",
+      "patronym": "Кириллович"
+    },
+    "2nd": {
+      "familia": "Подунаева",
+      "name": "Васса",
+      "patronym": "Ивановна"
+    }
+  },
+  "notes": ""
+}

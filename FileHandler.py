@@ -40,9 +40,9 @@ class FileHandler:
             for rec_type in self.records_dict:
                 cpf.joinpath(rec_type).mkdir(parents=True, exist_ok=True)
             with open(cpf.joinpath('reports.txt'), "w", encoding="utf-8") as f:
-                pass
+                f.write("")
             with open(cpf.joinpath('settings.json'), "w", encoding="utf-8") as f:
-                pass
+                json.dump({}, f)
             with open(cpf.joinpath('previous_results_ids.json'), "w", encoding="utf-8") as f:
                 json.dump(self.records_dict, f, ensure_ascii=False, indent=2)
 

@@ -7,28 +7,28 @@ from Patterns import name_pat_reg, full_name_reg, record_pattern, name_pat_error
 
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here'
+app.secret_key = "your_secret_key_here"
 
 
 # Начальная страница
-@app.route('/', methods=['GET', 'POST'])
+@app.route("/", methods=["GET", "POST"])
 def initial():
-    if request.method == 'POST':
-        selected_project = request.form.get('project_select')
+    if request.method == "POST":
+        selected_project = request.form.get("project_select")
         if selected_project:
-            session['current_project'] = selected_project
-            return redirect(url_for('rec_select'))
-    projects = FileHandler('None').get_projects()
-    return render_template('initial.html', projects=projects)
+            session["current_project"] = selected_project
+            return redirect(url_for("rec_select"))
+    projects = FileHandler("None").get_projects()
+    return render_template("initial.html", projects=projects)
 
 
 # Страница "Задать настройки нового проекта"
-@app.route('/new_project', methods=['GET', 'POST'])
+@app.route("/new_project", methods=["GET", "POST"])
 def new_project():
-    if request.method == 'POST':
-        project_name = request.form.get('pr_name')
-        familia_m = request.form.get('familia_m')
-        familia_f = request.form.get('familia_f')
+    if request.method == "POST":
+        project_name = request.form.get("pr_name")
+        familia_m = request.form.get("familia_m")
+        familia_f = request.form.get("familia_f")
         locality = request.form.get("locality")
 
         # Создание папки проекта и внутренней структуры папок
@@ -39,38 +39,38 @@ def new_project():
         handler.save_settings(familia_m, familia_f, locality)
 
         # Сохранение текущего проекта в сессии
-        session['current_project'] = project_name
+        session["current_project"] = project_name
 
-        return redirect(url_for('rec_select'))
-    return render_template('new_project.html')
+        return redirect(url_for("rec_select"))
+    return render_template("new_project.html")
 
 
 # Страница выбора типа записи
-@app.route('/rec_select')
+@app.route("/rec_select")
 def rec_select():
-    current_project = session.get('current_project', 'Проект не выбран')
-    return render_template('rec_select.html', current_project=current_project)
+    current_project = session.get("current_project", "Проект не выбран")
+    return render_template("rec_select.html", current_project=current_project)
 
 
 # Запись о рождении
-@app.route('/birth', methods=['GET', 'POST'])
+@app.route("/birth", methods=["GET", "POST"])
 def birth():
-    rec_type = 'Births'
-    current_project = session.get('current_project', 'Проект не выбран')
+    rec_type = "Births"
+    current_project = session.get("current_project", "Проект не выбран")
     handler = FileHandler(current_project)
     settings = handler.get_settings()
     rec_id = handler.get_id(rec_type)
-    if request.method == 'POST':
+    if request.method == "POST":
         # Получаем данные из формы
-        date_list = request.form.get("date").split('-')
-        gender = request.form.get('gender')
+        date_list = request.form.get("date").split("-")
+        gender = request.form.get("gender")
         newborn = request.form.get("newborn")
         father = request.form.get("father")
         mother = request.form.get("mother")
         locality = request.form.get("locality")
-        susceptor1 = request.form.get('susceptor1')
-        susceptor2 = request.form.get('susceptor2')
-        notes = request.form.get('notes')
+        susceptor1 = request.form.get("susceptor1")
+        susceptor2 = request.form.get("susceptor2")
+        notes = request.form.get("notes")
 
         # Проверка на заполнение полей "father", "susceptor1/2"
         check_list1 = [newborn, mother]
@@ -97,19 +97,19 @@ def birth():
             if not re.fullmatch(full_name_reg(), susceptor):
                 errors[susceptor] = full_name_error(susceptor)
         if errors:
-            return render_template('birth.html', errors=errors, form_data=request.form)
+            return render_template("birth.html", errors=errors, form_data=request.form)
 
         # Формирование словаря для последующей передачи в json файл
         rec_raw = {
-            'date_list': date_list,
-            'gender': gender,
-            'newborn': newborn,
-            'father': father,
-            'mother': mother,
-            'locality': locality,
-            'susceptor1': susceptor1,
-            'susceptor2': susceptor2,
-            'notes': notes
+            "date_list": date_list,
+            "gender": gender,
+            "newborn": newborn,
+            "father": father,
+            "mother": mother,
+            "locality": locality,
+            "susceptor1": susceptor1,
+            "susceptor2": susceptor2,
+            "notes": notes
         }
         record = record_pattern(rec_type, rec_raw, rec_id, settings)
 
@@ -122,25 +122,25 @@ def birth():
         # Запись в файл
         handler.rec_dump(rec_type, file_name, record, report)
 
-        return redirect(url_for('rec_select'))
+        return redirect(url_for("rec_select"))
     return render_template(
-        'birth.html',
+        "birth.html",
         current_project=current_project,
         locality=settings["locality"]
     )
 
 
 # Запись о бракосочетании
-@app.route('/wedding', methods=['GET', 'POST'])
+@app.route("/wedding", methods=["GET", "POST"])
 def wedding():
-    rec_type = 'Weddings'
-    current_project = session.get('current_project', 'Проект не выбран')
+    rec_type = "Weddings"
+    current_project = session.get("current_project", "Проект не выбран")
     handler = FileHandler(current_project)
     settings = handler.get_settings()
     rec_id = handler.get_id(rec_type)
-    if request.method == 'POST':
+    if request.method == "POST":
         # Получаем данные из формы
-        date_list = request.form.get("date").split('-')
+        date_list = request.form.get("date").split("-")
         husband = request.form.get("husband")
         wife = request.form.get("wife")
         hus_locality = request.form.get("hus_locality")
@@ -154,19 +154,19 @@ def wedding():
         # Проверка на заполнение полей
         check_list = [husband, wife]
         if not hus_guarantor1.strip():
-            hus_guarantor1 = '- - -'
+            hus_guarantor1 = "- - -"
         else:
             check_list.append(hus_guarantor1)
         if not hus_guarantor2.strip():
-            hus_guarantor2 = '- - -'
+            hus_guarantor2 = "- - -"
         else:
             check_list.append(hus_guarantor2)
         if not wif_guarantor1.strip():
-            wif_guarantor1 = '- - -'
+            wif_guarantor1 = "- - -"
         else:
             check_list.append(wif_guarantor1)
         if not wif_guarantor2.strip():
-            wif_guarantor2 = '- - -'
+            wif_guarantor2 = "- - -"
         else:
             check_list.append(wif_guarantor2)
 
@@ -176,20 +176,20 @@ def wedding():
             if not re.fullmatch(full_name_reg(), name):
                 errors[name] = full_name_error(name)
         if errors:
-            return render_template('wedding.html', errors=errors, form_data=request.form)
+            return render_template("wedding.html", errors=errors, form_data=request.form)
 
         # Формирование словаря для последующей передачи в json файл
         rec_raw = {
-            'date_list': date_list,
-            'husband': husband,
-            'wife': wife,
-            'hus_locality': hus_locality,
-            'wif_locality': wif_locality,
-            'hus_guarantor1': hus_guarantor1,
-            'hus_guarantor2': hus_guarantor2,
-            'wif_guarantor1': wif_guarantor1,
-            'wif_guarantor2': wif_guarantor2,
-            'notes': notes
+            "date_list": date_list,
+            "husband": husband,
+            "wife": wife,
+            "hus_locality": hus_locality,
+            "wif_locality": wif_locality,
+            "hus_guarantor1": hus_guarantor1,
+            "hus_guarantor2": hus_guarantor2,
+            "wif_guarantor1": wif_guarantor1,
+            "wif_guarantor2": wif_guarantor2,
+            "notes": notes
         }
         record = record_pattern(rec_type, rec_raw, rec_id, settings)
 
@@ -205,9 +205,9 @@ def wedding():
         # Запись в файл
         handler.rec_dump(rec_type, file_name, record, report)
 
-        return redirect(url_for('rec_select'))
+        return redirect(url_for("rec_select"))
     return render_template(
-        'wedding.html',
+        "wedding.html",
         current_project=current_project,
         locality=settings["locality"],
         familia_m=settings["familia_m"]
@@ -215,14 +215,14 @@ def wedding():
 
 
 # Запись о смерти
-@app.route('/death', methods=['GET', 'POST'])
+@app.route("/death", methods=["GET", "POST"])
 def death():
-    rec_type = 'Deaths'
-    current_project = session.get('current_project', 'Проект не выбран')
+    rec_type = "Deaths"
+    current_project = session.get("current_project", "Проект не выбран")
     handler = FileHandler(current_project)
     settings = handler.get_settings()
     rec_id = handler.get_id(rec_type)
-    if request.method == 'POST':
+    if request.method == "POST":
         # Получаем данные из формы
         date_list = request.form.get("date").split("-")
         gender = request.form.get("gender")
@@ -236,8 +236,8 @@ def death():
         # Проверка на заполнение полей
         check_list = [deceased]
         if not relative.strip():
-            relative = '- -'
-            relation_degree = '-'
+            relative = "- -"
+            relation_degree = "-"
         else:
             check_list.append(relative)
 
@@ -247,18 +247,18 @@ def death():
             if not re.fullmatch(name_pat_reg(), name):
                 errors[name] = name_pat_error(name)
         if errors:
-            return render_template('death.html', errors=errors, form_data=request.form)
+            return render_template("death.html", errors=errors, form_data=request.form)
 
         # Формирование словаря для последующей передачи в json файл
         rec_raw = {
-            'date_list': date_list,
-            'gender': gender,
-            'deceased': deceased,
-            'death_cause': death_cause,
-            'relative': relative,
-            'relation_degree': relation_degree,
-            'locality': locality,
-            'notes': notes
+            "date_list": date_list,
+            "gender": gender,
+            "deceased": deceased,
+            "death_cause": death_cause,
+            "relative": relative,
+            "relation_degree": relation_degree,
+            "locality": locality,
+            "notes": notes
         }
         record = record_pattern(rec_type, rec_raw, rec_id, settings)
 
@@ -273,23 +273,23 @@ def death():
         # Запись в файл
         handler.rec_dump(rec_type, file_name, record, report)
 
-        return redirect(url_for('rec_select'))
+        return redirect(url_for("rec_select"))
     return render_template(
-        'death.html',
+        "death.html",
         current_project=current_project,
         locality=settings["locality"]
     )
 
 
 # Запись о побочном событии
-@app.route('/side_event', methods=['GET', 'POST'])
+@app.route("/side_event", methods=["GET", "POST"])
 def side_event():
-    rec_type = 'Side_events'
-    current_project = session.get('current_project', 'Проект не выбран')
+    rec_type = "Side_events"
+    current_project = session.get("current_project", "Проект не выбран")
     handler = FileHandler(current_project)
     settings = handler.get_settings()
     rec_id = handler.get_id(rec_type)
-    if request.method == 'POST':
+    if request.method == "POST":
         # Получаем данные из формы
         date_list = request.form.get("date").split("-")
         gender = request.form.get("gender")
@@ -303,16 +303,16 @@ def side_event():
         if not re.fullmatch(name_pat_reg(), participant):
             errors[participant] = name_pat_error(participant)
         if errors:
-            return render_template('side_event.html', errors=errors, form_data=request.form)
+            return render_template("side_event.html", errors=errors, form_data=request.form)
 
         # Формирование словаря для последующей передачи в json файл
         rec_raw = {
-            'date_list': date_list,
-            'gender': gender,
-            'participant': participant,
-            'role': role,
-            'locality': locality,
-            'notes': notes
+            "date_list": date_list,
+            "gender": gender,
+            "participant": participant,
+            "role": role,
+            "locality": locality,
+            "notes": notes
         }
         record = record_pattern(rec_type, rec_raw, rec_id, settings)
 
@@ -327,20 +327,20 @@ def side_event():
         # Запись в файл
         handler.rec_dump(rec_type, file_name, record, report)
 
-        return redirect(url_for('rec_select'))
+        return redirect(url_for("rec_select"))
     return render_template(
-        'side_event.html',
+        "side_event.html",
         current_project=current_project,
         locality=settings["locality"]
     )
 
 
 # Страница "Настройки"
-@app.route('/settings', methods=['GET', 'POST'])
+@app.route("/settings", methods=["GET", "POST"])
 def settings():
-    current_project = session.get('current_project')
+    current_project = session.get("current_project")
     handler = FileHandler(current_project)
-    if request.method == 'POST':
+    if request.method == "POST":
         familia_m = request.form.get("familia_m")
         familia_f = request.form.get("familia_f")
         locality = request.form.get("locality")
@@ -350,7 +350,7 @@ def settings():
     # Получаем текущие настройки
     settings = handler.get_settings()
     return render_template(
-        'settings.html',
+        "settings.html",
         familia_m=settings["familia_m"],
         familia_f=settings["familia_f"],
         locality=settings["locality"]
@@ -358,40 +358,40 @@ def settings():
 
 
 # Поиск
-@app.route('/search_initial')
+@app.route("/search_initial")
 def search_initial():
     # При первой загрузке отправляем пустые списки
     return render_template(
-        'search.html',
-        lists={'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+        "search.html",
+        lists={"Births": [], "Weddings": [], "Deaths": [], "Side_events": []}
     )
 
 
 # Обработка поискового запроса
-@app.route('/search_query', methods=['POST'])
+@app.route("/search_query", methods=["POST"])
 def search_query():
-    current_project = session.get('current_project', 'Проект не выбран')
+    current_project = session.get("current_project", "Проект не выбран")
     handler = FileHandler(current_project)
     settings = handler.get_settings()
-    query = request.form.get('query', '')
+    query = request.form.get("query", "")
     rec_types = request.form.get("rectype", "all")
     rec_field = request.form.get("field", "name")
-    search_in_previous_value = request.form.get('search_in_previous', 'false').lower()
-    search_in_previous = search_in_previous_value == 'true'
+    search_in_previous_value = request.form.get("search_in_previous", "false").lower()
+    search_in_previous = search_in_previous_value == "true"
 
     # Обработка пропусков("...") в поисковых запросах
-    if rec_field == 'name':
+    if rec_field == "name":
         query = f'(?<![а-яА-ЯёЁ]){query}(?![а-яА-ЯёЁ])'
-    if '...' in query and query != '...':
+    if "..." in query and query != "...":
         query = f'{query.replace("...", "[а-яА-ЯёЁ.]+")}'
-    if query == '...':
-        query = '\\.\\.\\.'
+    if query == "...":
+        query = "\\.\\.\\."
 
-    # При поиске по 'Side_events' необходимо производить поиск по записям других типов
-    if rec_types == 'all':
-        rec_types = ['Births', 'Weddings', 'Deaths', 'Side_events']
-    elif rec_types == 'Side_events':
-        rec_types = ['Births', 'Weddings', 'Side_events']
+    # При поиске по "Side_events" необходимо производить поиск по записям других типов
+    if rec_types == "all":
+        rec_types = ["Births", "Weddings", "Deaths", "Side_events"]
+    elif rec_types == "Side_events":
+        rec_types = ["Births", "Weddings", "Side_events"]
     else:
         rec_types = [rec_types]
 
@@ -405,27 +405,27 @@ def search_query():
     search = DataBaseSearch(rec_dict, query, settings)
 
     # Осуществление поиска по заданному полю
-    if rec_field == 'name':
+    if rec_field == "name":
         results = search.name_search()
-    elif rec_field == 'id':
+    elif rec_field == "id":
         results = search.id_search()
-    elif rec_field == 'date':
+    elif rec_field == "date":
         results = search.date_search()
-    elif rec_field == 'gender':
+    elif rec_field == "gender":
         results = search.gender_search()
-    elif rec_field == 'locality':
+    elif rec_field == "locality":
         results = search.locality_search()
-    elif rec_field == 'text':
+    elif rec_field == "text":
         results = search.text_search()
     else:
-        results = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+        results = {"Births": [], "Weddings": [], "Deaths": [], "Side_events": []}
 
     # Корявая очистка результатов поиска по побочным записям от рождений и свадеб
-    if 'Side_events' not in rec_types:
-        results['Side_events'] = []
-    if rec_types == ['Births', 'Weddings', 'Side_events']:
-        results['Births'] = []
-        results['Weddings'] = []
+    if "Side_events" not in rec_types:
+        results["Side_events"] = []
+    if rec_types == ["Births", "Weddings", "Side_events"]:
+        results["Births"] = []
+        results["Weddings"] = []
 
     # Сохранение ID записей предыдущего поискового запроса
     handler.save_previous_results_ids(results)
@@ -433,5 +433,5 @@ def search_query():
     return jsonify(results)
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)

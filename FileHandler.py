@@ -8,7 +8,7 @@ class FileHandler:
     Attributes:
         project (str): Название проекта / название папки проекта.
         records_dict (dict): Словарь с типами записей / названия папок с типами записей.
-            Структура: {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+            Структура: {"Births": [], "Weddings": [], "Deaths": [], "Side_events": []}
         base_folder (Path): Путь к папке приложения.
         projects_folder (Path): Путь к папке с проектами.
         current_project_folder (Path): Путь к текущему проекту.
@@ -22,28 +22,28 @@ class FileHandler:
             project (str): Название проекта / название папки проекта.
         """
         self.project = project
-        self.records_dict = {'Births': [], 'Weddings': [], 'Deaths': [], 'Side_events': []}
+        self.records_dict = {"Births": [], "Weddings": [], "Deaths": [], "Side_events": []}
         self.base_folder = Path(__file__).resolve().parent
-        self.projects_folder = self.base_folder.joinpath('Projects')
+        self.projects_folder = self.base_folder.joinpath("Projects")
         self.current_project_folder = self.projects_folder.joinpath(self.project)
-        self.settings_path = self.current_project_folder.joinpath('settings.json')
+        self.settings_path = self.current_project_folder.joinpath("settings.json")
 
     def project_initiation(self) -> None:
         """Формирует папки и рабочие файлы нового проекта.
 
         Создает 4 папки по типам записи, названия берет из ключей record_dict,
-        также создает файл для отчетов - 'reports.txt'
-        и файл для сохранения результатов последнего поиска по БД - 'previous_results_ids.json'.
+        также создает файл для отчетов - "reports.txt"
+        и файл для сохранения результатов последнего поиска по БД - "previous_results_ids.json".
         """
         if self.project:
             cpf = self.current_project_folder
             for rec_type in self.records_dict:
                 cpf.joinpath(rec_type).mkdir(parents=True, exist_ok=True)
-            with open(cpf.joinpath('reports.txt'), "w", encoding="utf-8") as f:
+            with open(cpf.joinpath("reports.txt"), "w", encoding="utf-8") as f:
                 f.write("")
-            with open(cpf.joinpath('settings.json'), "w", encoding="utf-8") as f:
+            with open(cpf.joinpath("settings.json"), "w", encoding="utf-8") as f:
                 json.dump({}, f)
-            with open(cpf.joinpath('previous_results_ids.json'), "w", encoding="utf-8") as f:
+            with open(cpf.joinpath("previous_results_ids.json"), "w", encoding="utf-8") as f:
                 json.dump(self.records_dict, f, ensure_ascii=False, indent=2)
 
     def get_base_folder(self) -> Path:
@@ -108,7 +108,7 @@ class FileHandler:
         """Присваивает актуальный номер ID для записи.
 
         Args:
-            rec_type (str): Тип записи: 'Births'/'Weddings'/'Deaths'/'Side_events'.
+            rec_type (str): Тип записи: "Births"/"Weddings"/"Deaths"/"Side_events".
 
         Returns:
             int: Актуальный ID записи в виде числа.
@@ -116,17 +116,17 @@ class FileHandler:
         if self.project:
             rec_type_folder = self.current_project_folder.joinpath(rec_type)
             rec_list = [self.get_rec_text(f) for f in rec_type_folder.iterdir()]
-            ids = [text['id'] for text in rec_list if 'id' in text.keys()]
+            ids = [text["id"] for text in rec_list if "id" in text.keys()]
             if len(ids) >= 1:
                 return max(ids) + 1
             else:
                 return 1
 
     def rec_dump(self, rec_type: str, file_name: str, record: dict, report: str) -> None:
-        """Записывает новую запись в json файл, а также оставляет сообщение о новой записи в файле 'reports.txt'.
+        """Записывает новую запись в json файл, а также оставляет сообщение о новой записи в файле "reports.txt".
 
         Args:
-            rec_type (str): Тип записи: 'Births'/'Weddings'/'Deaths'/'Side_events'.
+            rec_type (str): Тип записи: "Births"/"Weddings"/"Deaths"/"Side_events".
             file_name (str): Название файла.
             record (dict): Новая запись БД в формате словаря.
             report (str): Сообщение о новой записи.
@@ -137,16 +137,16 @@ class FileHandler:
             with open(rec_type_folder.joinpath(f"{file_name}.json"), "w", encoding="UTF-8") as new_record:
                 json.dump(record, new_record, ensure_ascii=False, indent=2)
             with open(cpf.joinpath("reports.txt"), "a", encoding="UTF-8") as mod_reports:
-                mod_reports.write(f'{report}\n')
+                mod_reports.write(f"{report}\n")
 
     def save_previous_results_ids(self, results: dict) -> None:
-        """Сохраняет ID записей из последнего поиска по БД в файл 'previous_results_ids.json'.
+        """Сохраняет ID записей из последнего поиска по БД в файл "previous_results_ids.json".
 
         Args:
             results (dict): ID записей из последнего поиска по БД.
         """
         rec_dict = self.records_dict
-        id_list = [[character['ID'] for character in rec_type] for rec_type in results.values()]
+        id_list = [[character["ID"] for character in rec_type] for rec_type in results.values()]
         id_list = [sorted(list(set(sublist))) for sublist in id_list]
         id_dict = dict(zip(rec_dict, id_list))
         if self.project:
@@ -154,7 +154,7 @@ class FileHandler:
                 json.dump(id_dict, f, ensure_ascii=False, indent=2)
 
     def get_previous_results_ids(self) -> dict:
-        """Возвращает последний результат поиска по БД из файла 'previous_results.json'.
+        """Возвращает последний результат поиска по БД из файла "previous_results.json".
 
         Returns:
             dict: Словарь с ID записей, найденных прошлым поисковым запросом.
@@ -170,20 +170,20 @@ class FileHandler:
         Функция возвращает словарь с четырьмя ключами, соответствующими типам записей в БД,
         значениями выступают списки со словарями из отдельных записей БД.
         Args:
-            rec_types (list): Список из типов записей: 'Births'/'Weddings'/'Deaths'/'Side_events'.
+            rec_types (list): Список из типов записей: "Births"/"Weddings"/"Deaths"/"Side_events".
             prev_res (bool): Параметр отвечающий за поиск среди результатов предыдущего поискового запроса.
 
         Returns:
             dict: Словарь из записей БД.
         """
-        rec_dict = self.records_dict 
+        rec_dict = self.records_dict
         if prev_res:
             previous_results = self.get_previous_results_ids()
         for rec_type in rec_types:
             rec_type_folder = self.current_project_folder.joinpath(rec_type)
             if prev_res:
                 rec_list = [self.get_rec_text(record) for record in rec_type_folder.iterdir()
-                            if self.get_rec_text(record)['id'] in previous_results[rec_type]]
+                            if self.get_rec_text(record)["id"] in previous_results[rec_type]]
             else:
                 rec_list = [self.get_rec_text(record) for record in rec_type_folder.iterdir()]
             rec_dict[rec_type] = rec_list

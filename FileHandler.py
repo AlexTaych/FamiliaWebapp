@@ -157,7 +157,7 @@ class FileHandler:
         """Возвращает последний результат поиска по БД из файла 'previous_results.json'.
 
         Returns:
-            dict: Результат поиска по БД.
+            dict: Словарь с ID записей, найденных прошлым поисковым запросом.
         """
         if self.project:
             with open(self.current_project_folder.joinpath("previous_results_ids.json"), "r", encoding="UTF-8") as f:
@@ -176,8 +176,9 @@ class FileHandler:
         Returns:
             dict: Словарь из записей БД.
         """
-        rec_dict = self.records_dict
-        previous_results = self.get_previous_results_ids()
+        rec_dict = self.records_dict 
+        if prev_res:
+            previous_results = self.get_previous_results_ids()
         for rec_type in rec_types:
             rec_type_folder = self.current_project_folder.joinpath(rec_type)
             if prev_res:

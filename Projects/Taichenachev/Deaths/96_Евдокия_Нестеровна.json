@@ -1,0 +1,19 @@
+{
+  "id": 96,
+  "date": "16.12.1868",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Нестеровна",
+    "gender": "ж"
+  },
+  "death_cause": "Гор(ячка)",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "43 года, вдова"
+}

@@ -1,0 +1,34 @@
+{
+  "id": 186,
+  "date": "03.02.1868",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Феодор",
+    "patronym": "Михайлович",
+    "gender": "м"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Терентиевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "...",
+    "patronym": "Петровна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Куныгачев",
+      "name": "...",
+      "patronym": "..."
+    },
+    "2nd": {
+      "familia": "Пуданаева",
+      "name": "Акилина",
+      "patronym": "Лукиановна"
+    }
+  },
+  "notes": ""
+}

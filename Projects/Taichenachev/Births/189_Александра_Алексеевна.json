@@ -1,0 +1,34 @@
+{
+  "id": 189,
+  "date": "16.04.1869",
+  "newborn": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Алексеевна",
+    "gender": "ж"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Алексей",
+    "patronym": "Михайлович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Матрона",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Кирилл",
+      "patronym": "Андреевич"
+    },
+    "2nd": {
+      "familia": "Подунаева",
+      "name": "Мария",
+      "patronym": "Михайловна"
+    }
+  },
+  "notes": ""
+}

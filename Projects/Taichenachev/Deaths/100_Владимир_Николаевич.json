@@ -1,0 +1,19 @@
+{
+  "id": 100,
+  "date": "29.07.1869",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Владимир",
+    "patronym": "Николаевич",
+    "gender": "м"
+  },
+  "death_cause": "Родимец",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Михайлович",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "3 недели"
+}

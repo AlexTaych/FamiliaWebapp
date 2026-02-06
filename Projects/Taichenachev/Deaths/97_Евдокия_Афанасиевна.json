@@ -1,0 +1,19 @@
+{
+  "id": 97,
+  "date": "14.03.1869",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Афанасиевна",
+    "gender": "ж"
+  },
+  "death_cause": "Оспа",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Афанасиевич",
+    "relation_degree": "Брат"
+  },
+  "locality": "Кубаева",
+  "notes": "4 года"
+}

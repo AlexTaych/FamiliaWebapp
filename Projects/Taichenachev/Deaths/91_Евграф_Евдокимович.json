@@ -1,0 +1,19 @@
+{
+  "id": 91,
+  "date": "07.08.1867",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Евграф",
+    "patronym": "Евдокимович",
+    "gender": "м"
+  },
+  "death_cause": "Чахотка",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "20 лет"
+}

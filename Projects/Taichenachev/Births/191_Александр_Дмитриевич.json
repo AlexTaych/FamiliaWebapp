@@ -1,0 +1,34 @@
+{
+  "id": 191,
+  "date": "26.08.1869",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Александр",
+    "patronym": "Дмитриевич",
+    "gender": "м"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Дмитрий",
+    "patronym": "Андреевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Анна",
+    "patronym": "Павловна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Утанаков",
+      "name": "Иван",
+      "patronym": "..."
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Матрона",
+      "patronym": "Ивановна"
+    }
+  },
+  "notes": ""
+}

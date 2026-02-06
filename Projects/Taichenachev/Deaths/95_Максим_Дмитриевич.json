@@ -1,0 +1,19 @@
+{
+  "id": 95,
+  "date": "11.09.1868",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Максим",
+    "patronym": "Дмитриевич",
+    "gender": "м"
+  },
+  "death_cause": "Скарлатина",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Дмитрий",
+    "patronym": "Андреевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "11 месяцев"
+}

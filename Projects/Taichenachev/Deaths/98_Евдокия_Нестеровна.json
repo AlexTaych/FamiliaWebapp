@@ -1,0 +1,19 @@
+{
+  "id": 98,
+  "date": "21.04.1869",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Евдокия",
+    "patronym": "Нестеровна",
+    "gender": "ж"
+  },
+  "death_cause": "Горячка",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "43 года, дублер записи номер 96; но даты другие(!)"
+}

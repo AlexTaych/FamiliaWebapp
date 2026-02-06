@@ -1,0 +1,34 @@
+{
+  "id": 192,
+  "date": "11.02.1870",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Алексей",
+    "patronym": "Дорофеевич",
+    "gender": "м"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Дорофей",
+    "patronym": "Михайлович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Ксения",
+    "patronym": "Никитина"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    }
+  },
+  "notes": ""
+}

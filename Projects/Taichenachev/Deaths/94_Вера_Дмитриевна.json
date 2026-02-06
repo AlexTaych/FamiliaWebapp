@@ -1,0 +1,19 @@
+{
+  "id": 94,
+  "date": "16.04.1868",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Вера",
+    "patronym": "Дмитриевна",
+    "gender": "ж"
+  },
+  "death_cause": "Простуда",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Дмитрий",
+    "patronym": "Андреевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "5 лет"
+}

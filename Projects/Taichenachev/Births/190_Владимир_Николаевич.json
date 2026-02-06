@@ -1,0 +1,34 @@
+{
+  "id": 190,
+  "date": "08.07.1869",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Владимир",
+    "patronym": "Николаевич",
+    "gender": "м"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Николай",
+    "patronym": "Михайлович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Степанида",
+    "patronym": "Ивановна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачев",
+      "name": "Феодора",
+      "patronym": "Михайловна"
+    }
+  },
+  "notes": ""
+}

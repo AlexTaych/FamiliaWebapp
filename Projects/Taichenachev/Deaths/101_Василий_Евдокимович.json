@@ -1,0 +1,19 @@
+{
+  "id": 101,
+  "date": "21.11.1875",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Василий",
+    "patronym": "Евдокимович",
+    "gender": "м"
+  },
+  "death_cause": "Скоропостижно от неизвестной болезни",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "22 года"
+}

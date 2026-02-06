@@ -1,0 +1,19 @@
+{
+  "id": 93,
+  "date": "08.02.1868",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Дария",
+    "patronym": "Ивановна",
+    "gender": "ж"
+  },
+  "death_cause": "Простуда",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Андрей",
+    "patronym": "Кириллович",
+    "relation_degree": "Муж"
+  },
+  "locality": "Кубаева",
+  "notes": "52 года"
+}

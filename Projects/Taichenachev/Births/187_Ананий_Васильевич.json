@@ -1,0 +1,34 @@
+{
+  "id": 187,
+  "date": "26.09.1868",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Ананий",
+    "patronym": "Васильевич",
+    "gender": "м"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Василий",
+    "patronym": "Яковлевич"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Степанида",
+    "patronym": "Васильевна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "Тургу...",
+      "name": "Афанасий",
+      "patronym": "Тимофеевич"
+    },
+    "2nd": {
+      "familia": "Пуданаева",
+      "name": "Васса",
+      "patronym": "Дмитриевна"
+    }
+  },
+  "notes": ""
+}

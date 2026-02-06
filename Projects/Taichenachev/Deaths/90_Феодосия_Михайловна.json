@@ -1,0 +1,19 @@
+{
+  "id": 90,
+  "date": "04.07.1867",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Феодосия",
+    "patronym": "Михайловна",
+    "gender": "ж"
+  },
+  "death_cause": "Род(имец)",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Михаил",
+    "patronym": "Терентиевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "2 года"
+}

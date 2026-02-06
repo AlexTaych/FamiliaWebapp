@@ -1,0 +1,34 @@
+{
+  "id": 193,
+  "date": "26.06.1870",
+  "newborn": {
+    "familia": "Тайченачев",
+    "name": "Павел",
+    "patronym": "Иванович",
+    "gender": "м"
+  },
+  "father": {
+    "familia": "Тайченачев",
+    "name": "Иван",
+    "patronym": "Гавриилович"
+  },
+  "mother": {
+    "familia": "Тайченачева",
+    "name": "Степанида",
+    "patronym": "Михайловна"
+  },
+  "locality": "Кубаева",
+  "susceptors": {
+    "1st": {
+      "familia": "-",
+      "name": "-",
+      "patronym": "-"
+    },
+    "2nd": {
+      "familia": "Тайченачева",
+      "name": "Евдокия",
+      "patronym": "...ина"
+    }
+  },
+  "notes": ""
+}

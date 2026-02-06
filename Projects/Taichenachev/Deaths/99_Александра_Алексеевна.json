@@ -1,0 +1,19 @@
+{
+  "id": 99,
+  "date": "11.06.1869",
+  "deceased": {
+    "familia": "Тайченачева",
+    "name": "Александра",
+    "patronym": "Алексеевна",
+    "gender": "ж"
+  },
+  "death_cause": "Родимец",
+  "relative": {
+    "familia": "Тайченачев",
+    "name": "Алексей",
+    "patronym": "Терентиевич",
+    "relation_degree": "отец"
+  },
+  "locality": "Кубаева",
+  "notes": "7 недели"
+}

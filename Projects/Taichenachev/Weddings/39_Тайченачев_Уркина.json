@@ -1,0 +1,41 @@
+{
+  "id": 39,
+  "date": "09.11.1869",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Стефан",
+    "patronym": "Афанасиевич",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Уркина",
+    "name": "Феодосия",
+    "patronym": "Леонтиевна",
+    "locality": "Подайк"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Куныгачев",
+      "name": "Самуил",
+      "patronym": "Филиппович"
+    },
+    "2nd": {
+      "familia": "Пуданаев",
+      "name": "Филимон",
+      "patronym": "Кириллович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Уркин",
+      "name": "Павел",
+      "patronym": "Дорофеевич"
+    },
+    "2nd": {
+      "familia": "Подунаев",
+      "name": "Иван",
+      "patronym": "Павлович"
+    }
+  },
+  "notes": "Жениху 20 лет, первым браком"
+}

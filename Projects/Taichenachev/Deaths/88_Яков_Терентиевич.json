@@ -1,0 +1,19 @@
+{
+  "id": 88,
+  "date": "22.09.1872",
+  "deceased": {
+    "familia": "Тайченачев",
+    "name": "Яков",
+    "patronym": "Терентиевич",
+    "gender": "м"
+  },
+  "death_cause": "Чахотка",
+  "relative": {
+    "familia": "-",
+    "name": "-",
+    "patronym": "-",
+    "relation_degree": "-"
+  },
+  "locality": "Кубаева",
+  "notes": "Умершему 55 лет"
+}

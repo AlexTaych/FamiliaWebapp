@@ -1,0 +1,41 @@
+{
+  "id": 38,
+  "date": "23.10.1868",
+  "husband": {
+    "familia": "Тайченачев",
+    "name": "Дорофей",
+    "patronym": "Михайлович",
+    "locality": "Кубаева"
+  },
+  "wife": {
+    "familia": "Непомнящая",
+    "name": "Ксения",
+    "patronym": "Никитина",
+    "locality": "Мариинск"
+  },
+  "husband_guarantors": {
+    "1st": {
+      "familia": "Тайченачев",
+      "name": "Николай",
+      "patronym": "Михайлович"
+    },
+    "2nd": {
+      "familia": "Тайченачев",
+      "name": "Алексей",
+      "patronym": "Михайлович"
+    }
+  },
+  "wife_guarantors": {
+    "1st": {
+      "familia": "Бубинов",
+      "name": "Афанасий",
+      "patronym": "Прокопьевич"
+    },
+    "2nd": {
+      "familia": "...",
+      "name": "Матфий",
+      "patronym": "Тимофеевич"
+    }
+  },
+  "notes": "Жениху 23 года первым браком"
+}
